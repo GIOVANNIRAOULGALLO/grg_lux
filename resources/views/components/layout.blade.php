@@ -10,8 +10,8 @@
     <title>{{$title}}</title>
   </head>
   <body>
-      <x-navbar/>
-    {{$slot}}
+        <x-navbar/>
+        {{$slot}}
     <script src="{{asset('js/app.js')}}"></script>
   </body>
 </html>
