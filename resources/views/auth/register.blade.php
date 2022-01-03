@@ -1,12 +1,12 @@
 <x-layout>
     <x-slot name="title">Register</x-slot>
     <section class="container">
-        <div class="row">
+        <div class="row justify-content-center text-center">
             <div class="col-12">
                 <h1>Register</h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center text-center">
             <div class="col-12 col-md-8">
                 <form method="POST" action="{{route('register')}}">
                     @csrf
@@ -29,7 +29,7 @@
                         <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPasswordConfirmation" class="form-label">Password</label>
+                        <label for="exampleInputPasswordConfirmation" class="form-label">Confirm Password</label>
                         <input type="password" class="form-control" id="exampleInputPasswordConfirmation" name="password_confirmation">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>

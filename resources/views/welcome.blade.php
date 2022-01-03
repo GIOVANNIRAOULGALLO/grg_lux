@@ -12,9 +12,9 @@
             </div>
         </div>
         <div class="row justify-content-center text-center">
-            <div class="col-12 col-md-8 d-flex flex-row justify-content-evenly">
+            <div class="col-12  d-flex flex-row justify-content-evenly">
                 @foreach ($products as $product)
-                <div class="card" style="width: 220px">
+                <div class="card mx-3" style="width: 220px">
                     <img src="https://picsum.photos/200" class="card-img-top mx-auto img-fluid" alt="{{$product->name}}">
                     <div class="card-body">
                       <p class="card-text">{{$product->name}}</p>
