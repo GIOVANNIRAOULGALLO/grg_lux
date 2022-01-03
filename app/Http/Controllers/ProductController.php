@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use App\Models\Brand;
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -18,7 +19,11 @@ class ProductController extends Controller
         $products=Product::take(4)->orderBy('id','DESC')->get();
         return view('welcome',compact('products'));
     }
-
+    public function search(Request $req){
+        $q=$req->q;
+        $products=Product::search($q)->get();
+        return view('product.results',compact('products','q'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -26,8 +31,9 @@ class ProductController extends Controller
      */
     public function create()
     {
+        $brands=Brand::all();
         $categories=Category::all();
-        return view('product.create',compact('categories'));
+        return view('product.create',compact('categories','brands'));
     }
 
     /**
@@ -42,7 +48,8 @@ class ProductController extends Controller
             'name'=>$req->name,
             'description'=>$req->description,
             'price'=>$req->price,
-            'category_id'=>$req->category_id
+            'category_id'=>$req->category_id,
+            'brand_id'=>$req->brand_id
         ]);
         return redirect(route('homepage'));
     }

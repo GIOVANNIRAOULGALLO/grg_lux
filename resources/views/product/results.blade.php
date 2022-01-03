@@ -1,18 +1,9 @@
 <x-layout>
-    <x-slot name="title">Homepage</x-slot>
+    <x-slot name="title">Ricerca per {{$q}}</x-slot>
     <section class="container">
         <div class="row justify-content-center text-center">
             <div class="col-12">
-                <h1>WELCOME</h1>
-            </div>
-        </div>
-        <div class="row justify-content-center text-center">
-            <div class="col-12 col-md-6">
-                <h3><a href="{{route('product.create')}}">CREATE</a></h3>
-                <form class="d-flex" action="{{route('product.search')}}" method="GET">
-                    <input class="form-control me-2" type="text" name="q">
-                    <button class="btn btn-outline-success" type="submit" >Search</button>
-                  </form>
+                <h1>Ricerca per : "{{$q}}"</h1>
             </div>
         </div>
         <div class="row justify-content-center text-center">
