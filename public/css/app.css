@@ -11281,4 +11281,8 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* GENERAL */
+*{
+    font-family: 'Gayathri', sans-serif;
+}
 
