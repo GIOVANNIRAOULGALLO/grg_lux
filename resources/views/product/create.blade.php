@@ -19,14 +19,24 @@
                       <textarea name="description" id="productDescription" cols="30" rows="10"></textarea>
                     </div>
                     <div class="mb-3">
-                      <select name="category_id" id="">
+                      <label for="sexID">Sesso:</label>
+                      <select name="sex" id="sexID">
+                        <option value="UOMO">UOMO</option>
+                        <option value="DONNA">DONNA</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="categoryId">Category:</label>
+                      <select name="category_id" id="categoryId">
                         @foreach ($categories as $category)
                         <option value="{{$category->id}}">{{$category->name}}</option>
                         @endforeach
                       </select>
                     </div>
+                    
                     <div class="mb-3">
-                      <select name="brand_id" id="">
+                      <label for="brandId">Brand:</label>
+                      <select name="brand_id" id="brandId">
                         @foreach ($brands as $brand)
                         <option value="{{$brand->id}}">{{$brand->name}}</option>
                         @endforeach

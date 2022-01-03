@@ -20,8 +20,8 @@
               Welcome,{{ Auth::user()->name }}
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Account</a></li>
-              <li><a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Logout</a></li>
+              <li><a class="dropdown-item" href="{{route('account.display',['user'=>Auth::user()])}}">Account</a></li>
+              <li><a  class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Logout</a></li>
               <form method="post" action="{{route('logout')}}" id="form-logout">
                 @csrf
               </form>

@@ -48,6 +48,7 @@ class ProductController extends Controller
             'name'=>$req->name,
             'description'=>$req->description,
             'price'=>$req->price,
+            'sex'=>$req->sex,
             'category_id'=>$req->category_id,
             'brand_id'=>$req->brand_id
         ]);

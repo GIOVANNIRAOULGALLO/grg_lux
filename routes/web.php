@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AccountController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,4 +24,5 @@ Route::post('/update/{product}',[ProductController::class,'update'])->name('prod
 Route::delete('/destroy/{product}',[ProductController::class,'destroy'])->name('product.destroy');
 
 Route::get('/search',[ProductController::class,'search'])->name('product.search');
+Route::get('/account/{user}',[AccountController::class,'display'])->name('account.display');
 
