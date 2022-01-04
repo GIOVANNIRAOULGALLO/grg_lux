@@ -11286,6 +11286,52 @@ textarea.form-control-lg {
     font-family: 'Gayathri', sans-serif;
 }
 
+/* NAVBAR */
+
+
+.navbar-grg{
+    position: relative;
+    background: black;
+    border-bottom: 1px solid darkgrey;
+}
+.navbar-grg .navbar-brand{
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    color: white;
+    font-size: 40px;    
+}
+.navbar-grg .authenticate-dropdown{
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.navbar-grg .navbar-brand:hover{
+   color: white;
+   
+}
+
+.navbar-grg .nav-link{
+    color:white;
+}
+
+/* PRODUCTS */
+
+.btn-grg{
+    height: 30px;
+    width: 50% ;
+    background-color: black;
+    color:white;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+
+
 
 /* ACCOUNT */
 
