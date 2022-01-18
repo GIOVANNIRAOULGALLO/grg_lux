@@ -16,7 +16,7 @@
                       <p class="text-secondary">{{$product->brand->name ?? 'NULL'}}</p>
                       <p class="card-text"> € {{$product->price}}</p>
                     </div>
-                    <button><a href="{{route('product.show',compact('product'))}}">Details</a></button>
+                    <a href="{{route('product.show',compact('product'))}}" class="btn-grg">Details</a>
                   </div>
                 @endforeach
             </div>

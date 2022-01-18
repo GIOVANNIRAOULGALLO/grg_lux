@@ -32,7 +32,7 @@
                         <label for="exampleInputPasswordConfirmation" class="form-label">Confirm Password</label>
                         <input type="password" class="form-control" id="exampleInputPasswordConfirmation" name="password_confirmation">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn-grg">Registrati</button>
                 </form>
             </div>
         </div>

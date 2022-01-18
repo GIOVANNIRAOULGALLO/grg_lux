@@ -3187,6 +3187,25 @@ function withinMaxClamp(min, value, max) {
 
 __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 
+__webpack_require__(/*! ./script */ "./resources/js/script.js");
+
+/***/ }),
+
+/***/ "./resources/js/script.js":
+/*!********************************!*\
+  !*** ./resources/js/script.js ***!
+  \********************************/
+/***/ (() => {
+
+var inputSearch = document.querySelector('.input-search');
+var buttonSearch = document.querySelector('.button-search');
+inputSearch.addEventListener("keydown", function () {
+  inputSearch.style.width = '50%';
+});
+inputSearch.addEventListener("focusout", function () {
+  inputSearch.style.width = "10%";
+});
+
 /***/ }),
 
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.esm.js":

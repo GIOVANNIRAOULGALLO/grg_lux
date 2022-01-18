@@ -2,27 +2,41 @@
 *{
     font-family: 'Gayathri', sans-serif;
 }
-
+.bg-black{
+    background-color: black;
+}
+.text-white{
+    color:white;
+}
+.link-no-decoration{
+    text-decoration: none;
+}
 /* NAVBAR */
-
-
-.navbar-grg{
+.brand-grg{
+    color: white;
+    text-decoration: none;
+    font-size: 35px;
+}
+.input-search{
+    width: 10%;
+}
+/* .navbar-grg{
     position: relative;
     background: black;
     border-bottom: 1px solid darkgrey;
 }
 .navbar-grg .navbar-brand{
     position: relative;
-    transform: translateX(-50%);
+    transform: translateX(-50%); 
     left: 50%;
     color: white;
     font-size: 40px;    
 }
 .navbar-grg .authenticate-dropdown{
-    position: relative;
+     position: relative;
     transform: translateX(-50%);
     left: 50%;
-}
+} */
 .navbar-grg .navbar-brand:hover{
    color: white;
    
@@ -36,7 +50,8 @@
 
 .btn-grg{
     height: 30px;
-    width: 50% ;
+    width: 100px;
+    border-radius: 5px;
     background-color: black;
     color:white;
     margin-left: auto;

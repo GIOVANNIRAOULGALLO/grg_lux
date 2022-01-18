@@ -1,7 +1,7 @@
 <x-layout>
     <x-slot name="title">Login</x-slot>
     <section class="container">
-        <div class="row justify-content-center text-center">
+        <div class="row justify-content-center text-center my-2">
             <div class="col-12">
                 <h1>Login</h1>
             </div>
@@ -19,7 +19,7 @@
                         <label for="exampleInputPassword1" class="form-label">Password</label>
                         <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn-grg">Accedi</button>
                 </form>
             </div>
         </div>
