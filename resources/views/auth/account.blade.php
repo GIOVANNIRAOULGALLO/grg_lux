@@ -14,13 +14,30 @@
             </div>
         </div>
         <div class="row justify-content-center text-center my-5">
-            <div class="col-12 col-md-6 d-block">
-               <a href="" class="btn btn-alert">My Order</a>
-               <a href="" class="btn btn-alert">My Info</a>
+            <div class="col-12 col-md-6 text-center">
+               <a href="#" class="btn-grg my-1" >My Order</a>
+               <a href="#infoContent" class="btn-grg my-1 " id="infoButton">My Info</a>
             </div>
-            <div class="col-12 col-md-6 d-block">
-               <a href="" class="btn btn-alert">Work with Us</a>
-               <a href="" class="btn btn-alert">WishList</a>  
+            <div class="col-12 col-md-6 text-center">
+               <a href="#workContent" class="btn-grg my-1 " id="workButton">Work with Us</a>
+               <a href="" class="btn-grg my-1 ">WishList</a>  
+            </div>
+        </div>
+        <div class="row justify-content-center" id="accountContent">
+
+        </div>
+        <div class="row justify-content-center" id="infoContent" hidden>
+            <div class="col-12 col-md-6">
+                <p>Name: {{Auth::user()->name}}</p>
+                <p>Surname: {{Auth::user()->surname}}</p>
+                <p>E-mail: {{Auth::user()->email}}</p>
+            </div>
+        </div>
+        <div class="row justify-content-center" id="workContent" hidden>
+            <div class="col-12 col-md-6">
+                <p>WOOOOOEK: {{Auth::user()->name}}</p>
+                <p>Surname: {{Auth::user()->surname}}</p>
+                <p>E-mail: {{Auth::user()->email}}</p>
             </div>
         </div>
     </section>

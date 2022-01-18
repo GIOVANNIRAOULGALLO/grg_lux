@@ -3197,6 +3197,9 @@ __webpack_require__(/*! ./script */ "./resources/js/script.js");
   \********************************/
 /***/ (() => {
 
+// -----------
+// SEARCH BAR
+// -----------
 var inputSearch = document.querySelector('.input-search');
 var buttonSearch = document.querySelector('.button-search');
 inputSearch.addEventListener("keydown", function () {
@@ -3204,7 +3207,26 @@ inputSearch.addEventListener("keydown", function () {
 });
 inputSearch.addEventListener("focusout", function () {
   inputSearch.style.width = "10%";
-});
+}); // ----------------------------
+// ACCOUNT
+// --------------------
+
+var accountContent = document.getElementById("accountContent");
+var infoButton = document.getElementById("infoButton");
+var infoContent = document.getElementById("infoContent");
+var workButton = document.getElementById("workButton");
+var workContent = document.getElementById("workContent");
+
+function changeContent(button, content) {
+  button.addEventListener("click", function () {
+    accountContent.remove(content);
+    accountContent.append = content;
+    content.removeAttribute('hidden');
+  });
+}
+
+changeContent(infoButton, infoContent);
+changeContent(workButton, workContent);
 
 /***/ }),
 

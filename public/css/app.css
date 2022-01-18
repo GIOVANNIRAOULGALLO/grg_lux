@@ -11344,7 +11344,11 @@ textarea.form-control-lg {
     justify-content: center;
     text-decoration: none;
 }
-
+.text-area-misure{
+    width: 100%;
+    height: 200px;
+    resize: none;
+}
 
 
 

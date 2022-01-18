@@ -3,7 +3,7 @@
     <section class="container">
         <div class="row justify-content-center text-center">
             <div class="col-12 col-md-6 text-end">
-                <p class="text-secondary">{{$product->category->name ?? 'NULL'}}</p>
+                <p class="text-secondary text-center">Home > {{$product->category->name ?? 'NULL'}} > {{$product->name}}</p>
                 <img src="https://picsum.photos/400" alt="{{$product->name}}">
             </div>
             <div class="col-12 col-md-6 d-flex flex-column justify-content-center text-start">
@@ -11,6 +11,7 @@
                 <h1>{{$product->name}}</h1>
                 <h3>{{$product->description}}</h3>
                 <p>{{$product->price}} €</p>
+                <a href="#" class="btn-grg ms-0">Add to Cart</a>
             </div>
         </div>
         <div class="row justify-content-center text-center my-4">
