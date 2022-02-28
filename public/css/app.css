@@ -11368,6 +11368,10 @@ textarea.form-control-lg {
     justify-content: center;
    
 }
+
+.heart-button{
+    border: 1px solid black;
+}
 @media screen and (max-width:425px) {
     #inputSearch{
         display: none;

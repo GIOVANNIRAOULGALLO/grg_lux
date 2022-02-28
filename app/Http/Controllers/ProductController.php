@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Brand;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -101,4 +104,40 @@ class ProductController extends Controller
         $product->delete();
         return redirect(route('homepage'));
     }
+
+    public function viewCart(){
+        $products=Product::where('buy',true)->get();
+        return view('cart',compact('products'));
+    }
+
+    public function addToCart(Product $product){
+        if($product->buy == 1){
+            return redirect(route('product.show',compact('product')))->with('message','Questo articolo è gia nel carrello!');
+        }
+        else{
+            $product->update(['buy'=> 1 ]);
+            return redirect(route('product.show',compact('product')));
+        }
+       
+    }
+    
+    public function removeToCart(Product $product){
+        $product->update(['buy'=> 0 ]);
+        return redirect(route('cart'));
+    }
+
+    public function addLoved(Product $product){
+        if(Auth::user()){
+            $user=Auth::user()->id;
+            $product->users()->attach($user); 
+        }
+       
+        return redirect(route('product.show',compact('product')));
+    }
+
+    public function viewBySex($sex){
+        $products=Product::where('sex',$sex)->get();
+        return view('product.viewby',compact('products','sex'));
+    }
+
 }

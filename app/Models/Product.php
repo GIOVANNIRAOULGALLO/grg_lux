@@ -12,7 +12,7 @@ class Product extends Model
 {
     use Searchable;
     use HasFactory;
-    protected $fillable=['name','description','price','sex','category_id','brand_id'];
+    protected $fillable=['name','description','price','sex','category_id','brand_id','buy'];
 
     public function toSearchableArray()
     {
@@ -30,6 +30,9 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }public function brand(){
         return $this->belongsTo(Brand::class);
+    }
+    public function users(){
+        return $this->belongsToMany(User::class);
     }
      
 }

@@ -11,7 +11,28 @@
                 <h1>{{$product->name}}</h1>
                 <h3>{{$product->description}}</h3>
                 <p>{{$product->price}} €</p>
-                <a href="#" class="btn-grg ms-0">Add to Cart</a>
+                <div class="row justify-content-start align-items-center">
+                    <div class="col-4 text-center">
+                        <form method="POST" action="{{route('addToCart',compact('product'))}}">
+                            @csrf
+                            <button type ="submit" class="btn-grg my-2 ms-0">Add to cart</button>
+                        </form>
+                    </div>
+                    <div class="col-4 text-start">
+                        @if($product->users(Auth::user()->id))
+                        <form action="{{route('addLoved',compact('product'))}}" method="POST">
+                            @csrf
+                            <button type="submit" class="border-0"><i class="fa-solid fa-heart text-danger"></i></button>
+                        </form>
+                        @else
+                        <form action="{{route('addLoved',compact('product'))}}" method="POST">
+                            @csrf
+                            <button type="submit" class="border-0"><i class="fa-solid fa-heart text-dark"></i></button>
+                        </form>
+                        @endif
+                    </div>
+                </div>
+                
             </div>
         </div>
         <div class="row justify-content-center text-center my-4">
@@ -24,6 +45,7 @@
                     @method('delete')
                     <button type="submit" class="btn btn-danger"> DELETE</button>
                 </form>
+               
             </div>
         </div>
     </section>
