@@ -26,8 +26,8 @@ let infoContent=document.getElementById("infoContent");
 let workButton=document.getElementById("workButton");
 let workContent=document.getElementById("workContent");
 
-function changeContent(button,content){
-    button.addEventListener("click",function(){
+function changeContent(infoButton,content){
+   infoButton.addEventListener("click",function(){
         accountContent.remove(content);
         accountContent.append=content;
         content.removeAttribute('hidden');

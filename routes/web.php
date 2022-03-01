@@ -25,7 +25,7 @@ Route::post('/update/{product}',[ProductController::class,'update'])->name('prod
 Route::delete('/destroy/{product}',[ProductController::class,'destroy'])->name('product.destroy');
 Route::get('/search',[ProductController::class,'search'])->name('product.search');
 Route::get('/account/{user}',[AccountController::class,'display'])->name('account.display');
-Route::get('/cart',[ProductController::class,'viewCart'])->name('viewCart');
+Route::get('/{userName}{userSurname}/carrello',[ProductController::class,'viewCart'])->name('viewCart');
 Route::post('/addToCart/{product}',[ProductController::class,'addToCart'])->name('addToCart');
 Route::post('/removeToCart/{product}',[ProductController::class,'removeToCart'])->name('removeToCart');
 Route::post('/addLoved/{product}',[ProductController::class,'addLoved'])->name('addLoved');

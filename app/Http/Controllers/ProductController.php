@@ -107,7 +107,7 @@ class ProductController extends Controller
 
     public function viewCart(){
         $products=Product::where('buy',true)->get();
-        return view('cart',compact('products'));
+        return view('carrello',compact('products'));
     }
 
     public function addToCart(Product $product){
