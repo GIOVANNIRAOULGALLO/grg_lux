@@ -123,8 +123,10 @@ class ProductController extends Controller
     }
     
     public function removeToCart(Product $product){
-        $product->update(['buy'=> 0 ]);
-        return redirect(route('carrello'));
+        $product->update(['buy' => 0 ]);
+        $name=Auth::user()->name;
+        $surname=Auth::user()->surname;
+        return redirect(route('viewCart',['userName'=>'name','userSurname'=>'surname']));
     }
 
     public function addLoved(Product $product){

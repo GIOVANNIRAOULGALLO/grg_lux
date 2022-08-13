@@ -16,7 +16,11 @@
                         <div class="row  justify-content-center flex-wrap flex-grow-2">
                             <div class="col-md-4">
                                 <a href="{{route('product.show',compact('product'))}}"><img src="https://picsum.photos/50" class="img-fluid my-2" alt="{{$product->name}}"></a>
-                                <a href="{{route('removeToCart',compact('product'))}}"><i class="fa-solid fa-trash"></i></a>
+                                <form action="{{route('removeToCart',compact('product'))}}" method="post">
+                                    @csrf
+                                    @method('post')
+                                    <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                </form>
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
