@@ -113,11 +113,11 @@ class ProductController extends Controller
 
     public function addToCart(Product $product){
         if($product->buy == 1){
-            return redirect(route('product.show',compact('product')))->with('message','Questo articolo è gia nel carrello!');
+            return redirect(route('product.show',compact('product')))->with('message','Articolo aggiunto al carrello!');
         }
         else{
             $product->update(['buy'=> 1 ]);
-            return redirect(route('product.show',compact('product')));
+            return redirect(route('product.show',compact('product')))->with('message','Articolo aggiunto al carrello!');
         }
        
     }

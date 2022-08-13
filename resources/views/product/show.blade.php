@@ -1,5 +1,16 @@
 <x-layout>
     <x-slot name="title">Dettagli di {{$product->name}}</x-slot>
+    <section class="container-fluid">
+    <div class="row justify-content-center text-center my-2">
+                <div class="col-12">
+                    @if (session('message'))
+                        <div class="alert alert-success mx-0">
+                            {{ session('message') }}
+                        </div>
+                    @endif
+                </div>
+        </div>
+    </section>
     <section class="container">
         <div class="row justify-content-center text-center">
             <div class="col-12 col-md-6 text-end">
