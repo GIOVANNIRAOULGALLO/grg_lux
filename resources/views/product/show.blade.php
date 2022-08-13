@@ -1,7 +1,13 @@
 <x-layout>
     <x-slot name="title">Dettagli di {{$product->name}}</x-slot>
     <section class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <p class="text-secondary fs-5">Home > {{$product->category->name ?? 'NULL'}} > {{$product->name}}</p>
+        </div>
+    </div>
     <div class="row justify-content-center text-center my-2">
+        
                 <div class="col-12">
                     @if (session('message'))
                         <div class="alert alert-success mx-0">
@@ -14,11 +20,10 @@
     <section class="container">
         <div class="row justify-content-center text-center">
             <div class="col-12 col-md-6 text-end">
-                <p class="text-secondary text-center">Home > {{$product->category->name ?? 'NULL'}} > {{$product->name}}</p>
                 <img src="https://picsum.photos/400" alt="{{$product->name}}">
             </div>
             <div class="col-12 col-md-6 d-flex flex-column justify-content-center text-start">
-                <p class="text-secondary">{{$product->brand->name ?? 'NULL'}}</p>
+                <p class="card-text fw-bold fs-5">{{$product->brand->name ?? 'NULL'}}</p>
                 <h1>{{$product->name}}</h1>
                 <h3>{{$product->description}}</h3>
                 <p>{{$product->price}} €</p>

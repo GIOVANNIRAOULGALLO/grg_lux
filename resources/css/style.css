@@ -93,5 +93,6 @@
 .grg-footer{
     width: 100%;
     margin:0;
-    
+    /* position: sticky;
+    bottom:0;  */
 }

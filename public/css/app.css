@@ -11376,7 +11376,8 @@ textarea.form-control-lg {
 .grg-footer{
     width: 100%;
     margin:0;
-    
+    /* position: sticky;
+    bottom:0;  */
 }
 @media screen and (max-width:425px) {
     #inputSearch{

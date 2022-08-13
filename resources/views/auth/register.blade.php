@@ -1,12 +1,12 @@
 <x-layout>
     <x-slot name="title">Register</x-slot>
-    <section class="container">
+    <section class="container my-5">
         <div class="row justify-content-center text-center">
             <div class="col-12">
                 <h1>Register</h1>
             </div>
         </div>
-        <div class="row justify-content-center text-center">
+        <div class="row justify-content-center text-center my-5 pb-5">
             <div class="col-12 col-md-8">
                 <form method="POST" action="{{route('register')}}">
                     @csrf
@@ -23,6 +23,10 @@
                         <label for="exampleInputEmail1" class="form-label">Email </label>
                         <input type="email" class="form-control" id="exampleInputEmail1" name="email">
 
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputTelephone1" class="form-label">Phone </label>
+                        <input type="number" class="form-control" id="exampleInputTelephone1" name="telephone">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>

@@ -34,7 +34,7 @@
         <div class="row justify-content-center" id="accountContent">
 
         </div>
-        <div class="row justify-content-center" id="infoContent" hidden>
+        <div class="row justify-content-center my-5" id="infoContent" hidden>
             <div class="col-12 col-md-6">
                 <p>Name: {{Auth::user()->name}}</p>
                 <p>Surname: {{Auth::user()->surname}}</p>
