@@ -6,7 +6,7 @@
                 <h1>Create</h1>
             </div>
         </div>
-        <div class="row justify-content-center text-center">
+        <div class="row justify-content-center text-center my-5 pb-5">
             <div class="col-12 col-md-6">
                 <form method="POST" action="{{route('product.store')}}">
                     @csrf

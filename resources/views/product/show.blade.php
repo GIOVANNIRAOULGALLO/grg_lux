@@ -1,21 +1,24 @@
 <x-layout>
     <x-slot name="title">Dettagli di {{$product->name}}</x-slot>
     <section class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <p class="text-secondary fs-5">Home > {{$product->category->name ?? 'NULL'}} > {{$product->name}}</p>
-        </div>
-    </div>
-    <div class="row justify-content-center text-center my-2">
+        <div class="row justify-content-center text-center">
         
-                <div class="col-12">
-                    @if (session('message'))
-                        <div class="alert alert-success mx-0">
-                            {{ session('message') }}
-                        </div>
-                    @endif
+            <div class="col-12 mx-0 px-0">
+            @if (session('message'))
+                <div x-data="{show: true}" x-init="setTimeout(() => show = false, 2000)" x-show="show">
+                    <div class="messagebuy">
+                        {{ session('message') }}
+                    </div>
                 </div>
+            @endif
+            </div>
         </div>
+        <div class="row">
+            <div class="col-12">
+                <p class="text-secondary fs-5">Home > {{$product->category->name ?? 'NULL'}} > {{$product->name}}</p>
+            </div>
+        </div>
+    
     </section>
     <section class="container">
         <div class="row justify-content-center text-center">

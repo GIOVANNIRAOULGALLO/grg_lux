@@ -126,7 +126,7 @@ class ProductController extends Controller
         $product->update(['buy' => 0 ]);
         $name=Auth::user()->name;
         $surname=Auth::user()->surname;
-        return redirect(route('viewCart',['userName'=>'name','userSurname'=>'surname']));
+        return redirect(route('viewCart',['userName'=>'name','userSurname'=>'surname']))->with('message','Articolo rimosso dal carrello');
     }
 
     public function addLoved(Product $product){

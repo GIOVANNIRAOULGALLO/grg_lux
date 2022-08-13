@@ -31,18 +31,14 @@
                <a href="" class="btn-grg my-1 ">WishList</a>  
              </div>
         </div>
-        <div class="row justify-content-center" id="accountContent">
-
-        </div>
-        <div class="row justify-content-center my-5" id="infoContent" hidden>
-            <div class="col-12 col-md-6">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6" id="infoContent" hidden>
                 <p>Name: {{Auth::user()->name}}</p>
                 <p>Surname: {{Auth::user()->surname}}</p>
+                <p>Phone: {{Auth::user()->telephone}}</p>
                 <p>E-mail: {{Auth::user()->email}}</p>
             </div>
-        </div>
-        <div class="row justify-content-center" id="workContent" hidden>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 text-center" id="workContent" hidden>
                 <p>WOOOOOEK: {{Auth::user()->name}}</p>
                 <p>Surname: {{Auth::user()->surname}}</p>
                 <p>E-mail: {{Auth::user()->email}}</p>

@@ -1,11 +1,24 @@
 <x-layout>
-    <x-slot name="title">Homepage</x-slot>
-    <section class="container">
+    <x-slot name="title">Carrello</x-slot>
+    <section class="container-fluid">
+        <div class="row justify-content-center text-center">
+            <div class="col-12 mx-0 px-0">
+            @if (session('message'))
+                <div x-data="{show: true}" x-init="setTimeout(() => show = false, 3000)" x-show="show">
+                    <div class="messagesell">
+                        {{ session('message') }}
+                    </div>
+                </div>
+            @endif
+            </div>
+        </div>
+       
         <div class="row justify-content-center text-center my-2">
             <div class="col-12">
                 <h1 class="my-3">CARRELLO</h1>
             </div>
         </div>
+        @if(\App\Models\Product::where('buy',1)->count()>0)
         <div class="row  justify-content-center  my-2">
             @php($count=0)
             
@@ -38,5 +51,14 @@
                 <h3>Totale: {{$count}} $</h3>
             </div>
         </div>
+        @else
+            <div class="row justifycontent-center">
+                <div class="col-12 text-center">
+                    <h3>Nessun Prodotto</h3>
+                </div>
+            </div>
+
+        @endif
+
     </section>
 </x-layout>

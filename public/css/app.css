@@ -11379,6 +11379,25 @@ textarea.form-control-lg {
     /* position: sticky;
     bottom:0;  */
 }
+
+.messagebuy{
+    background-color: gold;
+    color: black;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.messagesell{
+    background-color: rgba(205, 108, 108, 0.537);
+    color: black;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 @media screen and (max-width:425px) {
     #inputSearch{
         display: none;
