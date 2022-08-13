@@ -3217,8 +3217,8 @@ var infoContent = document.getElementById("infoContent");
 var workButton = document.getElementById("workButton");
 var workContent = document.getElementById("workContent");
 
-function changeContent(button, content) {
-  button.addEventListener("click", function () {
+function changeContent(infoButton, content) {
+  infoButton.addEventListener("click", function () {
     accountContent.remove(content);
     accountContent.append = content;
     content.removeAttribute('hidden');

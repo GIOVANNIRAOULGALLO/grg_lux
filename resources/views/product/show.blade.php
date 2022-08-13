@@ -18,19 +18,7 @@
                             <button type ="submit" class="btn-grg my-2 ms-0">Add to cart</button>
                         </form>
                     </div>
-                    <div class="col-4 text-start">
-                        @if($product->users(Auth::user()->id))
-                        <form action="{{route('addLoved',compact('product'))}}" method="POST">
-                            @csrf
-                            <button type="submit" class="border-0"><i class="fa-solid fa-heart text-danger"></i></button>
-                        </form>
-                        @else
-                        <form action="{{route('addLoved',compact('product'))}}" method="POST">
-                            @csrf
-                            <button type="submit" class="border-0"><i class="fa-solid fa-heart text-dark"></i></button>
-                        </form>
-                        @endif
-                    </div>
+                   
                 </div>
                 
             </div>

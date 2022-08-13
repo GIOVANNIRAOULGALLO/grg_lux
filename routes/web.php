@@ -29,4 +29,5 @@ Route::get('/{userName}{userSurname}/carrello',[ProductController::class,'viewCa
 Route::post('/addToCart/{product}',[ProductController::class,'addToCart'])->name('addToCart');
 Route::post('/removeToCart/{product}',[ProductController::class,'removeToCart'])->name('removeToCart');
 Route::post('/addLoved/{product}',[ProductController::class,'addLoved'])->name('addLoved');
+Route::delete('/trash/{product}',[ProductController::class,'trash'])->name('product.trash');
 

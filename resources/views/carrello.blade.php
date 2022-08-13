@@ -6,16 +6,17 @@
                 <h1 class="my-3">CARRELLO</h1>
             </div>
         </div>
-        <div class="row  justify-content-center  align-items-center my-2">
+        <div class="row  justify-content-center  my-2">
             @php($count=0)
             
-            <div class="col-12 col-md-6 me-0">
+            <div class="col-12 col-md-6 d-flex flex-row flex-wrap justify-content-end">
                 
                 @foreach ($products as $product)
-                    <div class="card mb-3 text-center">
-                        <div class="row  justify-content-center">
+                    <div class="card mb-3 mx-3 text-center" style="height: 140px;width:200px">
+                        <div class="row  justify-content-center flex-wrap flex-grow-2">
                             <div class="col-md-4">
-                                <a href="{{route('product.show',compact('product'))}}"><img src="https://picsum.photos/100" class="img-fluid my-2" alt="{{$product->name}}"></a>
+                                <a href="{{route('product.show',compact('product'))}}"><img src="https://picsum.photos/50" class="img-fluid my-2" alt="{{$product->name}}"></a>
+                                <a href="{{route('removeToCart',compact('product'))}}"><i class="fa-solid fa-trash"></i></a>
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -29,7 +30,7 @@
                     @php($count+=$product->price)
                 @endforeach
             </div>
-            <div class="col-12 col-md-6 text-center">
+            <div class="col-12 col-md-6 text-start">
                 <h3>Totale: {{$count}} $</h3>
             </div>
         </div>

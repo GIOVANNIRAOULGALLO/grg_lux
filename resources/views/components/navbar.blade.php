@@ -49,14 +49,17 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center text-md">
         <li class="nav-item">
-          <a href="{{route('viewBySex',[$sex ='UOMO'])}}" class="nav-link">MEN</a>
+          <a href="{{route('viewBySex',[$sex ='UOMO'])}}" class="nav-link principal-link">MEN</a>
         </li>
 
         <li class="nav-item">
-          <a href="{{route('viewBySex',[$sex = 'DONNA'])}}" class="nav-link">WOMAN</a>
+          <a href="{{route('viewBySex',[$sex = 'DONNA'])}}" class="nav-link principal-link">WOMAN</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">BRANDS</a>
+          <a href="#" class="nav-link principal-link">HOUSE</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link principal-link">BRANDS</a>
         </li>
       </ul>
     </div>

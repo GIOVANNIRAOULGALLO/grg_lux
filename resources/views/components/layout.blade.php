@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <title>{{$title}}</title>
   </head>
-  <body>
+  <body class="min-vh-100">
         <x-navbar/>
         {{$slot}}
+        <x-footer/>
     <script src="{{asset('js/app.js')}}"></script>
   </body>
 </html>

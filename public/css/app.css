@@ -11303,27 +11303,19 @@ textarea.form-control-lg {
 .input-search{
     width: 10%;
 }
-/* .navbar-grg{
-    position: relative;
-    background: black;
-    border-bottom: 1px solid darkgrey;
-}
-.navbar-grg .navbar-brand{
-    position: relative;
-    transform: translateX(-50%); 
-    left: 50%;
-    color: white;
-    font-size: 40px;    
-}
-.navbar-grg .authenticate-dropdown{
-     position: relative;
-    transform: translateX(-50%);
-    left: 50%;
-} */
-.navbar-grg .navbar-brand:hover{
+
+.brand-grg:hover{
    color: white;
    
 }
+.principal-link:hover{
+    color: black;
+    background-color: gold;
+    border-radius: 5px;
+    transform: scale(0.85);
+    transition: 0.2s;
+}
+
 
 .navbar-grg .nav-link{
     color:white;
@@ -11371,6 +11363,20 @@ textarea.form-control-lg {
 
 .heart-button{
     border: 1px solid black;
+}
+
+.insert-button:hover{
+    transform: scale(0.8);
+    transition: 0.4s;
+
+}
+
+/* footer */
+
+.grg-footer{
+    width: 100%;
+    margin:0;
+    
 }
 @media screen and (max-width:425px) {
     #inputSearch{

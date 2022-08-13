@@ -11,7 +11,7 @@
                 @endif
             </div>
         </div>
-        <div class="row justify-content-center text-center">
+        <div class="row justify-content-center text-center align-items-center mt-4">
             <div class="col-12  d-flex flex-row flex-grow-5 flex-wrap justify-content-evenly align-items-center">
                 @foreach ($products as $product)
                 <div class="card mx-3 my-3" style="width: 220px">

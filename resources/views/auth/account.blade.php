@@ -2,7 +2,7 @@
     <x-slot name="title">Account di {{Auth::user()->name}}</x-slot>
     <section class="container">
         <div class="row justify-content-center text-center my-5">
-            <div class="col-12">
+            <div class="col-12 text-center">
                 @if (Auth::user()->profile_picture)
                     <img src="{{Storage::url(Auth::user()->profile_picture)}}" alt="{{Auth::user()->name}}" class="img-fluid rounded-circle">
                     <div class="add-image">+</div>
@@ -11,7 +11,10 @@
                     <div class="add-image"><p class="my-1">+</p></div>
                 @endif
                 <h1>{{Auth::user()->name}} {{Auth::user()->surname}} </h1>
-                <h3><a href="{{route('product.create')}}">Inserisci Annuncio</a></h3>
+                <div class="border border-dark w-25 mx-auto d-flex align-items-center justify-content-center my-2 insert-button">
+                    <h3><a href="{{route('product.create')}}" class="link-no-decoration my-auto text-black">Inserisci Annuncio</a></h3>
+                </div>
+              
             </div>
         </div>
         <div class="row justify-content-center text-center my-5">

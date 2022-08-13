@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Brand;
 use App\Models\Product;
 use App\Models\Category;
+use GuzzleHttp\Handler\Proxy;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
@@ -123,7 +124,7 @@ class ProductController extends Controller
     
     public function removeToCart(Product $product){
         $product->update(['buy'=> 0 ]);
-        return redirect(route('cart'));
+        return redirect(route('carrello'));
     }
 
     public function addLoved(Product $product){
@@ -139,5 +140,6 @@ class ProductController extends Controller
         $products=Product::where('sex',$sex)->get();
         return view('product.viewby',compact('products','sex'));
     }
+
 
 }
