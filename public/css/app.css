@@ -11410,10 +11410,26 @@ textarea.form-control-lg {
     align-items: center;
     justify-content: center;
     padding-top: 7.5px;
-    padding-right: 2px;
     bottom: 12px;
     left: 15px;
     border: 1px solid black;
+}
+.text-brand{
+    font-size: 16px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.btn-add{
+    position: relative;
+    /* width: 100%; */
+    background-color: gold;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 50px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media screen and (max-width:425px) {
     #inputSearch{

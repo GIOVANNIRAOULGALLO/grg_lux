@@ -26,7 +26,7 @@ class ProductController extends Controller
     public function search(Request $req){
         $q=$req->q;
         $products=Product::search($q)->get();
-        return view('product.results',compact('products','q'));
+        return view('results',compact('products','q'));
     }
     /**
      * Show the form for creating a new resource.
