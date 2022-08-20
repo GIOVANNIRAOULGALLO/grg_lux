@@ -33,7 +33,7 @@
         <button class="btn button-search " type="submit" id="buttonSearch"> <i class="fa-solid fa-magnifying-glass text-white ms-auto"></i></button>
         </form>
         <div class="d-flex mx-4 ">
-          <a href="{{route('viewCart',['userName'=> Auth::user()->name ?? 'user','userSurname'=> Auth::user()->surname ?? 'user'])}}" class="d-flex flex-column justify-content-center position-relative link-no-decoration"> <i class="fa-solid fa-cart-shopping text-light position-relative fa-2x" >  </i><span class="position-absolute top-0 start-100 d-flex justify-content-center align-items-center  mx-auto translate-middle badge rounded-circle bg-danger pt-2">
+          <a href="{{route('viewCart',['userName'=>Auth::user()->name ?? 'user','userSurname'=>Auth::user()->surname ?? 'user'])}}" class="d-flex flex-column justify-content-center position-relative link-no-decoration"> <i class="fa-solid fa-cart-shopping text-light position-relative" >  </i><span class="circle-counter">
             {{\App\Models\Product::where('buy',1)->count()}}
            </span></a>
         </div>

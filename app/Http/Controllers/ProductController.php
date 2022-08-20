@@ -124,8 +124,8 @@ class ProductController extends Controller
     
     public function removeToCart(Product $product){
         $product->update(['buy' => 0 ]);
-        $name=Auth::user()->name;
-        $surname=Auth::user()->surname;
+        $name=Auth::user()->name ?? '';
+        $surname=Auth::user()->surname ?? '';
         return redirect(route('viewCart',['userName'=>'name','userSurname'=>'surname']))->with('message','Articolo rimosso dal carrello');
     }
 
