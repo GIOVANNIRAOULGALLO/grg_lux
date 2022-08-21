@@ -19,14 +19,14 @@
             </div>
         </div>
         @if(\App\Models\Product::where('buy',1)->count()>0)
-        <div class="row  justify-content-center align-items-center  my-2">
+        <div class="row  justify-content-center align-items-center text-center my-2">
             @php($count=0)
             
-            <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+            <div class="col-12 d-flex flex-column justify-content-center text-center">
                 
                 @foreach ($products as $product)
                    
-                                <div class="card mb-3 mx-3 text-center d-flex flex-row justify-content-center align-items-center" style="height:200px;width:50%">
+                                <div class="card mb-3 text-center d-flex flex-row justify-content-center align-items-center" style="height:100px;width:300px;font-size:12px">
                                     <a href="{{route('product.show',compact('product'))}}"><img src="https://picsum.photos/50" class="img-fluid my-2 mx-3" alt="{{$product->name}}"></a>
                                     <div class="card-body my-auto">
                                         <h5 class="card-title text-secondary">{{$product->brand->name}}</h5>
@@ -41,10 +41,10 @@
                                 </div>
                     @php($count+=$product->price)
                 @endforeach
-            </div>
-            <div class="col-12 col-md-6 text-start d-flex align-items-center">
                 <h3>Totale: {{$count}} $</h3>
+                <a href="{{route('stripe',compact('count'))}}"><button class="btn btn-success">PAGA</button></a>
             </div>
+               
         </div>
         @else
             <div class="row justifycontent-center">

@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
     
 use Stripe;
 use Session;
+use Stripe\Charge;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Stripe\Charge;
     
 class StripeController extends Controller
 {
@@ -17,7 +18,13 @@ class StripeController extends Controller
      */
     public function stripe()
     {
-        return view('stripe');
+        $products=Product::where('buy',true)->get();
+        $count=0;
+        foreach($products as $product){ 
+            $count+=$product->price;
+        }
+        
+        return view('stripe',compact('count'));
     }
    
     /**
@@ -27,9 +34,14 @@ class StripeController extends Controller
      */
     public function stripePost(Request $request)
     {
+        $products=Product::where('buy',true)->get();
+        $count=0;
+        foreach($products as $product){ 
+            $count+=$product->price;
+        }
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         Stripe\Charge::create ([
-                "amount" => 100 * 100,
+                "amount" => $count,
                 "currency" => "usd",
                 "source" => $request->stripeToken,
                 "description" => "This payment is tested purpose phpcodingstuff.com"

@@ -21,7 +21,7 @@ Route::get('/create',[ProductController::class,'create'])->name('product.create'
 Route::post('/store',[ProductController::class,'store'])->name('product.store');
 Route::get('/show/{product}',[ProductController::class,'show'])->name('product.show');
 Route::get('/edit/{product}',[ProductController::class,'edit'])->name('product.edit');
-Route::get('/stripe', [StripeController::class, 'stripe']);
+Route::get('/stripe', [StripeController::class, 'stripe'])->name('stripe');
 Route::get('/{sex}',[ProductController::class,'viewBySex'])->name('viewBySex');
 
 Route::post('/stripepost', [StripeController::class, 'stripePost'])->name('stripe.post');
