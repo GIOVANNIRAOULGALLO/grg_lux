@@ -18,7 +18,6 @@
                       <p class="text-secondary">{{$product->brand->name ?? 'NULL'}}</p>
                       <p class="card-text"> € {{$product->price}}</p>
                     </div>
-                    <a href="#" class="btn-grg my-2">Add to cart</a>
                   </div>
                 @endforeach
             </div>

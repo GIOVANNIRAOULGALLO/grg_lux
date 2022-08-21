@@ -11419,6 +11419,9 @@ textarea.form-control-lg {
     font-weight: bolder;
     text-transform: uppercase;
 }
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/* BUTTONS */
+/* -------------------------------------------------------------------------------------------------------------------------------- */
 .btn-add{
     position: relative;
     /* width: 100%; */
@@ -11431,6 +11434,21 @@ textarea.form-control-lg {
     justify-content: center;
     align-items: center;
 }
+.btn-pay{
+    margin-bottom: 50px;
+    position: relative;
+    background-color: gold;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 50px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ------------------------------------------------------------------------------------------------------------- */
+/* STRIPE PAY */
+/* ---------------------------------------------------------------------------------------------------- */
 .panel-title {
     display: inline;
     font-weight: bold;
@@ -11445,6 +11463,23 @@ textarea.form-control-lg {
     display: table-cell;
     vertical-align: middle;
     width: 61%;
+    }
+
+    /* CART */
+
+    .cart-card{
+        display: flex;
+        justify-content: space-around;
+        margin:auto;
+        height:150px;
+        width:600px;
+        border-color: gold;
+        border-style: outset;
+        padding-inline: 100px;
+        align-items: center;
+        flex-flow: row;
+        text-align: center;
+        
     }
 @media screen and (max-width:425px) {
     #inputSearch{

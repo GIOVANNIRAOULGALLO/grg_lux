@@ -22,12 +22,11 @@ Route::post('/store',[ProductController::class,'store'])->name('product.store');
 Route::get('/show/{product}',[ProductController::class,'show'])->name('product.show');
 Route::get('/edit/{product}',[ProductController::class,'edit'])->name('product.edit');
 Route::get('/stripe', [StripeController::class, 'stripe'])->name('stripe');
+Route::get('/search',[ProductController::class,'search'])->name('product.search');
 Route::get('/{sex}',[ProductController::class,'viewBySex'])->name('viewBySex');
-
 Route::post('/stripepost', [StripeController::class, 'stripePost'])->name('stripe.post');
 Route::post('/update/{product}',[ProductController::class,'update'])->name('product.update');
 Route::delete('/destroy/{product}',[ProductController::class,'destroy'])->name('product.destroy');
-Route::get('/search',[ProductController::class,'search'])->name('product.search');
 Route::get('/account/{user}',[AccountController::class,'display'])->name('account.display');
 Route::get('/carrello/{userName}{userSurname}',[ProductController::class,'viewCart'])->name('viewCart');
 Route::post('/addToCart/{product}',[ProductController::class,'addToCart'])->name('addToCart');

@@ -1,22 +1,25 @@
 <x-layout>
     <x-slot name="title">CHECKOUT</x-slot>
+    <!-- STRIPE EXAMPLE CREDENTIAL
+    Card No: 4242424242424242
+    Month: any future month
+    Year: any future Year
+    CVV: 123 -->
     <div class="container">
-         <h1>Stripe Payment Page - HackTheStuff</h1>
-         <div class="row">
+        
+         <div class="row justify-content-center">
+            <h1 class="text-center">Checkout</h1>
             <div class="col-md-6 col-md-offset-3">
                <div class="panel panel-default credit-card-box">
                   <div class="panel-heading display-table" >
                      <div class="row display-tr" >
-                        <h3 class="panel-title display-td" >Payment Details</h3>
-                        <div class="display-td" >                            
-                           <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
-                        </div>
+                        <h6 class="panel-title display-td" >Inserisci i dati della tua carta</h6>
+                  
                      </div>
                   </div>
                   <div class="panel-body">
                      @if (Session::has('success'))
                      <div class="alert alert-success text-center">
-                        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
                         <p>{{ Session::get('success') }}</p>
                      </div>
                      @endif
@@ -78,7 +81,7 @@
          </div>
       </div>
    </body>
-   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+   
    <script type="text/javascript">
       $(function() {
     var $form = $(".require-validation");
