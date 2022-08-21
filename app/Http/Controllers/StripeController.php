@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
     
 use Stripe;
 use Session;
-use Stripe\Charge;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Stripe\Charge;
     
 class StripeController extends Controller
 {
