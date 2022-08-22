@@ -20,7 +20,7 @@
         </div>
     
     </section>
-    <section class="container">
+    <section class="container vh-100">
         <div class="row justify-content-center text-center">
             <div class="col-12 col-md-6 text-end">
                 <img src="https://picsum.photos/400" alt="{{$product->name}}">

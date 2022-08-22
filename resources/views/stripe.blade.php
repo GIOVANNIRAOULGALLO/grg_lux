@@ -5,19 +5,19 @@
     Month: any future month
     Year: any future Year
     CVV: 123 -->
-    <div class="container-fluid">
-         <div class="row justify-content-center">
+    <div class="container-fluid vh-100">
+         <div class="row justify-content-center ">
             <div class="col-12">
-               <h1 class="text-center">Checkout</h1>
+               <h1 class="text-center mt-4">Checkout</h1>
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center align-items-center">
                <div class="col-6">
                  <p class="fs-4">
                      Indirizzo di spedizione:
                   </p> 
                   <p> {{$adresses->last()->city}}, via {{$adresses->last()->road}}, n° {{$adresses->last()->number}} <br>CAP {{$adresses->last()->cap}}</p>
                </div>
-               <div class="col-6">
+               <div class="col-6 mt-5">
                <div class="panel panel-default credit-card-box">
                   <div class="panel-heading display-table" >
                      <div class="row">

@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot name="title">Ship Information</x-slot>
-    <section class="container">
+    <section class="container vh-100">
         <div class="row justify-content-center text-center my-2">
             <div class="col-12">
                 @if (session('message'))

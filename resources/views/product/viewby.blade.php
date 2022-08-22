@@ -2,7 +2,7 @@
     <x-slot name="title">{{$sex}}</x-slot>
     <section class="container my-5">
         <div class="row justify-content-center text-center">
-            <div class="col-12 my-2">
+            <div class="col-12">
                 <h1>{{$sex}}</h1>
                 @if($sex == 'UOMO')
                     <div class="justify-content-center">
@@ -22,7 +22,7 @@
         <div class="row justify-content-center text-center mb-5 pb-5">
             <div class="col-12  d-flex flex-row flex-grow-5 flex-wrap justify-content-evenly">
                 @foreach ($products as $product)
-                <div class="card mx-3 my-3" style="width: 220px;border: 2px solid gray">
+                <div class="card mx-3 my-3" style="width: 200px;">
                     <a href="{{route('product.show',compact('product'))}}">
                         <img src="https://picsum.photos/200" class="card-img-top mx-auto img-fluid" alt="{{$product->name}}">
                     </a>
@@ -33,7 +33,10 @@
                     </div>
                   </div>
                 @endforeach
+                
             </div>
+            
         </div>
+        
     </section>
 </x-layout>

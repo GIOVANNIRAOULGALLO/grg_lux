@@ -1,4 +1,4 @@
-<footer class="row bg-black fixed-bottom grg-footer text-center">
+<footer class="row bg-black sticky-bottom grg-footer text-center">
     <div class="col-4 d-flex flex-column my-2">
         <a href="#" class="link-no-decoration text-white">About Us</a>
         <a href="#" class="link-no-decoration text-white">Contact</a>

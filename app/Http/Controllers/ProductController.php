@@ -131,7 +131,7 @@ class ProductController extends Controller
         foreach($products as $product){ 
             $count+=$product->price;
         }
-        return view('ordine',compact('product','count'));   
+        return view('ordine',compact('count'));   
     }
     public function addToCart(Product $product){
         if($product->buy == 1){
@@ -162,6 +162,7 @@ class ProductController extends Controller
 
     public function viewBySex($sex){
         $products=Product::where('sex',$sex)->get();
+        
         return view('product.viewby',compact('products','sex'));
     }
 

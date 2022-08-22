@@ -42,6 +42,7 @@ class StripeController extends Controller
         $count=0;
         foreach($products as $product){ 
             $count+=$product->price;
+            $product->update(['buy'=>  0]);
         }
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         Stripe\Charge::create ([
@@ -50,6 +51,7 @@ class StripeController extends Controller
                 "source" => $request->stripeToken,
                 "description" => "This payment is tested purpose phpcodingstuff.com"
         ]);
+        
    
         Session::flash('success', 'Payment successful!');
            
