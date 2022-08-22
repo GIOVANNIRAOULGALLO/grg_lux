@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use Stripe;
 use Session;
 use Stripe\Charge;
+use App\Models\Adress;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
     
 class StripeController extends Controller
 {
@@ -18,13 +21,14 @@ class StripeController extends Controller
      */
     public function stripe()
     {
+        $adresses=Adress::where('user_id',Auth::user()->id)->get();
         $products=Product::where('buy',true)->get();
         $count=0;
         foreach($products as $product){ 
             $count+=$product->price;
         }
         
-        return view('stripe',compact('count'));
+        return view('stripe',compact('count','adresses'));
     }
    
     /**

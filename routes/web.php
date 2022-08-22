@@ -27,6 +27,7 @@ Route::get('/ordine', [ProductController::class, 'ordine'])->name('ordine');
 Route::get('/ship', [ProductController::class, 'ship'])->name('ship');
 Route::get('/{sex}',[ProductController::class,'viewBySex'])->name('viewBySex');
 Route::post('/stripepost', [StripeController::class, 'stripePost'])->name('stripe.post');
+Route::post('/ship/{userName}{userSurname}',[ProductController::class,'insertAdress'])->name('insertAdress');
 Route::post('/update/{product}',[ProductController::class,'update'])->name('product.update');
 Route::delete('/destroy/{product}',[ProductController::class,'destroy'])->name('product.destroy');
 Route::get('/account/{user}',[AccountController::class,'display'])->name('account.display');

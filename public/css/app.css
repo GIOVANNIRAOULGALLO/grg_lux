@@ -11424,9 +11424,8 @@ textarea.form-control-lg {
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 .btn-add{
     position: relative;
-    /* width: 100%; */
     background-color: gold;
-    text-transform: uppercase;
+    text-transform: uppercase; 
     font-weight: bold;
     height: 50px;
     width: 400px;
@@ -11438,10 +11437,28 @@ textarea.form-control-lg {
     margin-bottom: 50px;
     position: relative;
     background-color: gold;
+    border: 1 px solid black;
+    border-radius: 4px;
     text-transform: uppercase;
     font-weight: bold;
     height: 50px;
     width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-pay:hover{
+    transform: scale(1.02);
+    transition: 0.2s;
+    
+}
+.btn-mod{
+    position: relative;
+    background-color: red;
+    text-transform: uppercase; 
+    font-weight: bold;
+    height: 50px;
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11464,17 +11481,18 @@ textarea.form-control-lg {
     vertical-align: middle;
     width: 61%;
     }
-
+    /*-----------------------------------------------------------------------  */
     /* CART */
-
+    /* ------------------------------------------------------------- */
     .cart-card{
         display: flex;
         justify-content: space-around;
         margin:auto;
         height:150px;
         width:600px;
-        border-color: gold;
-        border-style: outset;
+        border-color: gold black;
+        border-style:groove;
+        border-radius: 3px;
         padding-inline: 100px;
         align-items: center;
         flex-flow: row;

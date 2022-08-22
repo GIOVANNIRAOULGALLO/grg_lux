@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Brand;
+use App\Models\Adress;
 use App\Models\Product;
 use App\Models\Category;
-use GuzzleHttp\Handler\Proxy;
 use Illuminate\Http\Request;
 
+use GuzzleHttp\Handler\Proxy;
 use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
@@ -112,6 +113,17 @@ class ProductController extends Controller
     }
     public function ship(){
         return view('ship');
+    }
+    public function insertAdress(Request $req){
+        Adress::create([
+            'city'=>$req->city,
+            'road'=>$req->road,
+            'number'=>$req->number,
+            'cap'=>$req->cap,
+            'state'=>$req->state,
+            'user_id'=>Auth::user()->id
+        ]);
+        return redirect(route('stripe'));
     }
     public function ordine(){
         $products=Product::where('buy',true)->get();

@@ -29,7 +29,6 @@
                     <div class="card-body">
                       <p class="card-text fw-bold text-brand">{{$product->brand->name ?? 'NULL'}}</p>
                       <p class="card-text">{{$product->name}}</p>
-                      <p class="text-secondary">{{$product->description ?? ''}}</p>
                       <p class="card-text"> € {{$product->price}}</p>
                     </div>
                   </div>

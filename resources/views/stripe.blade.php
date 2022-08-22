@@ -5,15 +5,29 @@
     Month: any future month
     Year: any future Year
     CVV: 123 -->
-    <div class="container">
-        
+    <div class="container-fluid">
          <div class="row justify-content-center">
-            <h1 class="text-center">Checkout</h1>
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-12">
+               <h1 class="text-center">Checkout</h1>
+            </div>
+            <div class="row justify-content-center">
+               <div class="col-6">
+                 <p class="fs-4">
+                     Indirizzo di spedizione:
+                  </p> 
+                  <p> {{$adresses->last()->city}}, via {{$adresses->last()->road}}, n° {{$adresses->last()->number}} <br>CAP {{$adresses->last()->cap}}</p>
+               </div>
+               <div class="col-6">
                <div class="panel panel-default credit-card-box">
                   <div class="panel-heading display-table" >
+                     <div class="row">
+                        <div class="col-12">
+                           
+                        </div>
+                     </div>
                      <div class="row display-tr" >
                         <h6 class="panel-title display-td" >Inserisci i dati della tua carta</h6>
+                        
                   
                      </div>
                   </div>
@@ -69,15 +83,17 @@
                               </div>
                            </div>
                         </div>
+                        </div>
                         <div class="row">
                            <div class="col-xs-12">
                               <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now {{$count}} $</button>
                            </div>
-                        </div>
                      </form>
                   </div>
                </div>
             </div>
+            </div>
+        
          </div>
       </div>
    </body>
