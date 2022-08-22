@@ -47,7 +47,7 @@
                 </div>
                 <div class="col-3 d-flex flex-column align-items-center">
                     <p class="fs-4 fw-bold mt-3">Totale: {{$count}} $</p>
-                    <a href="{{route('stripe',compact('count'))}}" class="link-no-decoration"><button class="btn-pay">VAI AL CHECKOUT</button></a>
+                    <a href="{{route('ship',compact('count'))}}" class="link-no-decoration"><button class="btn-pay">VAI AL CHECKOUT</button></a>
                 </div>
             </div>
         @else

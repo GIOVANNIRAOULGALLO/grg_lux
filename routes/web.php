@@ -23,6 +23,8 @@ Route::get('/show/{product}',[ProductController::class,'show'])->name('product.s
 Route::get('/edit/{product}',[ProductController::class,'edit'])->name('product.edit');
 Route::get('/stripe', [StripeController::class, 'stripe'])->name('stripe');
 Route::get('/search',[ProductController::class,'search'])->name('product.search');
+Route::get('/ordine', [ProductController::class, 'ordine'])->name('ordine');
+Route::get('/ship', [ProductController::class, 'ship'])->name('ship');
 Route::get('/{sex}',[ProductController::class,'viewBySex'])->name('viewBySex');
 Route::post('/stripepost', [StripeController::class, 'stripePost'])->name('stripe.post');
 Route::post('/update/{product}',[ProductController::class,'update'])->name('product.update');

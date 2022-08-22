@@ -49,6 +49,6 @@ class StripeController extends Controller
    
         Session::flash('success', 'Payment successful!');
            
-        return back();
+        return redirect(route('ordine'));
     }
 }

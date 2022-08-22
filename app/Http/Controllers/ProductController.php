@@ -110,7 +110,17 @@ class ProductController extends Controller
         $products=Product::where('buy',true)->get();
         return view('carrello',compact('products'));
     }
-
+    public function ship(){
+        return view('ship');
+    }
+    public function ordine(){
+        $products=Product::where('buy',true)->get();
+        $count=0;
+        foreach($products as $product){ 
+            $count+=$product->price;
+        }
+        return view('ordine',compact('product','count'));   
+    }
     public function addToCart(Product $product){
         if($product->buy == 1){
             return redirect(route('product.show',compact('product')))->with('message','Articolo aggiunto al carrello!');
