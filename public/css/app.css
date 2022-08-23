@@ -11499,6 +11499,15 @@ textarea.form-control-lg {
         text-align: center;
         
     }
+
+/* ------------------------------------------------------------------------- */  
+    /* FILTERS */
+/* ------------------------------------------------------------------------- */
+
+.filter-gap{
+    border:1px solid gray;
+    height: 100%;
+}
 @media screen and (max-width:425px) {
     #inputSearch{
         display: none;

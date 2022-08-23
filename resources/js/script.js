@@ -36,3 +36,5 @@ function changeContent(infoButton,content){
 
 changeContent(infoButton,infoContent);
 changeContent(workButton,workContent);
+    
+  
