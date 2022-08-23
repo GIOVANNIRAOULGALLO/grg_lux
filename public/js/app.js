@@ -3210,23 +3210,31 @@ inputSearch.addEventListener("focusout", function () {
 }); // ----------------------------
 // ACCOUNT
 // --------------------
+// let accountContent=document.getElementById("accountContent");
+// let infoButton=document.getElementById("infoButton");
+// let infoContent=document.getElementById("infoContent");
+// let workButton=document.getElementById("workButton");
+// let workContent=document.getElementById("workContent");
+// function changeContent(infoButton,content){
+//    infoButton.addEventListener("click",function(){
+//         accountContent.remove(content);
+//         accountContent.append=content;
+//         content.removeAttribute('hidden');
+//     })
+// }
+// changeContent(infoButton,infoContent);
+// changeContent(workButton,workContent);
 
-var accountContent = document.getElementById("accountContent");
-var infoButton = document.getElementById("infoButton");
-var infoContent = document.getElementById("infoContent");
-var workButton = document.getElementById("workButton");
-var workContent = document.getElementById("workContent");
+var height = screen.height;
+var width = screen.width;
 
-function changeContent(infoButton, content) {
-  infoButton.addEventListener("click", function () {
-    accountContent.remove(content);
-    accountContent.append = content;
-    content.removeAttribute('hidden');
-  });
-}
-
-changeContent(infoButton, infoContent);
-changeContent(workButton, workContent);
+window.onresize = function () {
+  if (width <= 768) {
+    document.getElementById("welcomeTest").innerHTML = "Altezza" + width;
+  } else {
+    document.getElementById("welcomeTest").innerHTML = "Larghezza" + height;
+  }
+}; // document.getElementById("welcomeTest").innerHTML="Altezza"+height;
 
 /***/ }),
 

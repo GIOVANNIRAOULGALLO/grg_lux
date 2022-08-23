@@ -23,8 +23,8 @@
             <div class="col-3">
                 <div class="filter-gap">
                     <p class="fs-5 mt-2">FILTRA</p>
-                    <div class="accordion" id="accordionPanelsStayOpenExample">
-                        <div class="accordion-item">
+                    <div class="accordion filter-content" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item ">
                             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                                     CATEGORIA
@@ -32,17 +32,18 @@
                             </h2>
                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
                                 <div class="accordion-body text-start">
-                                @foreach(\App\Models\Category::get() as $category)
+                                    @foreach(\App\Models\Category::get() as $category)
                                     <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                    <label for="vehicle1"> <p>{{$category->name}}</p></label><br>
+                                    <label for="vehicle1">
+                                        <p>{{$category->name}}</p>
+                                    </label><br>
                                     <a href="" class="link-no-decoration">
-                                        
                                     </a>
                                     @endforeach
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
+                        <div class="accordion-item ">
                             <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                                     BRAND
@@ -50,17 +51,21 @@
                             </h2>
                             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                                 <div class="accordion-body text-start">
-                                    @foreach(\App\Models\Brand::get() as $brand)
+
+                                    @foreach(\App\Models\Product::select('brand_id')->distinct()->get() as $product)
+
                                     <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                    <label for="vehicle1"> <p>{{$brand->name}}</p></label><br>
-                                    <a href="" class="link-no-decoration">
-                                        
-                                    </a>
+                                    <label for="vehicle1">
+                                        <p>{{$product->brand->name}}</p>
+                                    </label><br>
                                     @endforeach
+                                    <a href="" class="link-no-decoration">
+
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
+                        <div class="accordion-item ">
                             <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                                     PREZZO
@@ -68,22 +73,14 @@
                             </h2>
                             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
                                 <div class="accordion-body">
-                                    <p>
-                                        <label>Price From:</label>
-                                        <input type="range" id="fromPrice" value="50" min="0" max="500" oninput="document.getElementById('fPrice').innerHTML = this.value" />
-                                        <label id="fPrice"></label>
-                                    </p>
-                                    <p>
-                                        <label>Price To:</label>
-                                        <input type="range" id="toPrice" value="450" min="0" max="500" oninput="document.getElementById('tPrice').innerHTML = this.value" />
-                                        <label id="tPrice"></label>
-                                    </p>
-                                    <p><input type="submit" value="submit" onclick="ti()" /></p>
+                                    <p>Minore di</p>
+                                    <input type="range" name="price" id="price">
+                                    <p id="containerPrice"></p>
+
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
             <div class="col-9  d-flex flex-row flex-grow-5 flex-wrap justify-content-evenly">

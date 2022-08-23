@@ -11508,6 +11508,28 @@ textarea.form-control-lg {
     border:1px solid gray;
     height: 100%;
 }
+.filter-content:focus{
+    outline: 0;
+    box-shadow: none;
+
+    /* border: 0;
+    transition: none; */
+}
+.accordion-button:not(.collapsed){
+    color: black;
+    background-color: white;
+}
+
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+    background-color: gold;
+    color: black;
+}
+.accordion-button:not(.collapsed)::after{
+    background-image: url("/public/img/arrow_up.PNG");
+}
 @media screen and (max-width:425px) {
     #inputSearch{
         display: none;

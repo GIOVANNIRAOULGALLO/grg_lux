@@ -18,7 +18,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <p class="fs-2">DISCOVER NEW FASHION</p>
+                <p class="fs-2" id="welcomeTest">DISCOVER NEW FASHION</p>
             </div>
         </div>
         <div class="row justify-content-center text-center align-items-center my-4">

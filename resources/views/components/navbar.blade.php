@@ -10,7 +10,7 @@
           <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fa-solid fa-user"></i> {{Auth::user()->name}}  {{Auth::user()->surname}}
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu dropdowm-center" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{{route('account.display',['user'=>Auth::user()])}}">Account</a></li>
             <li><a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Logout</a></li>
             <form method="post" action="{{route('logout')}}" id="form-logout">
