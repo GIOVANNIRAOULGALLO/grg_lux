@@ -1,4 +1,6 @@
+/* -------------------------------------------------------------------------------------------------------------- */
 /* GENERAL */
+/* -------------------------------------------------------------------------------------------------------------- */
 *{
     font-family: 'Gayathri', sans-serif;
 }
@@ -11,7 +13,13 @@
 .link-no-decoration{
     text-decoration: none;
 }
+
+
+/* -------------------------------------------------------------------------------------------------------------- */
 /* NAVBAR */
+/* -------------------------------------------------------------------------------------------------------------- */
+
+
 .brand-grg{
     color: white;
     text-decoration: none;
@@ -22,8 +30,8 @@
 }
 
 .brand-grg:hover{
-   color: white;
-   
+    color: white;
+    
 }
 .principal-link:hover{
     color: black;
@@ -38,7 +46,11 @@
     color:white;
 }
 
+
+/* -------------------------------------------------------------------------------------------------------------- */
 /* PRODUCTS */
+/* -------------------------------------------------------------------------------------------------------------- */
+
 
 .btn-grg{
     height: 30px;
@@ -60,8 +72,10 @@
 }
 
 
-
+/* -------------------------------------------------------------------------------------------------------------- */
 /* ACCOUNT */
+/* -------------------------------------------------------------------------------------------------------------- */
+
 
 .add-image{
     position: relative;
@@ -75,7 +89,7 @@
     background-color: lime;
     display: flex;
     justify-content: center;
-   
+    
 }
 
 .heart-button{
@@ -85,10 +99,14 @@
 .insert-button:hover{
     transform: scale(0.8);
     transition: 0.4s;
-
+    
 }
 
+
+/* -------------------------------------------------------------------------------------------------------------- */
 /* footer */
+/* -------------------------------------------------------------------------------------------------------------- */
+
 
 .grg-footer{
     width: 100%;
@@ -96,6 +114,10 @@
     /* position: sticky;
     bottom:0;  */
 }
+
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
 
 .messagebuy{
     background-color: gold;
@@ -113,7 +135,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
 }
 .circle-counter{
     background-color: gold;
@@ -186,39 +208,39 @@
 .panel-title {
     display: inline;
     font-weight: bold;
-    }
-    .display-table {
+}
+.display-table {
     display: table;
-    }
-    .display-tr {
+}
+.display-tr {
     display: table-row;
-    }
-    .display-td {
+}
+.display-td {
     display: table-cell;
     vertical-align: middle;
     width: 61%;
-    }
-    /*-----------------------------------------------------------------------  */
-    /* CART */
-    /* ------------------------------------------------------------- */
-    .cart-card{
-        display: flex;
-        justify-content: space-around;
-        margin:auto;
-        height:150px;
-        width:600px;
-        border-color: gold black;
-        border-style:groove;
-        border-radius: 3px;
-        padding-inline: 100px;
-        align-items: center;
-        flex-flow: row;
-        text-align: center;
-        
-    }
+}
+/*-----------------------------------------------------------------------  */
+/* CART */
+/* ------------------------------------------------------------- */
+.cart-card{
+    display: flex;
+    justify-content: space-around;
+    margin:auto;
+    height:150px;
+    width:600px;
+    border-color: gold black;
+    border-style:groove;
+    border-radius: 3px;
+    padding-inline: 100px;
+    align-items: center;
+    flex-flow: row;
+    text-align: center;
+    
+}
 
 /* ------------------------------------------------------------------------- */  
-    /* FILTERS */
+/* FILTERS */
 /* ------------------------------------------------------------------------- */
 
 .filter-gap{
@@ -228,7 +250,7 @@
 .filter-content:focus{
     outline: 0;
     box-shadow: none;
-
+    
     /* border: 0;
     transition: none; */
 }
@@ -245,5 +267,25 @@
     color: black;
 }
 .accordion-button:not(.collapsed)::after{
-    background-image: url("/public/img/arrow_up.PNG");
+    background-image: url("/img/arrow.svg");
 }
+.accordion-button::after{
+    background-image: url("/img/arrow.svg");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

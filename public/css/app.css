@@ -11281,7 +11281,9 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* -------------------------------------------------------------------------------------------------------------- */
 /* GENERAL */
+/* -------------------------------------------------------------------------------------------------------------- */
 *{
     font-family: 'Gayathri', sans-serif;
 }
@@ -11294,7 +11296,13 @@ textarea.form-control-lg {
 .link-no-decoration{
     text-decoration: none;
 }
+
+
+/* -------------------------------------------------------------------------------------------------------------- */
 /* NAVBAR */
+/* -------------------------------------------------------------------------------------------------------------- */
+
+
 .brand-grg{
     color: white;
     text-decoration: none;
@@ -11305,8 +11313,8 @@ textarea.form-control-lg {
 }
 
 .brand-grg:hover{
-   color: white;
-   
+    color: white;
+    
 }
 .principal-link:hover{
     color: black;
@@ -11321,7 +11329,11 @@ textarea.form-control-lg {
     color:white;
 }
 
+
+/* -------------------------------------------------------------------------------------------------------------- */
 /* PRODUCTS */
+/* -------------------------------------------------------------------------------------------------------------- */
+
 
 .btn-grg{
     height: 30px;
@@ -11343,8 +11355,10 @@ textarea.form-control-lg {
 }
 
 
-
+/* -------------------------------------------------------------------------------------------------------------- */
 /* ACCOUNT */
+/* -------------------------------------------------------------------------------------------------------------- */
+
 
 .add-image{
     position: relative;
@@ -11358,7 +11372,7 @@ textarea.form-control-lg {
     background-color: lime;
     display: flex;
     justify-content: center;
-   
+    
 }
 
 .heart-button{
@@ -11368,10 +11382,14 @@ textarea.form-control-lg {
 .insert-button:hover{
     transform: scale(0.8);
     transition: 0.4s;
-
+    
 }
 
+
+/* -------------------------------------------------------------------------------------------------------------- */
 /* footer */
+/* -------------------------------------------------------------------------------------------------------------- */
+
 
 .grg-footer{
     width: 100%;
@@ -11379,6 +11397,10 @@ textarea.form-control-lg {
     /* position: sticky;
     bottom:0;  */
 }
+
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
 
 .messagebuy{
     background-color: gold;
@@ -11396,7 +11418,7 @@ textarea.form-control-lg {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
 }
 .circle-counter{
     background-color: gold;
@@ -11469,39 +11491,39 @@ textarea.form-control-lg {
 .panel-title {
     display: inline;
     font-weight: bold;
-    }
-    .display-table {
+}
+.display-table {
     display: table;
-    }
-    .display-tr {
+}
+.display-tr {
     display: table-row;
-    }
-    .display-td {
+}
+.display-td {
     display: table-cell;
     vertical-align: middle;
     width: 61%;
-    }
-    /*-----------------------------------------------------------------------  */
-    /* CART */
-    /* ------------------------------------------------------------- */
-    .cart-card{
-        display: flex;
-        justify-content: space-around;
-        margin:auto;
-        height:150px;
-        width:600px;
-        border-color: gold black;
-        border-style:groove;
-        border-radius: 3px;
-        padding-inline: 100px;
-        align-items: center;
-        flex-flow: row;
-        text-align: center;
-        
-    }
+}
+/*-----------------------------------------------------------------------  */
+/* CART */
+/* ------------------------------------------------------------- */
+.cart-card{
+    display: flex;
+    justify-content: space-around;
+    margin:auto;
+    height:150px;
+    width:600px;
+    border-color: gold black;
+    border-style:groove;
+    border-radius: 3px;
+    padding-inline: 100px;
+    align-items: center;
+    flex-flow: row;
+    text-align: center;
+    
+}
 
 /* ------------------------------------------------------------------------- */  
-    /* FILTERS */
+/* FILTERS */
 /* ------------------------------------------------------------------------- */
 
 .filter-gap{
@@ -11511,7 +11533,7 @@ textarea.form-control-lg {
 .filter-content:focus{
     outline: 0;
     box-shadow: none;
-
+    
     /* border: 0;
     transition: none; */
 }
@@ -11528,11 +11550,37 @@ textarea.form-control-lg {
     color: black;
 }
 .accordion-button:not(.collapsed)::after{
-    background-image: url("/public/img/arrow_up.PNG");
+    background-image: url("/img/arrow.svg");
 }
+.accordion-button::after{
+    background-image: url("/img/arrow.svg");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:425px) {
     #inputSearch{
         display: none;
     }
 }
+@media screen and (min-width:992px){
+    .nav-item {
+    line-height:80px;
+    }
+  }
 

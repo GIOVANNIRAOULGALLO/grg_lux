@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="row justify-content-center text-center align-items-center my-4">
-            <div class="col-12  d-flex flex-row flex-grow-5 flex-wrap justify-content-evenly align-items-center mb-5">
+            <div class="col-12 d-flex flex-row flex-grow-4 flex-grow-md-5 flex-wrap justify-content-evenly align-items-center mb-5">
                 @foreach ($products as $product)
                 <div class="card mx-3 my-3" style="width: 220px;height:400px">
                     <a href="{{route('product.show',compact('product'))}}"><img src="https://picsum.photos/200" class="card-img-top mx-auto img-fluid" alt="{{$product->name}}"></a>

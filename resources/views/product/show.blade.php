@@ -26,9 +26,9 @@
                 <img src="https://picsum.photos/400" alt="{{$product->name}}">
             </div>
             <div class="col-12 col-md-6 d-flex flex-column justify-content-center text-start">
-                <p class="card-text fw-bold fs-4 text-uppercase">{{$product->brand->name ?? 'NULL'}}</p>
-                <h1>{{$product->name}}</h1>
-                <h3>{{$product->description}}</h3>
+                <p class="card-text fw-bold fs-2 text-uppercase">{{$product->brand->name ?? 'NULL'}}</p>
+                <h2>{{$product->name}}</h1>
+                <h5>{{$product->description}}</h3>
                 <p>{{$product->price}} €</p>
                 <div class="row justify-content-start align-items-center">
                     <div class="col-4 text-center">

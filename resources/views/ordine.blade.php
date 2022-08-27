@@ -3,7 +3,8 @@
     <section class="container-fluid mb-5">
         <div class="row">
             <div class="col-12">
-                Dio CAN {{$count}}
+                <h2>Grazie per il tuo ordine!</h2>
+                <p class="fs-4">Le invieremo una mail con tutti i dettagli</p>
             </div>
         </div>
 
