@@ -38,8 +38,10 @@
            </span></a>
         </div>
       </div>
-     
-     
+     <i class="fa-solid fa-cart-shopping text-light position-relative" >  </i>
+     <span class="circle-counter">
+            {{\App\Models\Product::where('buy',1)->count()}}
+           </span>
     </div>
   </div>
   <nav class="navbar navbar-expand-lg navbar-grg">
@@ -155,17 +157,18 @@
       </ul>
       <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
         <li class="nav-item ">
-          <a class="nav-link text-light h5" href="" target="blank"><i class="fab fa-google-plus-square"></i></a>
+          <a class="nav-link text-light h5" href="" target="blank"> <i class="fa-solid fa-magnifying-glass text-white ms-auto"></i></a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link text-light h5" href="" target="blank"><i class="fab fa-twitter"></i></a>
+          <a class="nav-link text-light h5" href="" target="blank">
+          <i class="fa-solid fa-cart-shopping text-light position-relative" >  </i>
+          <span class="circle-counter">
+            {{\App\Models\Product::where('buy',1)->count()}}
+           </span>
+          </a>
         </li>
         <li class="nav-item" title="Account">
-          @if(Auth::user())
             <a class="nav-link text-light h5" href="" target="blank"><i class="fa-solid fa-user" ></i></a>
-          @else
-            <a class="nav-link text-light h5" href="" target="blank">LOGIN</a>
-          @endif
         </li>
       </ul>
     </div>

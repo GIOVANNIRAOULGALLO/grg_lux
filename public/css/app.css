@@ -11426,13 +11426,14 @@ textarea.form-control-lg {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    position:absolute;
+    position:relative;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    bottom: 40px;
     padding-top: 7.5px;
-    bottom: 12px;
+    /* bottom: 12px; */
     left: 15px;
     border: 1px solid black;
 }
