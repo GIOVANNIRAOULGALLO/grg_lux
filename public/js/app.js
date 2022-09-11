@@ -3241,7 +3241,7 @@ var widths = [0, 768, 850];
 function resizeFn() {
   if (window.innerWidth >= widths[0] && window.innerWidth < widths[1]) {
     filterButton.style.visibility = "visible";
-    accordion.style.visibility = "none";
+    accordion.style.visibility = "hidden";
   } else if (window.innerWidth >= widths[1] && window.innerWidth < widths[2]) {
     filterButton.style.visibility = "hidden";
     accordion.style.visibility = "visible";
