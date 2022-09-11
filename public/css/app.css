@@ -11302,7 +11302,6 @@ textarea.form-control-lg {
 /* NAVBAR */
 /* -------------------------------------------------------------------------------------------------------------- */
 
-
 .brand-grg{
     color: white;
     text-decoration: none;
@@ -11528,13 +11527,14 @@ textarea.form-control-lg {
 /* ------------------------------------------------------------------------- */
 
 .filter-gap{
-    border:1px solid gray;
+    /* border:1px solid gray; */
     height: 100%;
+    visibility:collapse;
 }
 .filter-content:focus{
     outline: 0;
     box-shadow: none;
-    
+   
     /* border: 0;
     transition: none; */
 }
@@ -11557,6 +11557,21 @@ textarea.form-control-lg {
     background-image: url("/img/arrow.svg");
 }
 
+.filter-section{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+    justify-content: center;
+    padding-top: 20px;
+    align-items: center;
+}
+.filter-section-content{
+    border-bottom: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 
 

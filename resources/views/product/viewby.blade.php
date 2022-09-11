@@ -20,9 +20,9 @@
             </div>
         </div>
         <div class="row justify-content-center text-center mb-5 pb-5">
-            <div class="col-12 col-md-3">
+            <div class="col-12 col-md-2">
+            <button id="filterButton">FILTRA</button>
                 <div class="filter-gap">
-                    <p class="fs-5 mt-2">FILTRA</p>
                     <div class="accordion filter-content" id="accordionPanelsStayOpenExample">
                         <div class="accordion-item ">
                             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -81,9 +81,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>     
             </div>
-            <div class="col-12 col-md-9  d-flex flex-row flex-grow-5 flex-wrap justify-content-evenly">
+            <div class="col-12 col-md-9  d-flex flex-row  flex-wrap justify-content-evenly">
                 @foreach ($products as $product)
                 <div class="card mx-3 my-3" style="width: 200px;">
                     <a href="{{route('product.show',compact('product'))}}">

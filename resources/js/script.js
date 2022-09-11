@@ -2,17 +2,19 @@
 // SEARCH BAR
 // -----------
 
-
-let inputSearch=document.querySelector('.input-search');
-let buttonSearch=document.querySelector('.button-search');
+const { filter } = require("lodash");
 
 
-inputSearch.addEventListener("focus",function(){
-    inputSearch.style.width='50%';
-});
-inputSearch.addEventListener("focusout",function(){
-    inputSearch.style.width="10%";
-})
+// let inputSearch=document.querySelector('.input-search');
+// let buttonSearch=document.querySelector('.button-search');
+
+
+// inputSearch.addEventListener("focus",function(){
+//     inputSearch.style.width='50%';
+// });
+// inputSearch.addEventListener("focusout",function(){
+//     inputSearch.style.width="10%";
+// })
 
 
 // ----------------------------
@@ -36,20 +38,29 @@ inputSearch.addEventListener("focusout",function(){
 
 // changeContent(infoButton,infoContent);
 // changeContent(workButton,workContent);
-    
-let height=screen.height;
-let width=screen.width;
+ 
 
-window.onresize=function(){
-    if(width<=768){
-        
-        document.getElementById("welcomeTest").innerHTML="Altezza"+width;
+// VIEW BY - FILTER VISIBILITY SECTION
+
+let accordion=document.querySelector('.filter-gap');
+let filterButton=document.querySelector('#filterButton');
+filterButton.addEventListener("click",function(){
+    accordion.style.visibility="visible";
+});
+// let width=window.innerWidth;
+// let height=window.innerHeight;
+var widths = [0, 768, 850];
+function resizeFn() {
+    if (window.innerWidth>=widths[0] && window.innerWidth<widths[1]) {
+        filterButton.style.visibility="visible";
+        accordion.style.visibility="none";
+    } else if (window.innerWidth>=widths[1] && window.innerWidth<widths[2]) {
+        filterButton.style.visibility="hidden";
+        accordion.style.visibility="visible";
+    } else {
+        filterButton.style.visibility="hidden";
+        accordion.style.visibility="visible";
     }
-    else{
-        
-        document.getElementById("welcomeTest").innerHTML="Larghezza"+height;
     }
-};
-
-
-// document.getElementById("welcomeTest").innerHTML="Altezza"+height;
+    window.onresize = resizeFn;
+    resizeFn();
