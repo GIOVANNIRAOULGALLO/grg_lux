@@ -3232,9 +3232,18 @@ var _require = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.j
 var accordion = document.querySelector('.filter-gap');
 var accordionContent = document.querySelector('.accordion');
 var filterButton = document.querySelector('#filterButton');
-filterButton.addEventListener("click", function () {
-  accordion.style.visibility = "visible";
-}); // let width=window.innerWidth;
+
+function filterOpen() {
+  if (accordion.style.visibility = "hidden") {
+    accordion.style.visibility = "visible";
+    accordion.append(accordionContent);
+  } else {
+    accordion.style.innerHTML = "";
+    accordion.style.visibility = "hidden";
+  }
+}
+
+; // let width=window.innerWidth;
 // let height=window.innerHeight;
 
 var widths = [0, 768, 850];
@@ -3244,6 +3253,7 @@ function resizeFn() {
     filterButton.style.visibility = "visible";
     accordion.style.visibility = "hidden";
     accordion.innerHTML = "";
+    filterButton.addEventListener("click", filterOpen);
   } else if (window.innerWidth >= widths[1] && window.innerWidth < widths[2]) {
     filterButton.style.visibility = "hidden";
     accordion.style.visibility = "visible";

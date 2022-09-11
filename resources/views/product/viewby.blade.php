@@ -21,7 +21,7 @@
         </div>
         <div class="row justify-content-center text-center mb-5 pb-5">
             <div class="col-12 col-md-3">
-            <button id="filterButton">FILTRA</button>
+            <button class="btn btn-dark" id="filterButton">FILTRA</button>
                 <div class="filter-gap">
                     <div class="accordion filter-content" id="accordionPanelsStayOpenExample">
                         <div class="accordion-item ">

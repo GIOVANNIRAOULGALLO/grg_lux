@@ -46,9 +46,18 @@ let accordion=document.querySelector('.filter-gap');
 let accordionContent=document.querySelector('.accordion');
 let filterButton=document.querySelector('#filterButton');
 
-filterButton.addEventListener("click",function(){
-    accordion.style.visibility="visible";
-});
+
+
+function filterOpen(){
+    if(accordion.style.visibility="hidden"){
+            accordion.style.visibility="visible";
+           accordion.append(accordionContent); 
+    }else{
+        accordion.style.innerHTML="";  
+        accordion.style.visibility="hidden";
+    }
+};
+
 // let width=window.innerWidth;
 // let height=window.innerHeight;
 var widths = [0, 768, 850];
@@ -57,6 +66,7 @@ function resizeFn() {
         filterButton.style.visibility="visible";
         accordion.style.visibility="hidden";
         accordion.innerHTML="";
+        filterButton.addEventListener("click", filterOpen);
     } else if (window.innerWidth>=widths[1] && window.innerWidth<widths[2]) {
         filterButton.style.visibility="hidden";
         accordion.style.visibility="visible";
