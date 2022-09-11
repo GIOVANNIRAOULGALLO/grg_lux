@@ -43,7 +43,9 @@ const { filter } = require("lodash");
 // VIEW BY - FILTER VISIBILITY SECTION
 
 let accordion=document.querySelector('.filter-gap');
+let accordionContent=document.querySelector('.accordion');
 let filterButton=document.querySelector('#filterButton');
+
 filterButton.addEventListener("click",function(){
     accordion.style.visibility="visible";
 });
@@ -54,13 +56,18 @@ function resizeFn() {
     if (window.innerWidth>=widths[0] && window.innerWidth<widths[1]) {
         filterButton.style.visibility="visible";
         accordion.style.visibility="hidden";
+        accordion.innerHTML="";
     } else if (window.innerWidth>=widths[1] && window.innerWidth<widths[2]) {
         filterButton.style.visibility="hidden";
         accordion.style.visibility="visible";
+        accordion.append(accordionContent);
     } else {
         filterButton.style.visibility="hidden";
         accordion.style.visibility="visible";
+        accordion.append(accordionContent);
     }
     }
     window.onresize = resizeFn;
     resizeFn();
+
+   // var PARAMS = @json($params)
