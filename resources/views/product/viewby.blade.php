@@ -22,8 +22,8 @@
         <div class="row justify-content-center text-center mb-5 pb-5">
             <div class="col-12 col-md-3">
             <button class="btn btn-dark" id="filterButton">FILTRA</button>
-                <div class="filter-gap">
-                    <div class="accordion filter-content" id="accordionPanelsStayOpenExample">
+                <div class="filter-gap" id="filterGap">
+                    <div class="accordion filter-content" id="accordionFilter">
                         <div class="accordion-item ">
                             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">

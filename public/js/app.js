@@ -3229,16 +3229,18 @@ var _require = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.j
 // VIEW BY - FILTER VISIBILITY SECTION
 
 
-var accordion = document.querySelector('.filter-gap');
-var accordionContent = document.querySelector('.accordion');
-var filterButton = document.querySelector('#filterButton');
+var accordion = document.getElementById('filterGap');
+var accordionContent = document.getElementById('accordionFilter');
+var filterButton = document.getElementById('filterButton');
 
 function filterOpen() {
-  if (accordion.style.visibility = "hidden") {
+  if (accordion.style.visibility == "hidden") {
     accordion.style.visibility = "visible";
     accordion.append(accordionContent);
+    accordion.style.height = "auto";
   } else {
     accordion.style.innerHTML = "";
+    accordion.style.height = 0;
     accordion.style.visibility = "hidden";
   }
 }
@@ -3247,21 +3249,46 @@ function filterOpen() {
 // let height=window.innerHeight;
 
 var widths = [0, 768, 850];
+var c = window.location; // let showPicture=;
 
 function resizeFn() {
   if (window.innerWidth >= widths[0] && window.innerWidth < widths[1]) {
-    filterButton.style.visibility = "visible";
-    accordion.style.visibility = "hidden";
-    accordion.innerHTML = "";
-    filterButton.addEventListener("click", filterOpen);
+    if (c.href.includes("show")) {
+      document.getElementById("showPicture").src = 'https://picsum.photos/200';
+      document.getElementById("sectionImg").classList.remove('text-end');
+      document.getElementById("textShow").classList.remove("text-start");
+      document.getElementById("textShow").classList.add("text-center");
+      document.getElementById("btnAdd").style.width = "200px";
+      document.getElementById("btnAdd").classList.remove("ms-0");
+      document.getElementById("btnAdd").classList.add("mx-auto");
+    } else {
+      filterButton.setAttribute('style', 'visibility: visible'); // filterButton.style.visibility="visible";
+
+      accordion.style.visibility = "hidden";
+      accordion.innerHTML = "";
+      filterButton.addEventListener("click", filterOpen);
+    }
   } else if (window.innerWidth >= widths[1] && window.innerWidth < widths[2]) {
-    filterButton.style.visibility = "hidden";
-    accordion.style.visibility = "visible";
-    accordion.append(accordionContent);
+    if (c.href.includes("show")) {} else {
+      filterButton.style.visibility = "hidden";
+      accordion.style.visibility = "visible";
+      accordion.append(accordionContent);
+      filterButton.addEventListener("click", filterOpen);
+    }
   } else {
-    filterButton.style.visibility = "hidden";
-    accordion.style.visibility = "visible";
-    accordion.append(accordionContent);
+    if (c.href.includes("show")) {
+      document.getElementById("showPicture").src = 'https://picsum.photos/400';
+      document.getElementById("sectionImg").classList.add('text-end');
+      document.getElementById("textShow").classList.add("text-start");
+      document.getElementById("textShow").classList.remove("text-center");
+      document.getElementById("btnAdd").style.width = "400px"; // document.getElementById("btnAdd").classList.add("ms-0");   
+      // document.getElementById("btnAdd").classList.add("mx-auto");   
+    } else {
+      filterButton.style.visibility = "hidden";
+      accordion.style.visibility = "visible";
+      accordion.append(accordionContent);
+      filterButton.addEventListener("click", filterOpen);
+    }
   }
 }
 
