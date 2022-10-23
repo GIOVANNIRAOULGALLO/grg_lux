@@ -84,10 +84,44 @@
     font-size: 12px;
     margin-top: -20px;
     font-weight: bolder;
-    margin-left: 0;
-    padding-left: 0;
 }
-
+.label-checkbox-filter{
+    display: block;
+    padding-left: 13px;
+    text-indent: -13px;
+    font-size:11px;
+  }
+.input-checkbox-filter{
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .filter-parameters-price{
+    font-size: 11px;
+  }
+  /* .filter-price-range{
+    
+    height: 15px;
+    width: 100px;
+    margin-left: 4px;
+    
+  } */
+  input[type='range'] {
+    -webkit-appearance: none !important;
+    background:yellow;
+    height:7px;
+}
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background:black;
+    height:10px;
+    width:10px;
+    border-radius: 50%;
+}
 /* -------------------------------------------------------------------------------------------------------------- */
 /* ACCOUNT */
 /* -------------------------------------------------------------------------------------------------------------- */

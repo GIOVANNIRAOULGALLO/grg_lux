@@ -28,10 +28,9 @@
                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse" aria-labelledby="panelsStayOpen-headingOne">
                                 <div class="accordion-body text-start">
                                     @foreach(\App\Models\Category::get() as $category)
-                                        <input type="checkbox" id="categoryCheck" name="categoryCheck" >
-                                        <label for="categoryCheck">
-                                            <p>{{$category->name}}</p>
-                                        </label><br>
+                                        <label class="label-checkbox-filter text-uppercase">
+                                            <input type="checkbox" class="input-checkbox-filter"/> {{$category->name}}
+                                        </label>
                                     @endforeach
                                 </div>
                             </div>
@@ -44,17 +43,11 @@
                             </h2>
                             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                                 <div class="accordion-body text-start">
-
                                     @foreach(\App\Models\Product::select('brand_id')->distinct()->get() as $product)
-
-                                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                    <label for="vehicle1">
-                                        <p>{{$product->brand->name}}</p>
-                                    </label><br>
+                                        <label class="label-checkbox-filter text-uppercase">
+                                            <input type="checkbox" class="input-checkbox-filter"/> {{$product->brand->name}}
+                                        </label>
                                     @endforeach
-                                    <a href="" class="link-no-decoration">
-
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -66,10 +59,9 @@
                             </h2>
                             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
                                 <div class="accordion-body">
-                                    <p>Minore di</p>
-                                    <input type="range" name="price" id="price">
-                                    <p id="containerPrice"></p>
-
+                                    <p class="filter-parameters-price text-uppercase">Minore di</p>
+                                    <input type="range" name="price" id="priceRange" class="filter-price-range" autocomplete="off" min="0" max="5000" onchange="rangeChange()">
+                                    <p id="filterPriceRange"></p>
                                 </div>
                             </div>
                         </div>

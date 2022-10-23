@@ -48,7 +48,7 @@ let filterButton=document.getElementById('filterButton');
 
 
 // --------------------------------------------------------------------------------------------------------------------------------
-// FILTER FUNCTION
+// FILTER FUNCTIONS
 // ---------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -69,7 +69,21 @@ function filterOpen(){
         // HIDDEN ACCORDION
         accordion.style.visibility="hidden";
     }
-};
+}
+let priceRange=document.getElementById('priceRange').value;
+    console.log(priceRange);
+    let filterPriceRange=document.getElementById('filterPriceRange');
+    filterPriceRange.innerHTML=priceRange;
+function rangeChange(){
+   
+    let priceRange=document.getElementById('priceRange').value;
+    console.log(priceRange);
+    let filterPriceRange=document.getElementById('filterPriceRange');
+    filterPriceRange.innerHTML=priceRange;
+}
+
+
+
 // -------------------------------------------------------------------------------------------------------------------------------------
 // RESIZE FUNCTION
 // -----------------------------------------------------------------------------------------------------------------------------------
@@ -81,9 +95,7 @@ let c=window.location;
 // FUNCTION WHEN WINDOW RESIZE
 function resizeFn() {
     if (window.innerWidth>=widths[0] && window.innerWidth<widths[1]) {   
-        
         // SHOW PAGE
-
         if(c.href.includes("show")){
             document.getElementById("showPicture").src='https://picsum.photos/200';
             document.getElementById("sectionImg").classList.remove('text-end');
@@ -98,7 +110,7 @@ function resizeFn() {
         //  WORK IN PROGRESS    
         }
         else{
-            // 
+            
             filterButton.style.visibility="visible";;
             accordion.style.visibility="hidden";
             accordion.innerHTML="";
@@ -106,6 +118,7 @@ function resizeFn() {
             document.querySelector('.filter-count-text').style.marginTop="10px";
         }
         // 
+        
     } else if (window.innerWidth>=widths[1] && window.innerWidth<widths[2]) {
         
         if((window.innerWidth>=window.innerWidth<widths[1] && window.innerWidth<1000)){
@@ -125,7 +138,16 @@ function resizeFn() {
         }
        
         
-    } else {
+    }
+    // else if(window.innerWidth<=991 && window.innerWidth>=425){
+    //     filterButton.style.visibility="visible";
+    //     accordion.style.visibility="hidden";
+    //     accordion.innerHTML="";
+    //     filterButton.addEventListener("click", filterOpen);
+    //     document.querySelector('.filter-count-text').style.marginTop="10px";
+    // }
+    else {
+        
         
         if(c.href.includes("show")){
             document.getElementById("showPicture").src='https://picsum.photos/400';

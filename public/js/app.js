@@ -3230,7 +3230,7 @@ __webpack_require__(/*! ./script */ "./resources/js/script.js");
 var accordion = document.getElementById('filterGap');
 var accordionContent = document.getElementById('accordionFilter');
 var filterButton = document.getElementById('filterButton'); // --------------------------------------------------------------------------------------------------------------------------------
-// FILTER FUNCTION
+// FILTER FUNCTIONS
 // ---------------------------------------------------------------------------------------------------------------------------------
 
 function filterOpen() {
@@ -3252,9 +3252,20 @@ function filterOpen() {
   }
 }
 
-; // -------------------------------------------------------------------------------------------------------------------------------------
+var priceRange = document.getElementById('priceRange').value;
+console.log(priceRange);
+var filterPriceRange = document.getElementById('filterPriceRange');
+filterPriceRange.innerHTML = priceRange;
+
+function rangeChange() {
+  var priceRange = document.getElementById('priceRange').value;
+  console.log(priceRange);
+  var filterPriceRange = document.getElementById('filterPriceRange');
+  filterPriceRange.innerHTML = priceRange;
+} // -------------------------------------------------------------------------------------------------------------------------------------
 // RESIZE FUNCTION
 // -----------------------------------------------------------------------------------------------------------------------------------
+
 
 var widths = [0, 768, 900]; // OUTPUT THE URI OF THER PAGE
 
@@ -3274,7 +3285,6 @@ function resizeFn() {
     } // cart 
     else if (c.href.includes("cart")) {//  WORK IN PROGRESS    
     } else {
-      // 
       filterButton.style.visibility = "visible";
       ;
       accordion.style.visibility = "hidden";
@@ -3297,7 +3307,14 @@ function resizeFn() {
       filterButton.addEventListener("click", filterOpen);
       document.querySelector('.filter-count-text').style.marginTop = "-20px";
     }
-  } else {
+  } // else if(window.innerWidth<=991 && window.innerWidth>=425){
+  //     filterButton.style.visibility="visible";
+  //     accordion.style.visibility="hidden";
+  //     accordion.innerHTML="";
+  //     filterButton.addEventListener("click", filterOpen);
+  //     document.querySelector('.filter-count-text').style.marginTop="10px";
+  // }
+  else {
     if (c.href.includes("show")) {
       document.getElementById("showPicture").src = 'https://picsum.photos/400';
       document.getElementById("sectionImg").classList.add('text-end');
