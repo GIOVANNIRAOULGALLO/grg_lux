@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot name="title">Carrello</x-slot>
-    <section class="container-fluid mb-5">
+    <section class="container-fluid vh-100">
         <div class="row justify-content-center text-center">
             <div class="col-12 mx-0 px-0">
             @if (session('message'))
@@ -14,7 +14,7 @@
         </div> 
         <div class="row justify-content-center text-center my-2">
             <div class="col-12">
-                <h1 class="my-3">CARRELLO</h1>
+                <h3 class="my-3">CARRELLO</h3>
             </div>
         </div>
         @if(\App\Models\Product::where('buy',1)->count()>0)
@@ -53,7 +53,7 @@
         @else
             <div class="row justifycontent-center">
                 <div class="col-12 text-center">
-                    <h3>Nessun Prodotto</h3>
+                    <p>Il tuo carrello è vuoto!</p>
                 </div>
             </div>
         @endif

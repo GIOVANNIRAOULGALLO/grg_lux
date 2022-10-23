@@ -11352,7 +11352,24 @@ textarea.form-control-lg {
     height: 200px;
     resize: none;
 }
-
+/* .product-text{
+    padding-top:-50px;
+} */
+.description-sex-text{
+    font-size: 15px;
+}
+.sex-text{
+    font-size:25px;
+    font-weight: 900;
+    text-shadow: 2px 2px gold;
+}
+.filter-count-text{
+    font-size: 12px;
+    margin-top: -20px;
+    font-weight: bolder;
+    margin-left: 0;
+    padding-left: 0;
+}
 
 /* -------------------------------------------------------------------------------------------------------------- */
 /* ACCOUNT */
@@ -11445,7 +11462,7 @@ textarea.form-control-lg {
 /* BUTTONS */
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 .btn-add{
-    position: relative;
+    /* position: relative; */
     background-color: gold;
     text-transform: uppercase; 
     font-weight: bold;
@@ -11529,7 +11546,7 @@ textarea.form-control-lg {
 .filter-gap{
     /* border:1px solid gray; */
     height: 100%;
-    visibility:collapse;
+    /* visibility:collapse; */
 }
 .filter-content:focus{
     outline: 0;

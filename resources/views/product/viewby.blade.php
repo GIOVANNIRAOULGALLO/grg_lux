@@ -1,51 +1,44 @@
 <x-layout>
     <x-slot name="title">{{$sex}}</x-slot>
-    <section class="container my-5">
+    <section class="container-fluid my-5">
         <div class="row justify-content-center text-center">
             <div class="col-12">
-                <h1>{{$sex}}</h1>
-                @if($sex == 'UOMO')
+                <p class="sex-text">COLLEZIONE {{$sex}}</p>
                 <div class="justify-content-center">
-                    <div class="col-12">
-                        <p>tutto il meglio per luomo forte</p>
-                    </div>
+                    @if($sex == 'UOMO')
+                        <p class="description-sex-text text-uppercase">Tutto il meglio per l'uomo forte</p>
+                    @else
+                        <p class="description-sex-text text-uppercase">L'eleganza femminile è come la pioggia</p>
+                    @endif
                 </div>
-                @else
-                <div class="justify-content-center">
-                    <div class="col-12">
-                        <p>L'eleganza femminile è come la pioggia</p>
-                    </div>
-                </div>
-                @endif
             </div>
         </div>
         <div class="row justify-content-center text-center mb-5 pb-5">
-            <div class="col-12 col-md-3">
-            <button class="btn btn-dark" id="filterButton">FILTRA</button>
+            <div class="col-12 col-md-2">
+                <button class="btn btn-dark" id="filterButton">FILTRA</button>
+                <p class="filter-count-text">Filtra {{$total}} prodotti</p>
                 <div class="filter-gap" id="filterGap">
                     <div class="accordion filter-content" id="accordionFilter">
                         <div class="accordion-item ">
                             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                <button class="accordion-button collapsed fw-bolder" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                                     CATEGORIA
                                 </button>
                             </h2>
-                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse" aria-labelledby="panelsStayOpen-headingOne">
                                 <div class="accordion-body text-start">
                                     @foreach(\App\Models\Category::get() as $category)
-                                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                    <label for="vehicle1">
-                                        <p>{{$category->name}}</p>
-                                    </label><br>
-                                    <a href="" class="link-no-decoration">
-                                    </a>
+                                        <input type="checkbox" id="categoryCheck" name="categoryCheck" >
+                                        <label for="categoryCheck">
+                                            <p>{{$category->name}}</p>
+                                        </label><br>
                                     @endforeach
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item ">
                             <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                <button class="accordion-button collapsed fw-bolder" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                                     BRAND
                                 </button>
                             </h2>
@@ -67,7 +60,7 @@
                         </div>
                         <div class="accordion-item ">
                             <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                <button class="accordion-button collapsed fw-bolder" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                                     PREZZO
                                 </button>
                             </h2>
@@ -83,11 +76,11 @@
                     </div>
                 </div>     
             </div>
-            <div class="col-12 col-md-9  d-flex flex-row  flex-wrap justify-content-evenly">
+            <div class="col-12 col-md-10  d-flex flex-row  flex-wrap justify-content-between">
                 @foreach ($products as $product)
-                <div class="card mx-3 my-3" style="width: 200px;">
+                <div class="card mx-3 my-3">
                     <a href="{{route('product.show',compact('product'))}}">
-                        <img src="https://picsum.photos/200" class="card-img-top mx-auto img-fluid" alt="{{$product->name}}">
+                        <img src="https://picsum.photos/250/350" class="card-img-top mx-auto img-fluid" alt="{{$product->name}}">
                     </a>
                     <div class="card-body">
                         <p class="card-text fw-bold text-brand">{{$product->brand->name ?? 'NULL'}}</p>

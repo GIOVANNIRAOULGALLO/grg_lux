@@ -34,7 +34,7 @@
                     <div class="col-4 text-center">
                         <form method="POST" action="{{route('addToCart',compact('product'))}}">
                             @csrf
-                            <button type ="submit" class="my-2 ms-0 btn-add" id="btnAdd">Add to cart</button>
+                            <button type ="submit" class="my-2 btn-add" id="btnAdd">Add to cart</button>
                         </form>
                     </div>
                    

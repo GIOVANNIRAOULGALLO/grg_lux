@@ -162,8 +162,8 @@ class ProductController extends Controller
 
     public function viewBySex($sex){
         $products=Product::where('sex',$sex)->get();
-        
-        return view('product.viewby',compact('products','sex'));
+        $total=$products->count();
+        return view('product.viewby',compact('products','sex','total'));
     }
 
 
