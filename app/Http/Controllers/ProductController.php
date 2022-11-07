@@ -111,9 +111,9 @@ class ProductController extends Controller
         $products=Product::where('buy',true)->get();
         return view('carrello',compact('products'));
     }
-    public function ship(){
-        return view('ship');
-    }
+
+    public function ship(){return view('ship');}
+
     public function insertAdress(Request $req){
         Adress::create([
             'city'=>$req->city,
@@ -125,6 +125,7 @@ class ProductController extends Controller
         ]);
         return redirect(route('stripe'));
     }
+
     public function ordine(){
         $products=Product::where('buy',true)->get();
         $count=0;
@@ -133,6 +134,7 @@ class ProductController extends Controller
         }
         return view('ordine',compact('count'));   
     }
+
     public function addToCart(Product $product){
         if($product->buy == 1){
             return redirect(route('product.show',compact('product')))->with('message','Articolo aggiunto al carrello!');
@@ -141,7 +143,6 @@ class ProductController extends Controller
             $product->update(['buy'=> 1 ]);
             return redirect(route('product.show',compact('product')))->with('message','Articolo aggiunto al carrello!');
         }
-       
     }
     
     public function removeToCart(Product $product){
@@ -165,6 +166,4 @@ class ProductController extends Controller
         $total=$products->count();
         return view('product.viewby',compact('products','sex','total'));
     }
-
-
 }

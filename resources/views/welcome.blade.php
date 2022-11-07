@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name="title">Homepage</x-slot>
+    <x-slot name="title">Homepage - GRG</x-slot>
     <section class="container">
         <div class="row justify-content-center text-center my-2">
             <div class="col-12">
@@ -13,7 +13,7 @@
         </div>
         <div class="row justify-content-center mb-5">
             <div class="col-12">
-                <img src="{{'/img/wardrobe.jpg'}}" alt="" class="img-fluid" style="height:400px;width:100%">
+                <img src="{{'/img/wardrobe.jpg'}}" alt="Homepage-GRG" class="img-fluid" style="height:400px;width:100%">
             </div>
         </div>
         <div class="row justify-content-center">
@@ -29,7 +29,7 @@
                     <div class="card-body">
                       <p class="card-text fw-bold text-brand">{{$product->brand->name ?? 'NULL'}}</p>
                       <p class="card-text">{{$product->name}}</p>
-                      <p class="card-text"> € {{$product->price}}</p>
+                      <p class="card-text">€ {{$product->price}}</p>
                     </div>
                   </div>
                 @endforeach
