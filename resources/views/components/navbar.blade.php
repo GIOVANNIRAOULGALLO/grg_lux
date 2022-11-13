@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 align-items-center">
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 align-items-center">
   <div class="container-fluid">
     <a class="navbar-brand fs-3 order-2 order-md-0 logo-shadow" href="{{route('homepage')}}">GRG</a>
     <button class="navbar-toggler order-1 order-md-1 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link mx-2" href="{{route('viewBySex',[$sex ='DONNA'])}}">NOVITA</a>
-        </li>
+        </li> -->
         <!-- 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -62,7 +62,7 @@
       
       
       -->
-      </ul>
+      <!-- </ul>
       <ul class="navbar-nav ms-auto d-none d-lg-inline-flex mt-3">
         <li class="nav-item ">
           <a class="nav-link text-light h5" href="" target="blank"> <i class="fa-solid fa-magnifying-glass text-white ms-auto"></i></a>
@@ -73,8 +73,8 @@
             <span class="circle-counter">{{\App\Models\Product::where('buy',1)->count()}}</span>
           </a>
         </li>
-        <li class="nav-item" title="Account">
-          <i class="fa-solid fa-user dropbtn"></i>
+        <li class="nav-item " title="Account">
+          <i class="fa-solid fa-user dropbtn"></i><p>Login</p>
           <div class="dropdown">
             <div class="dropdown-content">
               <a href="#">Link 1</a>
@@ -86,4 +86,41 @@
       </ul>
     </div>
   </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark navbar-survival101 text-uppercase">
+  <div class="container container-nav">
+    <a class="navbar-brand brand-grg" href="#">
+      GRG
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa-solid fa-arrow-down">MENU</i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">MAN<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">WOMAN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">HOUSE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login <i class="fa-solid fa-arrow-down"></i></a>
+        </li>
+      </ul>
+      <form class="form-inline">
+        <div class="input-group search-box">
+          <input type="text" class="form-control" placeholder="What are you looking for?" aria-label="Search for...">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+    
 </nav>

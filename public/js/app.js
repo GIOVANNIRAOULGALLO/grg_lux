@@ -3250,12 +3250,11 @@ function filterOpen() {
 
     accordion.style.visibility = "hidden";
   }
-}
+} // let priceRange=document.getElementById('priceRange').value;
+//     console.log(priceRange);
+//     let filterPriceRange=document.getElementById('filterPriceRange');
+//     filterPriceRange.innerHTML=priceRange;
 
-var priceRange = document.getElementById('priceRange').value;
-console.log(priceRange);
-var filterPriceRange = document.getElementById('filterPriceRange');
-filterPriceRange.innerHTML = priceRange;
 
 function rangeChange() {
   var priceRange = document.getElementById('priceRange').value;

@@ -70,10 +70,10 @@ function filterOpen(){
         accordion.style.visibility="hidden";
     }
 }
-let priceRange=document.getElementById('priceRange').value;
-    console.log(priceRange);
-    let filterPriceRange=document.getElementById('filterPriceRange');
-    filterPriceRange.innerHTML=priceRange;
+// let priceRange=document.getElementById('priceRange').value;
+//     console.log(priceRange);
+//     let filterPriceRange=document.getElementById('filterPriceRange');
+//     filterPriceRange.innerHTML=priceRange;
 function rangeChange(){
    
     let priceRange=document.getElementById('priceRange').value;
