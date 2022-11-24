@@ -111,13 +111,12 @@ function resizeFn() {
         }
         else{
             
-            filterButton.style.visibility="visible";;
-            accordion.style.visibility="hidden";
-            accordion.innerHTML="";
-            filterButton.addEventListener("click", filterOpen);
-            document.querySelector('.filter-count-text').style.marginTop="10px";
+            // document.getElementById('filterButton').style.visibility="visible";
+            // accordion.style.visibility="hidden";
+            // accordion.innerHTML="";
+            // filterButton.addEventListener("click", filterOpen);
+            // document.querySelector('.filter-count-text').style.marginTop="10px";
         }
-        // 
         
     } else if (window.innerWidth>=widths[1] && window.innerWidth<widths[2]) {
         

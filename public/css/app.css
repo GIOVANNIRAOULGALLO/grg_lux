@@ -11291,6 +11291,9 @@ textarea.form-control-lg {
 .bg-black{
     background-color: black;
 }
+.bg-gold{
+    background-color: gold;
+}
 .text-white{
     color:white;
 }
@@ -11305,10 +11308,10 @@ textarea.form-control-lg {
 .container-nav {
     max-width: 960px;
   }
-  .navbar-survival101 {
+  .navbar-grg{
     background-color:#000000;
   }
-  .navbar-survival101 .navbar-brand {
+  .navbar-grg .navbar-brand {
     font-size: 40px;
     text-shadow: 3px 2px gold;
     margin-right: 2.15rem;
@@ -11316,13 +11319,10 @@ textarea.form-control-lg {
     line-height: 36px;
   }
   
-  .navbar-survival101 .navbar-brand img {
+  .navbar-grg .navbar-brand img {
     vertical-align: baseline;
   }
   
-  .navbar-expand-lg .navbar-nav .nav-link {
-    color: #fff;
-  }
   
   .search-box {
     position: relative;
@@ -11355,39 +11355,12 @@ textarea.form-control-lg {
   .search-box .input-group-btn button:focus {
     color: rgba(0,0,0,.4);
   }
-  
-  @media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav .nav-link {
-      padding-right: .7rem;
-      padding-left: .7rem;
-    }
-    
-    .search-box {
-      width: 300px !important;
-    }
-  }
-  
-.brand-grg{
-    color: white;
-    text-decoration: none;
-    font-size: 22px;
-}
-.brand-grg:hover{
-    color: white;
-    
-}
-.principal-link:hover{
-    color: black;
-    background-color: gold;
-    border-radius: 5px;
-    transform: scale(0.85);
-    transition: 0.2s;
-}
 
-
-.navbar-grg .nav-link{
+/* .navbar-grg > .nav-link{
     color:white;
-}
+    margin-top: auto;
+    margin-bottom: auto;
+} */
 
 
 /* -------------------------------------------------------------------------------------------------------------- */
@@ -11454,64 +11427,6 @@ textarea.form-control-lg {
     margin-left: 4px;
     
   } */
-
-
- 
-  .dropbtn {
-    cursor: pointer;
-    color: white;
-    position: relative;
-    left: 15px;
-    bottom:17px;
-    transform: scale(1.2);
-  }
-
-    .dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 50px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 6px 4px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}
-  input[type='range'] {
-    -webkit-appearance: none !important;
-    background:yellow;
-    height:7px;
-}
-input[type='range']::-webkit-slider-thumb {
-    -webkit-appearance: none !important;
-    background:black;
-    height:10px;
-    width:10px;
-    border-radius: 50%;
-}
-
-.logo-shadow{
-    text-shadow: 2px 2px gold;
-}
 /* -------------------------------------------------------------------------------------------------------------- */
 /* ACCOUNT */
 /* -------------------------------------------------------------------------------------------------------------- */
@@ -11588,12 +11503,12 @@ input[type='range']::-webkit-slider-thumb {
     display: flex;
     align-items: center;
     justify-content: center;
-    bottom: 40px;
+    bottom: 70px;
     padding-top: 7.5px;
-    /* bottom: 12px; */
     left: 15px;
     border: 1px solid black;
 }
+
 .text-brand{
     font-size: 16px;
     font-weight: bolder;
@@ -11685,9 +11600,7 @@ input[type='range']::-webkit-slider-thumb {
 /* ------------------------------------------------------------------------- */
 
 .filter-gap{
-    /* border:1px solid gray; */
     height: 100%;
-    /* visibility:collapse; */
 }
 .filter-content:focus{
     outline: 0;
@@ -11747,14 +11660,20 @@ input[type='range']::-webkit-slider-thumb {
 
 
 
-@media screen and (max-width:425px) {
-    #inputSearch{
-        display: none;
-    }
-}
 @media screen and (min-width:992px){
     .nav-item {
-    line-height:80px;
+        line-height:50px;
     }
-  }
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: .7rem;
+        padding-left: .7rem;
+    }
+
+    .search-box {
+        width: 300px !important;
+    }
+}
 

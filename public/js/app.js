@@ -3283,15 +3283,12 @@ function resizeFn() {
       document.getElementById("btnAdd").style.marginRight = "50%";
     } // cart 
     else if (c.href.includes("cart")) {//  WORK IN PROGRESS    
-    } else {
-      filterButton.style.visibility = "visible";
-      ;
-      accordion.style.visibility = "hidden";
-      accordion.innerHTML = "";
-      filterButton.addEventListener("click", filterOpen);
-      document.querySelector('.filter-count-text').style.marginTop = "10px";
-    } // 
-
+    } else {// document.getElementById('filterButton').style.visibility="visible";
+      // accordion.style.visibility="hidden";
+      // accordion.innerHTML="";
+      // filterButton.addEventListener("click", filterOpen);
+      // document.querySelector('.filter-count-text').style.marginTop="10px";
+    }
   } else if (window.innerWidth >= widths[1] && window.innerWidth < widths[2]) {
     if (window.innerWidth >= window.innerWidth < widths[1] && window.innerWidth < 1000) {
       document.getElementById("filterGap").style.fontSize = "10px";
