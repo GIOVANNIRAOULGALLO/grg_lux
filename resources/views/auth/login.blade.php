@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot name="title">Login</x-slot>
-    <section class="container">
+    <section class="container vh-100">
         <div class="row justify-content-center text-center my-2">
             <div class="col-12">
                 <h1>Login</h1>
@@ -21,6 +21,9 @@
                     </div>
                     <button type="submit" class="btn-grg">Accedi</button>
                 </form>
+                <p class="my-2">
+                   Se non hai ancora un account, registrati <a href="{{route('register')}}" class="text-uppercase">QUI</a>
+                </p>
             </div>
         </div>
     </section>

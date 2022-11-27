@@ -91,7 +91,11 @@
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <p class="fs-2">E' necessario effettuare l'accesso per proseguire </p>
-                <a href="{{route('login')}}" class="link-no-decoration"><button class=" btn btn-add mx-auto">LOGIN</button></a>
+                <a href="{{route('login')}}" class="link-no-decoration"><button class=" btn btn-grg mx-auto">LOGIN</button></a>
+                <hr class="divider">
+                <p>
+                   Se non hai ancora un account, registrati <a href="{{route('register')}}" class="text-uppercase">QUI</a>
+                </p>
             </div>
         </div>
         @endif
