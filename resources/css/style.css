@@ -11,13 +11,19 @@
 .bg-gold{
     background-color: gold;
 }
-.text-white{
+.tc-gold{
+    color: gold;
+}
+.tc-white{
     color:white;
 }
+.tc-black{
+    color: black;
+}
+
 .link-no-decoration{
     text-decoration: none;
 }
-
 
 /* -------------------------------------------------------------------------------------------------------------- */
 /* NAVBAR */
@@ -73,24 +79,27 @@
     color: rgba(0,0,0,.4);
   }
 
+
+
+  /* --------------------------------------------------------------------------------------------------------------- */
+/* WELCOME */
+/* .................................................................................................................. */
+
+.over-text-welcome{
+    position: relative;
+    z-index: 2;
+    top: -40%;
+    font-size: 20px;
+    left: 110px;
+}
 /* -------------------------------------------------------------------------------------------------------------- */
 /* PRODUCTS */
 /* -------------------------------------------------------------------------------------------------------------- */
-
-
-.btn-grg{
-    height: 30px;
-    width: 100px;
-    border-radius: 5px;
-    background-color: black;
-    color:white;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
+.text-show-top{
+    font-size: 15px;
 }
+
+
 .text-area-misure{
     width: 100%;
     height: 200px;
@@ -212,6 +221,19 @@
 /* ------------------------------------------------------------------------------------------------------------------------------- */
 /* BUTTONS */
 /* -------------------------------------------------------------------------------------------------------------------------------- */
+.btn-grg{
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: black;
+    color:white;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
 .btn-add{
     /* position: relative; */
     background-color: gold;
@@ -240,7 +262,7 @@
 .btn-pay:hover{
     transform: scale(1.02);
     transition: 0.2s;
-    
+    color: black;
 }
 .btn-mod{
     position: relative;
@@ -252,6 +274,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.btn-grg-general{
+    background-color: gold;
+    border: 1 px solid black;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 50px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 /* ------------------------------------------------------------------------------------------------------------- */
 /* STRIPE PAY */

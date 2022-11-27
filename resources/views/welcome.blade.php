@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name="title">Homepage - GRG</x-slot>
+    <x-slot name="title">GRG - Homepage</x-slot>
     <section class="container">
         <div class="row justify-content-center text-center my-2">
             <div class="col-12">
@@ -13,15 +13,22 @@
         </div>
         <div class="row justify-content-center mb-5">
             <div class="col-12">
-                <img src="{{'/img/wardrobe.jpg'}}" alt="Homepage-GRG" class="img-fluid" style="height:400px;width:100%">
+                <img src="{{'/img/wardrobe.jpg'}}" alt="Homepage-GRG" class="img-fluid" style="">
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <p class="fs-2" id="welcomeTest">DISCOVER NEW FASHION</p>
+                <p class="fs-4" id="welcomeTest">DISCOVER NEW FASHION</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <a href="#"><img src="{{'/img/welcome_2.jpg'}}" alt="FallWinter" class="img-fluid"></a>
+                <p class="over-text-welcome tc-white">Fall/Winter Collection 2023</p>
             </div>
         </div>
         <div class="row justify-content-center text-center align-items-center my-4">
+            <h3>NEWS</h3>
             <div class="col-12 d-flex flex-row flex-grow-4 flex-grow-md-5 flex-wrap justify-content-evenly align-items-center mb-5">
                 @foreach ($products as $product)
                 <div class="card mx-3 my-3" style="width: 220px;height:400px">

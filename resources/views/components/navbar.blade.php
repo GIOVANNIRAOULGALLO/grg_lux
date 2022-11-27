@@ -95,22 +95,22 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mr-auto align-items-center">
         <li class="nav-item">
-          <a class="nav-link" href="{{route('viewBySex',[$sex ='UOMO'])}}">MAN</a>
+          <a class="nav-link text-light" href="{{route('viewBySex',[$sex ='UOMO'])}}">MAN</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('viewBySex',[$sex ='DONNA'])}}">WOMAN</a>
+          <a class="nav-link text-light" href="{{route('viewBySex',[$sex ='DONNA'])}}">WOMAN</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">HOUSE</a>
+          <a class="nav-link text-light" href="#">HOUSE</a>
         </li>
         
         <li class="nav-item dropdown">
           @if(Auth::user())
-            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link text-light dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <span class="fw-bolder text-light">ACCOUNT</span>
             </a>
             <ul class="dropdown-menu login-dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Profilo</a></li>
               <li>
                 <a class="dropdown-item" href="{{route('logout')}}"  onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Logout</a>
               </li>
@@ -119,12 +119,12 @@
               </form>
             </ul>
           @else
-            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <span class="fw-bolder text-light">Login</span>
+            <a class="nav-link text-light dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="fw-bolder">ACCOUNT</span>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
               <li><a class="dropdown-item" href="{{route('login')}}">LOGIN</a></li>
-              <li><a class="dropdown-item" href="{{route('register')}}">REGISTER</a></li>
+              <li><a class="dropdown-item" href="{{route('register')}}">CONTATTI</a></li>
             </ul>
           @endif
         </li>

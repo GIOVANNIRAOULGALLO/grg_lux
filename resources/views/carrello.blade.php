@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot name="title">Carrello</x-slot>
-    <section class="container-fluid vh-100">
+    <section class="container-fluid">
         <div class="row justify-content-center text-center">
             <div class="col-12 mx-0 px-0">
             @if (session('message'))
