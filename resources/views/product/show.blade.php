@@ -22,14 +22,14 @@
     </section>
     <section class="container vh-100">
         <div class="row justify-content-center text-center">
-            <div class="col-12 col-md-6 text-end" id="sectionImg">
-                <img src="https://picsum.photos/400" alt="{{$product->name}}" id="showPicture">
+            <div class="col-6 text-end" id="sectionImg">
+                <img src="https://picsum.photos/300" alt="{{$product->name}}" id="showPicture" class="img-product-detail">
             </div>
-            <div class="col-12 col-md-6 d-flex flex-column justify-content-center text-start" id="textShow">
-                <p class="card-text fw-bold fs-2 text-uppercase">{{$product->brand->name ?? 'NULL'}}</p>
-                <h2>{{$product->name}}</h1>
-                <h5>{{$product->description}}</h3>
-                <p>{{$product->price}} €</p>
+            <div class="col-6 d-flex flex-column justify-content-center text-start" id="textShow">
+                <p class="card-text fw-bold  text-uppercase">{{$product->brand->name ?? 'NULL'}}</p>
+                <p class="card-text">{{$product->name}}</p>
+                <p class="card-text">{{$product->description}}</p>
+                <p class="card-text">{{$product->price}} €</p>
                 <div class="row justify-content-start align-items-center">
                     <div class="col-4 text-center">
                         <form method="POST" action="{{route('addToCart',compact('product'))}}">
@@ -37,7 +37,6 @@
                             <button type ="submit" class="my-2 btn-add" id="btnAdd">Add to cart</button>
                         </form>
                     </div>
-                   
                 </div>
                 
             </div>

@@ -23,17 +23,17 @@
                 <div class="col-12 mx-auto">   
                 @foreach ($products as $product)
                     <div class="row cart-card">
-                        <div class="col-12 col-md-6">
-                            <a href="{{route('product.show',compact('product'))}}"><img src="https://picsum.photos/100" class="img-fluid" alt="{{$product->name}}"></a>
+                        <div class="col-3 cart-inside">
+                            <a href="{{route('product.show',compact('product'))}}"><img src="https://picsum.photos/100" class="img-fluid img-cart-inside" alt="{{$product->name}}"></a>
                         </div>
-                        <div class="col-12 col-md-6">
-                            <p class="text-uppercase">{{$product->brand->name}}</p>
-                            <p class="">{{$product->name}}</p>
-                            <p class="">{{$product->price}}$</p>
+                        <div class="col-6 cart-inside">
+                            <p class="cart-product-text text-uppercase">{{$product->brand->name}}</p>
+                            <p class="cart-product-text">{{$product->name}}</p>
+                            <p class="cart-product-text">{{$product->price}}$</p>
                         </div>
-                        <div class="col-12 col-md-6">
+                        <div class="col-3 cart-inside">
                             <label for="qta">Q.ta: </label>
-                            <input type="number" id="qta" name="" value="1" style="width:40px" min="1" max="10">
+                            <input type="text" id="qta" value="1" style="width:40px">
                             <form action="{{route('removeToCart',compact('product'))}}" method="post">
                                 @csrf
                                 @method('post')
@@ -43,7 +43,6 @@
                     </div>
                     @php($count+=$product->price)
                 @endforeach
-                
                 </div>
                 <div class="col-3 d-flex flex-column align-items-center">
                     <p class="fs-4 fw-bold mt-3">Totale: {{$count}} $</p>

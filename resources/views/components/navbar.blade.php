@@ -85,7 +85,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark navbar-grg text-uppercase sticky-top">
   <div class="container container-nav">
-    <a class="navbar-brand brand-grg" href="{{route('homepage')}}">
+    <a class="navbar-brand" href="{{route('homepage')}}">
       GRG
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,7 +93,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav mr-auto align-items-center">
         <li class="nav-item">
           <a class="nav-link" href="{{route('viewBySex',[$sex ='UOMO'])}}">MAN</a>
         </li>
@@ -111,7 +111,12 @@
             </a>
             <ul class="dropdown-menu login-dropdown-menu" aria-labelledby="navbarScrollingDropdown">
               <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <a class="dropdown-item" href="{{route('logout')}}"  onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Logout</a>
+              </li>
+              <form action="{{route('logout')}}" method="post" id="form-logout">
+                @csrf
+              </form>
             </ul>
           @else
             <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -124,20 +129,27 @@
           @endif
         </li>
         <li class="nav-item">
+        <form class="form-inline">
+          <div class="input-group search-box">
+            <input type="text" class="form-control" placeholder="What are you looking for?" aria-label="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </span>
+          </div>
+        </form>
+      </li>
+        <li class="nav-item">
           <a class="nav-link text-light" href="{{route('viewCart',['userName'=>Auth::user()->name ?? 'user','userSurname'=>Auth::user()->surname ?? 'user'])}}">
-            <i class="fa-solid fa-cart-shopping text-light" > </i>
+            <i class="fa-solid fa-cart-shopping text-light cart-icon"> </i>
             <span class="circle-counter">{{\App\Models\Product::where('buy',1)->count()}}</span>
           </a>
         </li>
       </ul>
-      <form class="form-inline">
-        <div class="input-group search-box">
-          <input type="text" class="form-control" placeholder="What are you looking for?" aria-label="Search for...">
-          <span class="input-group-btn">
-            <button class="btn btn-secondary" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
-          </span>
-        </div>
-      </form>
+
+      
+
+
+
     </div>
   </div>
 </nav>
