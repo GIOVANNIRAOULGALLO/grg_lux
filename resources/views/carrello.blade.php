@@ -20,7 +20,7 @@
         @if(\App\Models\Product::where('buy',1)->count()>0)
             <div class="row justify-content-center">
             @php($count=0)  
-                <div class="col-12 mx-auto">   
+                <div class="col-12 col-md-6 mx-auto">   
                 @foreach ($products as $product)
                     <div class="row cart-card">
                         <div class="col-3 cart-inside">
@@ -44,13 +44,13 @@
                     @php($count+=$product->price)
                 @endforeach
                 </div>
-                <div class="col-3 d-flex flex-column align-items-center">
+                <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
                     <p class="fs-4 fw-bold mt-3">Totale: {{$count}} $</p>
                     <a href="{{route('ship',compact('count'))}}" class="link-no-decoration"><button class="btn-pay">VAI AL CHECKOUT</button></a>
                 </div>
             </div>
         @else
-            <div class="row justifycontent-center">
+            <div class="row justify-content-center">
                 <div class="col-12 text-center">
                     <p>Il tuo carrello è vuoto!</p>
                 </div>

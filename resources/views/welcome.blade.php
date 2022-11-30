@@ -13,7 +13,7 @@
         </div>
         <div class="row justify-content-center mb-5">
             <div class="col-12">
-                <img src="{{'/img/wardrobe.jpg'}}" alt="Homepage-GRG" class="img-fluid" style="">
+                <img src="{{'/img/wardrobe.jpg'}}" alt="Homepage-GRG" class="img-fluid">
             </div>
         </div>
         <div class="row justify-content-center">
