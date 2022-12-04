@@ -11311,25 +11311,28 @@ textarea.form-control-lg {
 /* -------------------------------------------------------------------------------------------------------------- */
 /* NAVBAR */
 /* -------------------------------------------------------------------------------------------------------------- */
-.container-nav {
-    max-width: 960px;
+ /* .container-nav {
+    width: 100%;
+    margin-right: 0;
   }
   .navbar-grg{
     background-color:#000000;
   }
-  .navbar-grg .navbar-brand {
+ 
+  
+  .navbar-grg .navbar-brand img {
+    vertical-align: baseline;
+  }
+  
+   */
+
+   .navbar-grg .navbar-brand {
     font-size: 40px;
     text-shadow: 3px 2px gold;
     margin-right: 2.15rem;
     padding: 3px 0 0 0;
     line-height: 36px;
   }
-  
-  .navbar-grg .navbar-brand img {
-    vertical-align: baseline;
-  }
-  
-  
   .search-box {
     position: relative;
     height: 34px;
@@ -11351,7 +11354,7 @@ textarea.form-control-lg {
   .search-box .input-group-btn button {
     background-color: transparent;
     border: 0;
-    padding: 4px 8px;
+    padding: 4px 4px;
     color: rgba(0,0,0,.4);
     font-size: 20px;
   }
@@ -11362,7 +11365,11 @@ textarea.form-control-lg {
     color: rgba(0,0,0,.4);
   }
 
-
+  .search-form{
+    width:-webkit-fit-content;
+    width:-moz-fit-content;
+    width:fit-content;
+  }
 
   /* --------------------------------------------------------------------------------------------------------------- */
 /* WELCOME */
@@ -11375,6 +11382,9 @@ textarea.form-control-lg {
     font-size: 20px;
     left: 110px;
 }
+/* .welcome-product{
+    width: max-content;
+} */
 /* -------------------------------------------------------------------------------------------------------------- */
 /* PRODUCTS */
 /* -------------------------------------------------------------------------------------------------------------- */
@@ -11718,6 +11728,11 @@ textarea.form-control-lg {
 
 
 @media screen and (max-width:768px){
+
+    .navbar-grg .navbar-nav{
+        flex-direction: row !important;
+        justify-content: space-around;
+    }
     /* --------------------------------------------------------------------------------------------------------------------- */
     /* CART */
     /* -------------------------------------------------------------------------------------------------------------------- */

@@ -83,7 +83,31 @@
   </div>
 </nav> -->
 
-<nav class="navbar navbar-expand-lg navbar-dark navbar-grg text-uppercase sticky-top">
+
+
+<!-- 
+
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>Try scrolling the rest of the page to see this option in action.</p>
+  </div>
+</div>
+
+
+
+ -->
+
+
+
+
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark navbar-grg text-uppercase sticky-top">
   <div class="container container-nav">
     <a class="navbar-brand" href="{{route('homepage')}}">
       GRG
@@ -91,7 +115,16 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span><i class="fa-solid fa-arrow-down">MENU</i></span>
     </button>
-
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">MENU</button>
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>Try scrolling the rest of the page to see this option in action.</p>
+        </div>
+    </div>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mr-auto align-items-center">
         <li class="nav-item">
@@ -145,11 +178,49 @@
           </a>
         </li>
       </ul>
+    </div>
+  </div>
+</nav> -->
 
-      
 
-
-
+<nav class="navbar navbar-expand-lg bg-black sticky-top navbar-grg">
+  <div class="container-fluid">
+    <a class="navbar-brand link-no-decoration tc-white grg-brand" href="#">G2R</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <i class="fa-solid fa-bars tc-white"></i>
+    </button>
+    <div class="offcanvas offcanvas-end bg-black bg-lg-light" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title tc-white mx-auto me-0" id="offcanvasNavbarLabel">G2R</h5>
+        <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark tc-white"></i></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav my-auto">
+          <li class="nav-item tc-white">
+            <a class="nav-link tc-white link-no-decoration active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tc-white link-no-decoration" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link tc-white link-no-decoration dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex my-auto me-0" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-light" type="submit">Search</button>
+        </form>
+      </div>
     </div>
   </div>
 </nav>

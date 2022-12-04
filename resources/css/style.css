@@ -28,25 +28,28 @@
 /* -------------------------------------------------------------------------------------------------------------- */
 /* NAVBAR */
 /* -------------------------------------------------------------------------------------------------------------- */
-.container-nav {
-    max-width: 960px;
+ /* .container-nav {
+    width: 100%;
+    margin-right: 0;
   }
   .navbar-grg{
     background-color:#000000;
   }
-  .navbar-grg .navbar-brand {
+ 
+  
+  .navbar-grg .navbar-brand img {
+    vertical-align: baseline;
+  }
+  
+   */
+
+   .navbar-grg .navbar-brand {
     font-size: 40px;
     text-shadow: 3px 2px gold;
     margin-right: 2.15rem;
     padding: 3px 0 0 0;
     line-height: 36px;
   }
-  
-  .navbar-grg .navbar-brand img {
-    vertical-align: baseline;
-  }
-  
-  
   .search-box {
     position: relative;
     height: 34px;
@@ -68,7 +71,7 @@
   .search-box .input-group-btn button {
     background-color: transparent;
     border: 0;
-    padding: 4px 8px;
+    padding: 4px 4px;
     color: rgba(0,0,0,.4);
     font-size: 20px;
   }
@@ -79,7 +82,9 @@
     color: rgba(0,0,0,.4);
   }
 
-
+  .search-form{
+    width:fit-content;
+  }
 
   /* --------------------------------------------------------------------------------------------------------------- */
 /* WELCOME */
@@ -92,6 +97,9 @@
     font-size: 20px;
     left: 110px;
 }
+/* .welcome-product{
+    width: max-content;
+} */
 /* -------------------------------------------------------------------------------------------------------------- */
 /* PRODUCTS */
 /* -------------------------------------------------------------------------------------------------------------- */
