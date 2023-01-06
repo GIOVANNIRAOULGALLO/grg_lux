@@ -183,21 +183,74 @@
 </nav> -->
 
 
-<nav class="navbar navbar-expand-lg bg-black sticky-top navbar-grg">
+
+
+
+
+
+
+<nav class="bg-black sticky-top navbar-grg">
   <div class="container-fluid">
-    <a class="navbar-brand link-no-decoration tc-white grg-brand" href="#">G2R</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <i class="fa-solid fa-bars tc-white"></i>
-    </button>
-    <div class="offcanvas offcanvas-end bg-black bg-lg-light" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-4 d-flex flex-row align-items-center">
+        <a class="link-no-decoration mx-3 tc-white" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+        <p class="fs-4 pt-4">
+          <i class="fa-solid fa-bars fs-5"1></i>
+          MENU
+        </p>
+        </a>
+        <div class="offcanvas offcanvas-start" tabindex="-99" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+            </div>
+            <div class="dropdown mt-3">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                Dropdown button
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <form class="d-flex">
+          <input class="form-control me-2 input-search" type="search" placeholder="Search" aria-label="Search" name="">
+          <button class="btn tc-white" type="submit" name=""><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+      <div class="col-4 text-center py-auto">
+        <div>
+          <a class="link-no-decoration grg-brand" href="{{route('homepage')}}">GRG</a>
+        </div> 
+      </div>
+      <div class="col-4  d-flex flex-row justify-content-end">
+        <div>
+          <a class="link-no-decoration tc-white" href="{{route('viewCart',['userName'=>Auth::user()->name ?? 'user','userSurname'=>Auth::user()->surname ?? 'user'])}}">
+              <i class="fa-solid fa-cart-shopping text-light"> </i>
+              <span class="circle-counter">{{\App\Models\Product::where('buy',1)->count()}}</span>
+            </a>
+        </div>
+        <div> <a href="" class="tc-white link-no-decoration mx-3">LINK</a></div>
+        <div> <a href="" class="tc-white link-no-decoration mx-3">LINK</a></div>
+      </div>
+    </div>
+    
+    <!-- <div class="offcanvas offcanvas-end bg-black bg-lg-light" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title tc-white mx-auto me-0" id="offcanvasNavbarLabel">G2R</h5>
+        <h5 class="offcanvas-title tc-white mx-auto" id="offcanvasNavbarLabel">GRG</h5>
         <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark tc-white"></i></button>
       </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav my-auto">
+      <div class="offcanvas-body justify-content-between">
+        <ul class="navbar-nav my-auto justify-content-end">
           <li class="nav-item tc-white">
-            <a class="nav-link tc-white link-no-decoration active" aria-current="page" href="#">Home</a>
+            <a class="nav-link tc-white link-no-decoration active" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link tc-white link-no-decoration" href="#">Link</a>
@@ -216,11 +269,15 @@
             </ul>
           </li>
         </ul>
-        <form class="d-flex my-auto me-0" role="search">
+          <a class="text-light" href="{{route('viewCart',['userName'=>Auth::user()->name ?? 'user','userSurname'=>Auth::user()->surname ?? 'user'])}}">
+              <i class="fa-solid fa-cart-shopping text-light"> </i>
+              <span class="circle-counter">{{\App\Models\Product::where('buy',1)->count()}}</span>
+            </a>
+        <form class="d-flex my-auto" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-light" type="submit">Search</button>
         </form>
       </div>
-    </div>
+    </div> -->
   </div>
 </nav>

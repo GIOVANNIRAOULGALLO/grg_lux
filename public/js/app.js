@@ -3233,20 +3233,19 @@ function resizeFn() {
 window.onresize = resizeFn;
 resizeFn(); // var PARAMS = @json($params)
 // ------------------------------------------------------------------------------------------------------------------------------
-// PORCATE
 // -----------
 // SEARCH BAR
 // -----------
 // const { filter } = require("lodash");
-// let inputSearch=document.querySelector('.input-search');
-// let buttonSearch=document.querySelector('.button-search');
-// inputSearch.addEventListener("focus",function(){
-//     inputSearch.style.width='50%';
-// });
-// inputSearch.addEventListener("focusout",function(){
-//     inputSearch.style.width="10%";
-// })
-// ----------------------------
+
+var inputSearch = document.querySelector('.input-search');
+var buttonSearch = document.querySelector('.button-search');
+inputSearch.addEventListener("focus", function () {
+  inputSearch.style.width = '50%';
+});
+inputSearch.addEventListener("focusout", function () {
+  inputSearch.style.width = "10%";
+}); // ----------------------------
 // ACCOUNT
 // --------------------
 // let accountContent=document.getElementById("accountContent");

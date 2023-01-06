@@ -53,6 +53,30 @@
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
                     <p>Il tuo carrello è vuoto!</p>
+                    <p><a href="">CONTINUA AD ACQUISTARE</a></p>
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-danger mx-5 my-4">
+                            la moda che piace
+                        </button>
+                        <button class="btn btn-danger mx-5 my-4">
+                            la moda che piace
+                        </button>
+                        <button class="btn btn-danger mx-5 my-4">
+                            la moda che piace
+                        </button>
+                        <button class="btn btn-danger mx-5 my-4">
+                            la moda che piace
+                        </button>
+                        <button class="btn btn-danger mx-5 my-4">
+                            la moda che piace
+                        </button>
+                    </div>
+                    <div>
+                        <p class="fs-5">oppure </p>
+                        <p class="fs-3">guarda la nostra ss23</p>
+                        <img src="https://picsum.photos/1000/300" alt="casual image" class="mb-5 img-fluid">
+                    </div>
+                    
                 </div>
             </div>
         @endif

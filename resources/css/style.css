@@ -43,16 +43,27 @@
   
    */
 
-   .navbar-grg .navbar-brand {
-    font-size: 40px;
-    text-shadow: 3px 2px gold;
-    margin-right: 2.15rem;
-    padding: 3px 0 0 0;
-    line-height: 36px;
+   .grg-brand:hover{
+        color: white;
+        transform: scale(0.8);
+        transition: 0.3s;
+   }
+
+   .grg-brand {
+        color: gold;
+        font-size: 50px;
+        text-shadow: 3px 2px rgba(255, 227, 71, 0.527);
+        text-decoration: none;
+  }
+  .input-search{
+    background: transparent;
+    border: none;
+    max-width: 150px;
+    font-size: 13px;
   }
   .search-box {
     position: relative;
-    height: 34px;
+    /* height: 34px; */
   }
   .search-box input {
     border: 0;
@@ -82,9 +93,9 @@
     color: rgba(0,0,0,.4);
   }
 
-  .search-form{
+  /* .search-form{
     width:fit-content;
-  }
+  } */
 
   /* --------------------------------------------------------------------------------------------------------------- */
 /* WELCOME */
@@ -320,7 +331,7 @@
 /*-----------------------------------------------------------------------  */
 /* CART */
 /* ------------------------------------------------------------- */
-.circle-counter{
+/* .circle-counter{
     background-color: gold;
     color: black;
     height: 20px;
@@ -335,11 +346,12 @@
     padding-top: 40%;
     left: 15px;
     border: 1px solid black;
-}
+} */
 .cart-icon{
-    position: absolute;
-    top: 22px;
+    /* position: absolute;
+    top: 22px; */
 }
+
 
 .cart-card{
     display: flex;
