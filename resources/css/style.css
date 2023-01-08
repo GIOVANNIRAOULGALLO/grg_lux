@@ -1,9 +1,10 @@
 /* -------------------------------------------------------------------------------------------------------------- */
-/* GENERAL */
+/* GENERAL *
 /* -------------------------------------------------------------------------------------------------------------- */
 *{
     font-family: 'Gayathri', sans-serif;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
+    
 }
 .bg-black{
     background-color: black;
@@ -20,7 +21,9 @@
 .tc-black{
     color: black;
 }
-
+.tc-red{
+    color: red;
+}
 .link-no-decoration{
     text-decoration: none;
 }
@@ -52,9 +55,11 @@
    .grg-brand {
         color: gold;
         font-size: 50px;
-        text-shadow: 3px 2px rgba(255, 227, 71, 0.527);
         text-decoration: none;
   }
+  /* .menu-bars{
+    font-size: 10px;
+  } */
   .input-search{
     background: transparent;
     border: none;
@@ -264,6 +269,10 @@
     justify-content: center;
     align-items: center;
 }
+.btn-search{
+    background: none;
+    border: none;
+}
 .btn-pay{
     margin-bottom: 50px;
     position: relative;
@@ -331,25 +340,29 @@
 /*-----------------------------------------------------------------------  */
 /* CART */
 /* ------------------------------------------------------------- */
-/* .circle-counter{
+.circle-counter{
     background-color: gold;
     color: black;
     height: 20px;
     width: 20px;
+    margin-bottom: 40px;
     border-radius: 50%;
-    position:relative;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: 10px;
-    padding-top: 40%;
-    left: 15px;
     border: 1px solid black;
-} */
-.cart-icon{
-    /* position: absolute;
-    top: 22px; */
+}
+.carouel-image{
+    width: 100%;
+    height: auto;
+    max-height: 700px;
+    padding: 0;
+    margin: 0; 
+}
+.bg-side{
+    background-color: rgba(251, 255, 139, 0.597);
+}
+
+.navbargrg-link:hover{
+    color: gold;
 }
 
 

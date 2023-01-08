@@ -12,9 +12,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   </head>
   <body class="">
-        <x-navbar/>
-        {{$slot}}
-        <x-footer/>
+      <x-navbar/>
+      {{$slot}}
+      <x-footer/>
     <script src="{{asset('js/app.js')}}"></script>
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@2.8.2/dist/alpine.min.js"></script>
