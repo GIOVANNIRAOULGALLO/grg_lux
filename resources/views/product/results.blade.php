@@ -4,7 +4,7 @@
         
         @if($products->count()>0)
             <div class="row justify-content-center text-center">
-                <div class="col-12">
+                <div class="col-12 mt-2">
                     <h1>Risultati per: "{{$q}}"</h1>
                 </div>
             </div>
@@ -26,7 +26,7 @@
             </div>
         @else
             <div class="row justify-content-center text-center">
-                <div class="col-12">
+                <div class="col-12 mt-2">
                     <p class="fs-4">Nessun risultato per la tua ricerca..</p>
                 </div>
             </div>

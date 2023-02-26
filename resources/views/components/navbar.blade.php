@@ -259,7 +259,7 @@
         </div>
         <span class="circle-counter">{{\App\Models\Product::where('buy',1)->count()}}</span>
         <div class="dropdown show"> 
-          <a href="" class="tc-white link-no-decoration mx-3 navbargrg-link dropdown-toggle" role="button"  id="dropdownAccountButton"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a href="#" class="tc-white link-no-decoration mx-3 navbargrg-link dropdown-toggle" role="button"  id="dropdownAccountButton"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             My GRG
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdownAccountButton">

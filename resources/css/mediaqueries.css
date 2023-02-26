@@ -17,22 +17,13 @@
 
 
 
-@media screen and (max-width:768px){
-
-    /* .navbar-grg .navbar-nav{
-        flex-direction: row !important;
-        justify-content: space-between;
-    } */
-    
+@media screen and (max-width:768px){   
     .grg-brand {
         color: gold;
         font-size: 30px;
         text-decoration: none;
         margin-top: auto;
-  }
-    
-   
-
+    }
     
     /* --------------------------------------------------------------------------------------------------------------------- */
     /* CART */
@@ -70,13 +61,6 @@
         left: 40px;
     }
 }
-
-
-
-
-
-
-
 
 
 

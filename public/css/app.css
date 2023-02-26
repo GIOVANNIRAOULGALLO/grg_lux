@@ -11390,6 +11390,11 @@ textarea.form-control-lg {
   /* --------------------------------------------------------------------------------------------------------------- */
 /* WELCOME */
 /* .................................................................................................................. */
+.carousel-welcome{
+    display:block;
+    vertical-align: middle;
+}
+
 .welcome-background-1{
     height: 95vh;
     background: rgb(255,237,131);
@@ -11409,7 +11414,7 @@ textarea.form-control-lg {
     font-weight: 800;
     text-shadow: 1px 1px gold;
     text-decoration: none;
-    color: rgb(108, 84, 24);
+    color: black;
     border: 3px solid white;
     border-radius: 15px;
     padding: 10px;
@@ -11687,9 +11692,9 @@ textarea.form-control-lg {
     background: none;
     border: none;
 }
-.navbargrg-link:hover{
+/* .navbargrg-link:hover{
     color: gold;
-}
+} */
 .navbargrg-link-offcanvas{
     display: flex;
     justify-content: space-between;
@@ -11817,22 +11822,13 @@ textarea.form-control-lg {
 
 
 
-@media screen and (max-width:768px){
-
-    /* .navbar-grg .navbar-nav{
-        flex-direction: row !important;
-        justify-content: space-between;
-    } */
-    
+@media screen and (max-width:768px){   
     .grg-brand {
         color: gold;
         font-size: 30px;
         text-decoration: none;
         margin-top: auto;
-  }
-    
-   
-
+    }
     
     /* --------------------------------------------------------------------------------------------------------------------- */
     /* CART */
@@ -11870,13 +11866,6 @@ textarea.form-control-lg {
         left: 40px;
     }
 }
-
-
-
-
-
-
-
 
 
 

@@ -107,6 +107,11 @@
   /* --------------------------------------------------------------------------------------------------------------- */
 /* WELCOME */
 /* .................................................................................................................. */
+.carousel-welcome{
+    display:block;
+    vertical-align: middle;
+}
+
 .welcome-background-1{
     height: 95vh;
     background: rgb(255,237,131);
@@ -126,7 +131,7 @@
     font-weight: 800;
     text-shadow: 1px 1px gold;
     text-decoration: none;
-    color: rgb(108, 84, 24);
+    color: black;
     border: 3px solid white;
     border-radius: 15px;
     padding: 10px;
@@ -404,9 +409,9 @@
     background: none;
     border: none;
 }
-.navbargrg-link:hover{
+/* .navbargrg-link:hover{
     color: gold;
-}
+} */
 .navbargrg-link-offcanvas{
     display: flex;
     justify-content: space-between;

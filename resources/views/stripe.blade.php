@@ -22,13 +22,10 @@
                   <div class="panel-heading display-table" >
                      <div class="row">
                         <div class="col-12">
-                           
                         </div>
                      </div>
                      <div class="row display-tr" >
                         <h6 class="panel-title display-td" >Inserisci i dati della tua carta</h6>
-                        
-                  
                      </div>
                   </div>
                   <div class="panel-body">
@@ -48,13 +45,13 @@
                         @csrf
                         <div class='form-row row'>
                            <div class='col-xs-12 form-group required'>
-                              <label class='control-label'>Name on Card</label> <input
+                              <label class='control-label'>Intestesta a</label> <input
                                  class='form-control' size='4' type='text'>
                            </div>
                         </div>
                         <div class='form-row row'>
                            <div class='col-xs-12 form-group card required'>
-                              <label class='control-label'>Card Number</label> <input
+                              <label class='control-label'>Numero della carta</label> <input
                                  autocomplete='off' class='form-control card-number' size='20'
                                  type='text'>
                            </div>
@@ -86,7 +83,7 @@
                         </div>
                         <div class="row">
                            <div class="col-xs-12">
-                              <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now {{$count}} $</button>
+                              <button class="btn btn-primary btn-lg btn-block" type="submit">Paga ora {{$count}} $</button>
                            </div>
                      </form>
                   </div>
