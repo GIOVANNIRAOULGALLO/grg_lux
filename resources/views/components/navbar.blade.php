@@ -199,14 +199,20 @@
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
           <div class="offcanvas-header">
               <p class="offcanvas-brand" id="offcanvasBottomLabel">GRG</p>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <button type="button" class="btnGrg" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark tc-red"></i></button>
           </div>
           <div class="offcanvas-body text-center">
             <div>
               <div class="row">
-                <input type="search" id="mySearch" placeholder="Cerca.." title="" class="navbar-search"><br>
+                <form method="GET" action="{{route('product.search')}}" class="d-none d-md-flex">
+                  <input class="form-control me-2 navbar-search" type="text" placeholder="Cerca.." aria-label="Search" autoComplete="off" name="q">
+                  <button class="tc-white btn-search d-none" type="submit" name=""><i class="fa-solid fa-magnifying-glass navbargrg-link"></i></button>
+                </form>
+                <!-- <input type="text" id="mySearch" placeholder="Cerca.." title="" class="navbar-search"><br> -->
               </div>
+              
               <p>Comincia ad acquistare...</p>
+              <hr class="divider">
               <a class="link-no-decoration tc-black navbargrg-link-offcanvas w-100" href="{{route('viewBySex',[$sex ='UOMO'])}}">UOMO <i class="fa-solid fa-chevron-right"></i></a>
               <hr class="divider">
               <a class="link-no-decoration tc-black navbargrg-link-offcanvas" href="{{route('viewBySex',[$sex ='DONNA'])}}">DONNA <i class="fa-solid fa-chevron-right"></i></a>
@@ -224,7 +230,7 @@
         <div class="offcanvas offcanvas-start" tabindex="-1" id="categoryOffcanvas" aria-labelledby="offcanvasMenuLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasBottomLabel">CATEGORIES</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btnGrg" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark tc-red"></i></button>
           </div>
           <div class="offcanvas-body">
             <div>
@@ -235,12 +241,12 @@
             </div>    
           </div>
         </div>
-        <form class="d-none d-md-flex">
-          <input class="form-control me-2 input-search" type="search" placeholder="Search" aria-label="Search" name="">
+        <form method="GET" action="{{route('product.search')}}" class="d-none d-md-flex">
+          <input class="form-control me-2 input-search" type="text" placeholder="Search" aria-label="Search" autoComplete="off" name="q">
           <button class="tc-white btn-search" type="submit" name=""><i class="fa-solid fa-magnifying-glass navbargrg-link"></i></button>
         </form>
       </div>
-      <div class="col-9 col-md-4 text-end text-md-center py-auto">
+      <div class="col-9 col-md-4 text-end text-md-center">
         <div>
           <a class="link-no-decoration grg-brand" href="{{route('homepage')}}">GRG</a>
         </div> 
