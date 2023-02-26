@@ -258,7 +258,22 @@
             </a>
         </div>
         <span class="circle-counter">{{\App\Models\Product::where('buy',1)->count()}}</span>
-        <div> <a href="" class="tc-white link-no-decoration mx-3 navbargrg-link">My GRG</a></div>
+        <div class="dropdown show"> 
+          <a href="" class="tc-white link-no-decoration mx-3 navbargrg-link dropdown-toggle" role="button"  id="dropdownAccountButton"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            My GRG
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownAccountButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+          <!-- <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Logout</a></li>
+            <form method="POST" action="{{route('logout')}}" id="form-logout">
+              @csrf
+            </form> -->
+        </div>
+        
+        
         <div> <a href="" class="tc-white link-no-decoration mx-3"><i class="fa-solid fa-flag navbargrg-link"></i></a></div>
       </div>
     </div>
