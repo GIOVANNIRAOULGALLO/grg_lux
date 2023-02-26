@@ -58,20 +58,6 @@ function resizeFn() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
    // -----------
 // SEARCH BAR
 // -----------
@@ -85,11 +71,22 @@ let buttonSearch=document.querySelector('.button-search');
 
 inputSearch.addEventListener("focus",function(){
     inputSearch.style.width='50%';
+    inputSearch.style.marginLeft='10px';
 });
 inputSearch.addEventListener("focusout",function(){
-    inputSearch.style.width="10%";
+    inputSearch.style.width="100%";
 })
 
+
+// --------------------------------------------------------------------------------------------------------------------------
+
+var offcanvasMenu = document.getElementById('offcanvasMenu');
+var offcanvasCategory = document.getElementById('offcanvasCategory');
+
+offcanvasMenu.addEventListener('hidden.bs.offcanvas', function () {
+  var bsOffcanvas2 = new bootstrap.Offcanvas(offcanvasCategory);
+  bsOffcanvas2.show();
+});
 
 // ----------------------------
 // ACCOUNT

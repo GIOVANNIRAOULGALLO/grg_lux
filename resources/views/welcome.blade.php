@@ -20,25 +20,26 @@
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <img src="{{'/img/carousel_image2.jpg'}}" class="d-block carouel-image img-fluid" alt="...">
+                        <div class="carousel-item active welcome-background-1 d-flex align-items-center justify-content-center">
+
+                        <div class="d-flex  justify-content-center align-items-center flex-column tc-black ">
+                            <p class="fs-3 fs-md-1 text-center fw-bold">COMINCIANO I <span class="tc-red">SALDI</span></p>
+                            <p class="text-center">Corri a vedere i nostri sconti dal 30% al 60%</p>
+                            <a href="" class="button-welcome">
+                                DISCOVER MORE
+                            </a>
+                        </div>
+                        </div>
+                        <div class="carousel-item welcome-background-2">
                         <div class="carousel-caption d-block tc-black ">
                             <p class="fs-1 fw-bold">COMINCIANO I <span class="tc-red">SALDI</span></p>
-                            <p>Some representative placeholder content for the first slide.</p>
+                            <p>Corri a vedere i nostri sconti dal 30% al 60%.</p>
                         </div>
                         </div>
-                        <div class="carousel-item">
-                        <img src="{{'/img/carousel_image2.jpg'}}" class="d-block carouel-image img-fluid" alt="...">
+                        <div class="carousel-item welcome-background-3">
                         <div class="carousel-caption d-block tc-black ">
                             <p class="fs-1 fw-bold">COMINCIANO I <span class="tc-red">SALDI</span></p>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                        </div>
-                        <div class="carousel-item">
-                        <img src="{{'/img/carousel_image2.jpg'}}" class="d-block carouel-image img-fluid" alt="...">
-                        <div class="carousel-caption d-block tc-black ">
-                            <p class="fs-1 fw-bold">COMINCIANO I <span class="tc-red">SALDI</span></p>
-                            <p>Some representative placeholder content for the third slide.</p>
+                            <p>Corri a vedere i nostri sconti dal 30% al 60%</p>
                         </div>
                         </div>
                     </div>
@@ -53,17 +54,17 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
+        <!-- <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <p class="fs-4" id="welcomeTest">DISCOVER NEW FASHION</p>
             </div>
-        </div>
-        <div class="row justify-content-center">
+        </div> -->
+        <!-- <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <a href="#"><img src="{{'/img/welcome_2.jpg'}}" alt="FallWinter" class="img-fluid"></a>
                 <p class="over-text-welcome tc-white">Fall/Winter Collection 2023</p>
             </div>
-        </div>
+        </div> -->
         <div class="row justify-content-center text-center align-items-center my-4">
             <h3>NEWS</h3>
             <div class="col-12 d-flex flex-row flex-grow-4 flex-grow-md-5 flex-wrap justify-content-center align-items-center mb-5">

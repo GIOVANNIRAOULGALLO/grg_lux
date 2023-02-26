@@ -19,6 +19,10 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $products=Product::all();
+    }
     public function index()
     {
         $products=Product::take(4)->orderBy('id','DESC')->get();
@@ -68,7 +72,8 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('product.show',compact('product'));
+        $sex=$product->sex;
+        return view('product.show',compact('product','sex'));
     }
 
     /**

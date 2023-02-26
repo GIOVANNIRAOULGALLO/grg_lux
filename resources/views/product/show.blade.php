@@ -18,7 +18,7 @@
                 <p class="text-secondary text-show-top">Home > {{$product->category->name ?? 'NULL'}} > {{$product->name}}</p>
             </div>
             <div class="col-6">
-                <p class="text-secondary text-show-top"><a href="{{route('viewCart',['userName'=>Auth::user()->name ?? 'user','userSurname'=>Auth::user()->surname ?? 'user'])}}">Carrello</a></p>
+              
             </div>
         </div>
     
@@ -26,10 +26,10 @@
     <section class="container vh-100">
         <div class="row justify-content-center text-center">
             <div class="col-12 col-md-6 text-end" id="sectionImg">
-                <img src="https://picsum.photos/300" alt="{{$product->name}}" id="showPicture" class="img-product-detail">
+                <img src="https://picsum.photos/500" alt="{{$product->name}}" id="showPicture" class="img-product-detail">
             </div>
             <div class="col-12 col-md-6 d-flex flex-column justify-content-center text-center text-md-start" id="textShow">
-                <p class="card-text fw-bold  text-uppercase">{{$product->brand->name ?? 'NULL'}}</p>
+                <p class="card-text fw-bold text-uppercase fs-1">{{$product->brand->name ?? 'NULL'}}</p>
                 <p class="card-text">{{$product->name}}</p>
                 <p class="card-text">{{$product->description}}</p>
                 <p class="card-text">{{$product->price}} €</p>
@@ -61,5 +61,22 @@
             @endif
             </div>
         @endif
+        <div class="row">
+            <p class="fs-1">Ti potrebbe anche piacere...</p>
+        </div>
+        <div class="row">
+            <div class="col-12 d-flex flex-row flex-grow-4 flex-grow-md-5 flex-wrap justify-content-center align-items-center mb-5">
+                    @foreach ($previewProducts as $product)
+                        <div class="card mx-2 my-2 welcome-product">
+                            <a href="{{route('product.show',compact('product'))}}"><img src="https://placehold.co/300" class="card-img-top mx-auto img-fluid" alt="{{$product->name}}"></a>
+                            <div class="card-body">
+                                <p class="card-text fw-bold text-brand">{{$product->brand->name ?? 'NULL'}}</p>
+                                <p class="card-text">{{$product->name}}</p>
+                                <p class="card-text">€ {{$product->price}}</p>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
     </section>
 </x-layout>

@@ -193,34 +193,46 @@
   <div class="container-fluid">
     <div class="row justify-content-center align-items-center">
       <div class="col-3 col-md-4 d-flex flex-row align-items-center flex-nowrap">
-          <a class="link-no-decoration ms-1 tc-white " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+          <a class="link-no-decoration ms-1 tc-white " data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button" aria-controls="offcanvasMenu">
           <i class="fa-solid fa-bars tc-white navbargrg-link"><span class="my-auto">MENU</span></i>
           </a>
-        <div class="offcanvas offcanvas-start" tabindex="-99" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">GRG LUXURY SHOP</h5>
+              <p class="offcanvas-brand" id="offcanvasBottomLabel">GRG</p>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body text-center">
+            <div>
+              <div class="row">
+                <input type="search" id="mySearch" placeholder="Cerca.." title="" class="navbar-search"><br>
+              </div>
+              <p>Comincia ad acquistare...</p>
+              <a class="link-no-decoration tc-black navbargrg-link-offcanvas w-100" href="{{route('viewBySex',[$sex ='UOMO'])}}">UOMO <i class="fa-solid fa-chevron-right"></i></a>
+              <hr class="divider">
+              <a class="link-no-decoration tc-black navbargrg-link-offcanvas" href="{{route('viewBySex',[$sex ='DONNA'])}}">DONNA <i class="fa-solid fa-chevron-right"></i></a>
+              
+              <hr class="divider">
+              <a class="link-no-decoration tc-black navbargrg-link-offcanvas w-100" href="{{route('viewBySex',[$sex ='UOMO'])}}">CASA <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+            <hr class="divider">
+            <a class="link-no-decoration tc-black navbargrg-link-offcanvas" data-bs-toggle="offcanvas" href="#categoryOffcanvas" role="button" aria-controls="categoryOffcanvas">
+              CATEGORIES<i class="fa-solid fa-chevron-right"></i>
+            </a>
+            
+          </div>
+        </div>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="categoryOffcanvas" aria-labelledby="offcanvasMenuLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasBottomLabel">CATEGORIES</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
             <div>
-              <p>Comincia ad acquistare...</p>
-              <a href="">UOMO</a>
-              <hr class="divider">
-              <a href="">DONNA</a>
-              <hr class="divider">
-              <a href="">CASA</a>
-            </div>
-            <hr class="divider">
-            <div class="dropdown mt-3">
-              <button class="btn-search  ms-0 dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                <span>CATEGORIES</span>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </div>
+              @foreach ($allCategories as $category)
+                <p class="">{{$category->name}}</p>
+                <hr class="divider">
+              @endforeach
+            </div>    
           </div>
         </div>
         <form class="d-none d-md-flex">
@@ -230,18 +242,17 @@
       </div>
       <div class="col-9 col-md-4 text-end text-md-center py-auto">
         <div>
-          <a class="link-no-decoration grg-brand" href="{{route('homepage')}}"><img src="{{'/img/grglogofinale.png'}}" alt=""></a>
+          <a class="link-no-decoration grg-brand" href="{{route('homepage')}}">GRG</a>
         </div> 
       </div>
       <div class="col-4  d-none d-md-flex flex-row justify-content-end align-items-center">
         <div>
           <a class="link-no-decoration tc-white " href="{{route('viewCart',['userName'=>Auth::user()->name ?? 'user','userSurname'=>Auth::user()->surname ?? 'user'])}}">
               <i class="fa-solid fa-cart-shopping navbargrg-link"> </i>
-              
             </a>
         </div>
         <span class="circle-counter">{{\App\Models\Product::where('buy',1)->count()}}</span>
-        <div> <a href="" class="tc-white link-no-decoration mx-3"><i class="fa-solid fa-user dropbtn navbargrg-link"></i></a></div>
+        <div> <a href="" class="tc-white link-no-decoration mx-3 navbargrg-link">My GRG</a></div>
         <div> <a href="" class="tc-white link-no-decoration mx-3"><i class="fa-solid fa-flag navbargrg-link"></i></a></div>
       </div>
     </div>
