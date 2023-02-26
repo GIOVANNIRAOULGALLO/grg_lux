@@ -20,7 +20,7 @@
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div> -->
                     <div class="carousel-inner">
-                        <div class="carousel-item active welcome-background-1 carousel-welcome">
+                        <div class="carousel-item active welcome-background-1 d-flex align-items-center justify-content-center">
                             <div class="d-flex  justify-content-center align-items-center flex-column tc-black">
                                 <p class="fs-1 fs-md-1 text-center fw-bold">COMINCIANO I <span class="tc-red">SALDI</span></p>
                                 <p class="text-center">Corri a vedere i nostri sconti dal 30% al 60%</p>
@@ -29,8 +29,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="carousel-item welcome-background-2 carousel-welcome">
-                            <div class="d-flex  justify-content-center align-items-center flex-column tc-black">
+                        <div class="carousel-item welcome-background-2 ">
+                            <div class="d-flex  justify-content-center align-items-center flex-column tc-black carousel-welcome">
                                 <p class="fs-1 fs-md-1 text-center fw-bold">COMINCIANO I <span class="tc-red">SALDI</span></p>
                                 <p class="text-center">Corri a vedere i nostri sconti dal 30% al 60%</p>
                                 <a href="" class="button-welcome">
@@ -38,8 +38,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="carousel-item welcome-background-3 carousel-welcome">
-                            <div class="d-flex  justify-content-center align-items-center flex-column tc-black ">
+                        <div class="carousel-item welcome-background-3 ">
+                            <div class="d-flex  justify-content-center align-items-center flex-column tc-black carousel-welcome">
                                 <p class="fs-1 fs-md-1 text-center fw-bold">COMINCIANO I <span class="tc-red">SALDI</span></p>
                                 <p class="text-center">Corri a vedere i nostri sconti dal 30% al 60%</p>
                                 <a href="" class="button-welcome">

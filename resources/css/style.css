@@ -108,8 +108,8 @@
 /* WELCOME */
 /* .................................................................................................................. */
 .carousel-welcome{
-    display:block;
-    vertical-align: middle;
+    margin-top: 15%;
+    margin-bottom: auto;
 }
 
 .welcome-background-1{
@@ -465,9 +465,6 @@
 .filter-content:focus{
     outline: 0;
     box-shadow: none;
-   
-    /* border: 0;
-    transition: none; */
 }
 .accordion-button:not(.collapsed){
     color: black;

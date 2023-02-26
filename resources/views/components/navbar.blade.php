@@ -263,8 +263,11 @@
             My GRG
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdownAccountButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">ACCOUNT</a>
+            <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">LOGOUT</a>
+            <form method="POST" action="{{route('logout')}}" id="form-logout">
+              @csrf
+            </form>
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
           <!-- <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Logout</a></li>
