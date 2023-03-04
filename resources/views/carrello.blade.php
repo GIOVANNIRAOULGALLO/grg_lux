@@ -18,20 +18,16 @@
             </div>
         </div>
         @if(\App\Models\Product::where('buy',1)->count()>0)
-            <div class="row justify-content-center">
+            <div class="row ">
             @php($count=0)  
                 <div class="col-12 col-md-6 mx-auto">   
                 @foreach ($products as $product)
                     <div class="row cart-card">
-                        <div class="col-3 cart-inside">
+                        <div class="col-12 my-2">
                             <a href="{{route('product.show',compact('product'))}}"><img src="https://picsum.photos/100" class="img-fluid img-cart-inside" alt="{{$product->name}}"></a>
-                        </div>
-                        <div class="col-6 cart-inside">
                             <p class="cart-product-text text-uppercase">{{$product->brand->name}}</p>
                             <p class="cart-product-text">{{$product->name}}</p>
                             <p class="cart-product-text">{{$product->price}}$</p>
-                        </div>
-                        <div class="col-3 cart-inside">
                             <label for="qta">Q.ta: </label>
                             <input type="text" id="qta" value="1" style="width:40px">
                             <form action="{{route('removeToCart',compact('product'))}}" method="post">

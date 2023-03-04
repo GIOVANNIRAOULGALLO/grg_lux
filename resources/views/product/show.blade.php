@@ -20,7 +20,7 @@
     </section>
     <section class="container">
         <div class="row justify-content-center text-center">
-            <div class="col-12 col-md-6 text-end" id="sectionImg">
+            <div class="col-12 col-md-6 text-center text-md-end" id="sectionImg">
                 <img src="https://picsum.photos/300" alt="{{$product->name}}" id="showPicture" class="img-product-detail">
             </div>
             <div class="col-12 col-md-6 d-flex flex-column justify-content-center text-center text-md-start" id="textShow">

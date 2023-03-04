@@ -161,22 +161,8 @@
             </ul>
           @endif
         </li>
-        <li class="nav-item">
-        <form class="form-inline">
-          <div class="input-group search-box">
-            <input type="text" class="form-control" placeholder="What are you looking for?" aria-label="Search for...">
-            <span class="input-group-btn">
-              <button class="btn btn-secondary" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </span>
-          </div>
-        </form>
       </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" href="{{route('viewCart',['userName'=>Auth::user()->name ?? 'user','userSurname'=>Auth::user()->surname ?? 'user'])}}">
-            <i class="fa-solid fa-cart-shopping text-light cart-icon"> </i>
-            <span class="circle-counter">{{\App\Models\Product::where('buy',1)->count()}}</span>
-          </a>
-        </li>
+       
       </ul>
     </div>
   </div>
@@ -191,8 +177,8 @@
 
 <nav class="bg-black sticky-top navbar-grg">
   <div class="container-fluid">
-    <div class="row justify-content-center align-items-center">
-      <div class="col-3 col-md-4 d-flex flex-row align-items-center flex-nowrap">
+    <div class="row justify-content-center align-items-center flex-nowrap">
+      <div class="col-3  d-flex flex-row align-items-center flex-nowrap">
           <a class="link-no-decoration ms-1 tc-white " data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button" aria-controls="offcanvasMenu">
           <i class="fa-solid fa-bars tc-white navbargrg-link"><span class="my-auto">MENU</span></i>
           </a>
@@ -204,7 +190,7 @@
           <div class="offcanvas-body text-center">
             <div>
               <div class="row">
-                <form method="GET" action="{{route('product.search')}}" class="d-none d-md-flex">
+                <form method="GET" action="{{route('product.search')}}" class="">
                   <input class="form-control me-2 navbar-search" type="text" placeholder="Cerca.." aria-label="Search" autoComplete="off" name="q">
                   <button class="tc-white btn-search d-none" type="submit" name=""><i class="fa-solid fa-magnifying-glass navbargrg-link"></i></button>
                 </form>
@@ -246,29 +232,38 @@
           <button class="tc-white btn-search" type="submit" name=""><i class="fa-solid fa-magnifying-glass navbargrg-link"></i></button>
         </form>
       </div>
-      <div class="col-9 col-md-4 text-end text-md-center">
+      <div class="col-6 text-center">
         <div>
-          <a class="link-no-decoration grg-brand" href="{{route('homepage')}}">GRG</a>
+          <a class="link-no-decoration grg-brand" href="{{route('homepage')}}">
+            <span class="grg-brand-content">GRG</span>
+          </a>
         </div> 
       </div>
-      <div class="col-4  d-none d-md-flex flex-row justify-content-end align-items-center">
+      <div class="col-3  d-flex flex-row justify-content-end align-items-center">
         <div>
-          <a class="link-no-decoration tc-white " href="{{route('viewCart',['userName'=>Auth::user()->name ?? 'user','userSurname'=>Auth::user()->surname ?? 'user'])}}">
+          <a class="link-no-decoration tc-white d" href="{{route('viewCart',['userName'=>Auth::user()->name ?? 'user','userSurname'=>Auth::user()->surname ?? 'user'])}}">
               <i class="fa-solid fa-cart-shopping navbargrg-link"> </i>
             </a>
         </div>
-        <span class="circle-counter">{{\App\Models\Product::where('buy',1)->count()}}</span>
-        <div class="dropdown show"> 
+        <span class="circle-counter"><p class="quantity-cart">{{\App\Models\Product::where('buy',1)->count()}}</p></span>
+        <div class="dropdown show d-none d-md-inline"> 
           <a href="#" class="tc-white link-no-decoration mx-3 navbargrg-link dropdown-toggle" role="button"  id="dropdownAccountButton"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             My GRG
+            @if(Auth::User())
+            <span class="account-on"></span>
+           @endif
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdownAccountButton">
+            @if(Auth::User())
             <a class="dropdown-item" href="#">ACCOUNT</a>
             <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">LOGOUT</a>
             <form method="POST" action="{{route('logout')}}" id="form-logout">
               @csrf
             </form>
-            <a class="dropdown-item" href="#">Something else here</a>
+            @else
+            <a class="dropdown-item" href="{{route('login')}}">LOGIN</a>
+            <a class="dropdown-item" href="{{route('register')}}">SIGN IN</a>
+            @endif
           </div>
           <!-- <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Logout</a></li>
             <form method="POST" action="{{route('logout')}}" id="form-logout">
@@ -277,7 +272,7 @@
         </div>
         
         
-        <div> <a href="" class="tc-white link-no-decoration mx-3"><i class="fa-solid fa-flag navbargrg-link"></i></a></div>
+        <div> <a href="" class="tc-white link-no-decoration mx-3 d-none d-md-inline me-3 me-md-auto"><i class="fa-solid fa-flag navbargrg-link"></i></a></div>
       </div>
     </div>
     

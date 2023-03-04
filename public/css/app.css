@@ -11328,6 +11328,9 @@ textarea.form-control-lg {
   }
   
    */
+   .navbar-grg{
+        /* overflow: hidden; */
+   }
 
    .grg-brand:hover{
         color: white;
@@ -11339,76 +11342,44 @@ textarea.form-control-lg {
         color: gold;
         font-size: 50px;
         text-decoration: none;
-        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
         /* margin-bottom: auto; */
-  }
-  /* .menu-bars{
-    font-size: 10px;
-  } */
-  .input-search{
-    background: transparent;
-    border: none;
-    max-width: 150px;
-    font-size: 13px;
-  }
-  .search-box {
-    position: relative;
-    /* height: 34px; */
-  }
-  .search-box input {
-    border: 0;
-    border-radius: 3px !important;
-    padding-right: 28px;
-    font-size: 15px;
-  }
+    }
+    .input-search{
+        background: transparent;
+        border: none;
+        max-width: 150px;
+        font-size: 13px;
+    }
   
-  .search-box .input-group-btn {
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 999;
-  }
-  
-  .search-box .input-group-btn button {
-    background-color: transparent;
-    border: 0;
-    padding: 4px 4px;
-    color: rgba(0,0,0,.4);
-    font-size: 20px;
-  }
-  
-  .search-box .input-group-btn button:hover,
-  .search-box .input-group-btn button:active,
-  .search-box .input-group-btn button:focus {
-    color: rgba(0,0,0,.4);
-  }
 
-  /* .search-form{
-    width:fit-content;
-  } */
 
   /* --------------------------------------------------------------------------------------------------------------- */
 /* WELCOME */
 /* .................................................................................................................. */
 .carousel-welcome{
-    margin-top: 15%;
-    margin-bottom: auto;
+   vertical-align: middle;
 }
 
 .welcome-background-1{
     height: 95vh;
     background: rgb(255,237,131);
     background: radial-gradient(circle, rgba(255,237,131,1) 0%, rgba(214,146,0,1) 100%);
+    
 }
 .welcome-background-2{
     height: 95vh;
     background-color: #0093E9;
     background-image: linear-gradient(180deg, #0093E9 0%, #80D0C7 100%);
+    padding-top:35%;
 }
 .welcome-background-3{
     height: 95vh;
     background-color: #FAD961;
     background-image: linear-gradient(315deg, #FAD961 0%, #F76B1C 100%);
+    padding-top:35%;
 }
 .button-welcome{
     font-weight: 800;
@@ -11667,16 +11638,26 @@ textarea.form-control-lg {
 /*-----------------------------------------------------------------------  */
 /* CART */
 /* ------------------------------------------------------------- */
+
+
+
 .circle-counter{
     background-color: gold;
     color: black;
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     margin-bottom: 30px;
     margin-right: 3px;
     border-radius: 50%;
     text-align: center;
     border: 1px solid black;
+}
+.quantity-cart{
+    font-size: 12px;
+    margin-bottom: auto;
+    margin-top:auto;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 .carouel-image{
     width: 100%;
@@ -11720,21 +11701,27 @@ textarea.form-control-lg {
     margin-left: auto;
     margin-bottom: 20px;
 }
-
+.account-on{
+    display: inline-block;
+    margin-bottom: 10px;
+    height: 4px;
+    width: 4px;
+    background-color: red;
+    border-radius: 50%;
+}
+/* --------------------------------------------------- */
 .cart-card{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin:auto;
     height:150px;
-    width:600px;
+    width:150px;
     border-color: gold black;
-    border-style:groove;
     border-radius: 3px;
     padding-inline: 100px;
     align-items: center;
-    flex-flow: row;
+    flex-flow: column;
     text-align: center;
-    
 }
 
 

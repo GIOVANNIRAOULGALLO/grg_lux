@@ -14,11 +14,6 @@
         <div class="row justify-content-center mb-5 mt-0">
             <div class="col-12 px-0 mt-0">
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                    <!-- <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div> -->
                     <div class="carousel-inner">
                         <div class="carousel-item active welcome-background-1 d-flex align-items-center justify-content-center">
                             <div class="d-flex  justify-content-center align-items-center flex-column tc-black">
@@ -29,7 +24,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="carousel-item welcome-background-2 ">
+                        <div class="carousel-item welcome-background-2">
                             <div class="d-flex  justify-content-center align-items-center flex-column tc-black carousel-welcome">
                                 <p class="fs-1 fs-md-1 text-center fw-bold">COMINCIANO I <span class="tc-red">SALDI</span></p>
                                 <p class="text-center">Corri a vedere i nostri sconti dal 30% al 60%</p>
@@ -38,13 +33,11 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="carousel-item welcome-background-3 ">
-                            <div class="d-flex  justify-content-center align-items-center flex-column tc-black carousel-welcome">
+                        <div class="carousel-item welcome-background-3 align-self-center">
+                            <div class="d-flex justify-content-center align-items-center flex-column tc-black carousel-welcome">
                                 <p class="fs-1 fs-md-1 text-center fw-bold">COMINCIANO I <span class="tc-red">SALDI</span></p>
                                 <p class="text-center">Corri a vedere i nostri sconti dal 30% al 60%</p>
-                                <a href="" class="button-welcome">
-                                    SCOPRI DI PIU
-                                </a>
+                                <a href="" class="button-welcome">SCOPRI DI PIU</a>
                             </div>
                         </div>
                     </div>
