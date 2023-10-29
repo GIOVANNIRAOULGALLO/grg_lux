@@ -16,7 +16,15 @@
                     </div>
                     <div class="mb-3">
                       <label for="productDescription" class="form-label">Description</label>
-                      <textarea value="{{$product->description}}" name="description" id="productDescription" cols="30" rows="10"></textarea>
+                      <input type="text" class="form-control" id="productDescription" value="{{$product->description}}" name="description">
+                    </div>
+                    <div class="mb-3">
+                      <label for="productCategory" class="form-label">Category</label>
+                        <select name="category" id="productCategory" class="w-50" >
+                          @foreach ($categories as $category)
+                          <option value="{{$product->category->id}}">{{$category->name}}</option>
+                          @endforeach
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="productPrice" class="form-label">Product Price</label>

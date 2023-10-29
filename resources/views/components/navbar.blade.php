@@ -188,29 +188,23 @@
               <button type="button" class="btnGrg" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark tc-red"></i></button>
           </div>
           <div class="offcanvas-body text-center">
-            <div>
-              <div class="row">
-                <form method="GET" action="{{route('product.search')}}" class="">
-                  <input class="form-control me-2 navbar-search" type="text" placeholder="Cerca.." aria-label="Search" autoComplete="off" name="q">
-                  <button class="tc-white btn-search d-none" type="submit" name=""><i class="fa-solid fa-magnifying-glass navbargrg-link"></i></button>
-                </form>
+            <form method="GET" action="{{route('product.search')}}" class="offcanvas-search">
+              <input class="form-control navbar-search" type="text" placeholder="Cerca.." aria-label="Search" autoComplete="off" name="q">
+              <button class="tc-black btn-search" type="submit" name=""><i class="fa-solid fa-magnifying-glass "></i></button>
+            </form>
                 <!-- <input type="text" id="mySearch" placeholder="Cerca.." title="" class="navbar-search"><br> -->
-              </div>
               
-              <p>Comincia ad acquistare...</p>
-              <hr class="divider">
-              <a class="link-no-decoration tc-black navbargrg-link-offcanvas w-100" href="{{route('viewBySex',[$sex ='UOMO'])}}">UOMO <i class="fa-solid fa-chevron-right"></i></a>
-              <hr class="divider">
-              <a class="link-no-decoration tc-black navbargrg-link-offcanvas" href="{{route('viewBySex',[$sex ='DONNA'])}}">DONNA <i class="fa-solid fa-chevron-right"></i></a>
-              
-              <hr class="divider">
-              <a class="link-no-decoration tc-black navbargrg-link-offcanvas w-100" href="{{route('viewBySex',[$sex ='UOMO'])}}">CASA <i class="fa-solid fa-chevron-right"></i></a>
-            </div>
+            <p>Comincia ad acquistare...</p>
+            <hr class="divider">
+            <a class="link-no-decoration tc-black navbargrg-link-offcanvas w-100" href="{{route('viewBySex',[$sex ='UOMO'])}}">UOMO <i class="fa-solid fa-chevron-right"></i></a>
+            <hr class="divider">
+            <a class="link-no-decoration tc-black navbargrg-link-offcanvas" href="{{route('viewBySex',[$sex ='DONNA'])}}">DONNA <i class="fa-solid fa-chevron-right"></i></a>
+            <hr class="divider">
+            <a class="link-no-decoration tc-black navbargrg-link-offcanvas w-100" href="{{route('viewBySex',[$sex ='UOMO'])}}">CASA <i class="fa-solid fa-chevron-right"></i></a>
             <hr class="divider">
             <a class="link-no-decoration tc-black navbargrg-link-offcanvas" data-bs-toggle="offcanvas" href="#categoryOffcanvas" role="button" aria-controls="categoryOffcanvas">
               CATEGORIES<i class="fa-solid fa-chevron-right"></i>
             </a>
-            
           </div>
         </div>
         <div class="offcanvas offcanvas-start" tabindex="-1" id="categoryOffcanvas" aria-labelledby="offcanvasMenuLabel">
@@ -227,7 +221,7 @@
             </div>    
           </div>
         </div>
-        <form method="GET" action="{{route('product.search')}}" class="d-none d-md-flex">
+        <form method="GET" action="{{route('product.search')}}" class="d-none d-lg-flex">
           <input class="form-control me-2 input-search" type="text" placeholder="Search" aria-label="Search" autoComplete="off" name="q">
           <button class="tc-white btn-search" type="submit" name=""><i class="fa-solid fa-magnifying-glass navbargrg-link"></i></button>
         </form>
@@ -256,6 +250,7 @@
           <div class="dropdown-menu" aria-labelledby="dropdownAccountButton">
             @if(Auth::User())
             <a class="dropdown-item" href="#">ACCOUNT</a>
+            <a class="dropdown-item" href="{{route('product.create')}}">INS. PROD.</a>
             <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">LOGOUT</a>
             <form method="POST" action="{{route('logout')}}" id="form-logout">
               @csrf

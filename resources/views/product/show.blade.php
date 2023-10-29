@@ -21,7 +21,7 @@
     <section class="container">
         <div class="row justify-content-center text-center">
             <div class="col-12 col-md-6 text-center text-md-end" id="sectionImg">
-                <img src="https://picsum.photos/300" alt="{{$product->name}}" id="showPicture" class="img-product-detail">
+                <img src="https://picsum.photos/400" alt="{{$product->name}}" id="showPicture" class="img-product-detail">
             </div>
             <div class="col-12 col-md-6 d-flex flex-column justify-content-center text-center text-md-start" id="textShow">
                 <p class="card-text fw-bold text-uppercase fs-1">{{$product->brand->name ?? 'NULL'}}</p>
@@ -31,6 +31,10 @@
                 <form method="POST" action="{{route('addToCart',compact('product'))}}">
                     @csrf
                     <button type ="submit" class="my-2 btn-grg-general ms-auto ms-md-0" id="btnAdd">Add to cart</button>
+                </form>
+                <form method="GET" action="{{route('product.edit',compact('product'))}}">
+                    @csrf
+                    <button type ="submit" class="my-2 btn-grg-general ms-auto ms-md-0" id="btnAdd">Edit</button>
                 </form>
             </div>
         </div>

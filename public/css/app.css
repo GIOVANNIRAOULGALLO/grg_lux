@@ -11284,103 +11284,79 @@ textarea.form-control-lg {
 /* -------------------------------------------------------------------------------------------------------------- */
 /* GENERAL *
 /* -------------------------------------------------------------------------------------------------------------- */
+
+
 *{
     font-family: 'Gayathri', sans-serif;
-    letter-spacing: 2px;
-    
+    letter-spacing: 2px;    
 }
+
 .bg-black{
     background-color: black;
 }
+
 .bg-gold{
     background-color: gold;
 }
+
 .tc-gold{
     color: gold;
 }
+
 .tc-white{
     color:white;
 }
+
 .tc-black{
     color: black;
 }
+
 .tc-red{
     color: red;
 }
+
 .link-no-decoration{
     text-decoration: none;
 }
 
+
 /* -------------------------------------------------------------------------------------------------------------- */
 /* NAVBAR */
 /* -------------------------------------------------------------------------------------------------------------- */
- /* .container-nav {
-    width: 100%;
-    margin-right: 0;
-  }
-  .navbar-grg{
-    background-color:#000000;
-  }
- 
-  
-  .navbar-grg .navbar-brand img {
-    vertical-align: baseline;
-  }
-  
-   */
-   .navbar-grg{
-        /* overflow: hidden; */
-   }
 
-   .grg-brand:hover{
-        color: white;
-        transform: scale(0.8);
-        transition: 0.3s;
-   }
 
-   .grg-brand {
-        color: gold;
-        font-size: 50px;
-        text-decoration: none;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        /* margin-bottom: auto; */
-    }
-    .input-search{
-        background: transparent;
-        border: none;
-        max-width: 150px;
-        font-size: 13px;
-    }
+.grg-brand:hover{
+    color: white;
+    transform: scale(0.8);
+    transition: 0.3s;
+}
+
+.grg-brand {
+    color: gold;
+    font-size: 50px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* margin-bottom: auto; */
+}
+
+.input-search{
+    background: transparent;
+    border: none;
+    font-size: 13px;
+}
   
 
-
-  /* --------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------- */
 /* WELCOME */
 /* .................................................................................................................. */
-.carousel-welcome{
-   vertical-align: middle;
+
+
+.welcome-background{
+    height: 85vh;
 }
 
-.welcome-background-1{
-    height: 95vh;
-    background: rgb(255,237,131);
-    background: radial-gradient(circle, rgba(255,237,131,1) 0%, rgba(214,146,0,1) 100%);
-    
-}
-.welcome-background-2{
-    height: 95vh;
-    background-color: #0093E9;
-    background-image: linear-gradient(180deg, #0093E9 0%, #80D0C7 100%);
-    padding-top:35%;
-}
-.welcome-background-3{
-    height: 95vh;
-    background-color: #FAD961;
-    background-image: linear-gradient(315deg, #FAD961 0%, #F76B1C 100%);
-    padding-top:35%;
-}
 .button-welcome{
     font-weight: 800;
     text-shadow: 1px 1px gold;
@@ -11391,9 +11367,11 @@ textarea.form-control-lg {
     padding: 10px;
     margin-bottom: 50px;
 }
+
 .button-welcome:hover{
     color: rgb(108, 84, 24);
 }
+
 .over-text-welcome{
     position: relative;
     z-index: 2;
@@ -11401,44 +11379,62 @@ textarea.form-control-lg {
     font-size: 20px;
     left: 110px;
 }
-/* .welcome-product{
-    width: max-content;
-} */
+
+.welcome-saldi{
+    position: absolute;
+    z-index: 2;
+    top: 100px;
+    right: 25%; 
+    width: 50%;
+    text-align: center;
+    display: flex;
+    padding: 20px;
+    font-weight: bolder;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 247, 0, 0.716);
+    border-radius: 4px;
+}
+
+
 /* -------------------------------------------------------------------------------------------------------------- */
 /* PRODUCTS */
 /* -------------------------------------------------------------------------------------------------------------- */
+
 .text-show-top{
     font-size: 15px;
 }
-
 
 .text-area-misure{
     width: 100%;
     height: 200px;
     resize: none;
 }
-/* .product-text{
-    padding-top:-50px;
-} */
+
 .description-sex-text{
     font-size: 15px;
 }
+
 .sex-text{
     font-size:25px;
     font-weight: 900;
     text-shadow: 2px 2px gold;
 }
+
 .filter-count-text{
     font-size: 12px;
     margin-top: -20px;
     font-weight: bolder;
 }
+
 .label-checkbox-filter{
     display: block;
     padding-left: 13px;
     text-indent: -13px;
-    font-size:11px;
-  }
+    font-size:11px;  
+}
+
 .input-checkbox-filter{
     width: 13px;
     height: 13px;
@@ -11447,17 +11443,13 @@ textarea.form-control-lg {
     vertical-align: middle;
     position: relative;
     top: -1px;
-  }
-  .filter-parameters-price{
+}
+
+.filter-parameters-price{
     font-size: 11px;
-  }
-  /* .filter-price-range{
-    
-    height: 15px;
-    width: 100px;
-    margin-left: 4px;
-    
-  } */
+}
+
+
 /* -------------------------------------------------------------------------------------------------------------- */
 /* ACCOUNT */
 /* -------------------------------------------------------------------------------------------------------------- */
@@ -11474,8 +11466,7 @@ textarea.form-control-lg {
     border-radius: 50%;
     background-color: lime;
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;    
 }
 
 .heart-button{
@@ -11484,8 +11475,7 @@ textarea.form-control-lg {
 
 .insert-button:hover{
     transform: scale(0.8);
-    transition: 0.4s;
-    
+    transition: 0.4s;    
 }
 
 
@@ -11497,8 +11487,6 @@ textarea.form-control-lg {
 .grg-footer{
     width: 100%;
     margin:0;
-    /* position: sticky;
-    bottom:0;  */
 }
 
 
@@ -11522,7 +11510,6 @@ textarea.form-control-lg {
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 .text-brand{
@@ -11531,14 +11518,19 @@ textarea.form-control-lg {
     font-family: 'Outfit', sans-serif;
     text-transform: uppercase;
 }
+
+
 /* ------------------------------------------------------------------------------------------------------------------------------- */
 /* BUTTONS */
 /* -------------------------------------------------------------------------------------------------------------------------------- */
+
+
 .btn-filters{
     background: none;
     border: 1px solid gray;
     margin: 5px;
 }
+
 .btn-grg{
     height: 30px;
     width: 100px;
@@ -11552,6 +11544,7 @@ textarea.form-control-lg {
     justify-content: center;
     text-decoration: none;
 }
+
 .btn-add{
     /* position: relative; */
     background-color: gold;
@@ -11563,14 +11556,17 @@ textarea.form-control-lg {
     justify-content: center;
     align-items: center;
 }
+
 .btn-search{
     background: none;
     border: none;
 }
+
 .btn-regular{
     background: none;
     border: none;
 }
+
 .btn-pay{
     margin-bottom: 50px;
     position: relative;
@@ -11585,11 +11581,13 @@ textarea.form-control-lg {
     justify-content: center;
     align-items: center;
 }
+
 .btn-pay:hover{
     transform: scale(1.02);
     transition: 0.2s;
     color: black;
 }
+
 .btn-mod{
     position: relative;
     background-color: red;
@@ -11601,6 +11599,7 @@ textarea.form-control-lg {
     justify-content: center;
     align-items: center;
 }
+
 .btn-grg-general{
     background-color: gold;
     border: 1 px solid black;
@@ -11617,28 +11616,36 @@ textarea.form-control-lg {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+
 /* ------------------------------------------------------------------------------------------------------------- */
 /* STRIPE PAY */
 /* ---------------------------------------------------------------------------------------------------- */
+
+
 .panel-title {
     display: inline;
     font-weight: bold;
 }
+
 .display-table {
     display: table;
 }
+
 .display-tr {
     display: table-row;
 }
+
 .display-td {
     display: table-cell;
     vertical-align: middle;
     width: 61%;
 }
+
+
 /*-----------------------------------------------------------------------  */
 /* CART */
 /* ------------------------------------------------------------- */
-
 
 
 .circle-counter{
@@ -11652,6 +11659,7 @@ textarea.form-control-lg {
     text-align: center;
     border: 1px solid black;
 }
+
 .quantity-cart{
     font-size: 12px;
     margin-bottom: auto;
@@ -11659,6 +11667,7 @@ textarea.form-control-lg {
     padding-left: 3px;
     padding-right: 3px;
 }
+
 .carouel-image{
     width: 100%;
     height: auto;
@@ -11666,26 +11675,28 @@ textarea.form-control-lg {
     padding: 0;
     margin: 0; 
 }
+
 .bg-side{
     background-color: rgba(251, 255, 139, 0.597);
 }
+
 .btnGrg{
     background: none;
     border: none;
 }
-/* .navbargrg-link:hover{
-    color: gold;
-} */
+
 .navbargrg-link-offcanvas{
     display: flex;
     justify-content: space-between;
 }
+
 .navbargrg-link-offcanvas:hover{
     color:black;
     font-weight: 700;
     font-size: 25px;
 }
- .offcanvas-brand{
+
+.offcanvas-brand{
     font-size: 32px;
     margin-top:auto;
     margin-bottom: auto;
@@ -11693,14 +11704,20 @@ textarea.form-control-lg {
     font-weight: bolder;
     text-shadow: 1px 1px black;
  }
-.navbar-search{
-    width: 90%;
+
+ .navbar-search{
+    width: 60%;
     border: 3px solid gold;
     border-radius: 10px;
-    margin-right: auto;
-    margin-left: auto;
     margin-bottom: 20px;
 }
+
+.offcanvas-search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .account-on{
     display: inline-block;
     margin-bottom: 10px;
@@ -11709,19 +11726,16 @@ textarea.form-control-lg {
     background-color: red;
     border-radius: 50%;
 }
+
+
 /* --------------------------------------------------- */
-.cart-card{
-    display: flex;
-    justify-content: center;
-    margin:auto;
-    height:150px;
-    width:150px;
-    border-color: gold black;
-    border-radius: 3px;
-    padding-inline: 100px;
-    align-items: center;
-    flex-flow: column;
-    text-align: center;
+
+
+.cart-product{
+    width: 50%;;
+    border: 1px solid black;
+    justify-content: flex-end;
+    margin-right: 0;
 }
 
 
@@ -11732,26 +11746,32 @@ textarea.form-control-lg {
 .filter-gap{
     height: 100%;
 }
+
 .filter-content:focus{
     outline: 0;
     box-shadow: none;
 }
+
 .accordion-button:not(.collapsed){
     color: black;
     background-color: white;
 }
+
 .accordion-button:focus {
     box-shadow: none;
     border-color: rgba(0,0,0,.125);
     background-color: gold;
     color: black;
 }
+
 .accordion-button:not(.collapsed)::after{
     background-image: url("/img/arrow_bella.png");
 }
+
 .accordion-button::after{
     background-image: url("/img/arrow_bella.png");
 }
+
 .filter-section{
     display: flex;
     flex-direction: column;
@@ -11760,6 +11780,7 @@ textarea.form-control-lg {
     padding-top: 20px;
     align-items: center;
 }
+
 .filter-section-content{
     border-bottom: 1px solid black;
     width: 100%;
@@ -11768,24 +11789,14 @@ textarea.form-control-lg {
     align-items: center;
 }
 
+
 /* -------------------------------------------------------------------------------------------- */
+
+
 .brandsResult{
     border:1px solid gold;
     padding: 5px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width:992px){
     .nav-item {

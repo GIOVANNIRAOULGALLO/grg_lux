@@ -3241,8 +3241,9 @@ resizeFn(); // var PARAMS = @json($params)
 var inputSearch = document.querySelector('.input-search');
 var buttonSearch = document.querySelector('.button-search');
 inputSearch.addEventListener("focus", function () {
-  inputSearch.style.width = '50%';
-  inputSearch.style.marginLeft = '10px';
+  inputSearch.style.position = 'relative';
+  inputSearch.style.width = '250px';
+  inputSearch.style.marginLeft = '50px';
 });
 inputSearch.addEventListener("focusout", function () {
   inputSearch.style.width = "100%";
