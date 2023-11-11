@@ -14,7 +14,7 @@
         </div>
         <div class="row w-100">
             <div class="col-12 w-100">
-                <p class="text-secondary text-show-top">Home > {{$product->category->name ?? 'NULL'}} > {{$product->name}}</p>
+                <p class="text-secondary text-show-top">Home > {{$sex}} > {{$product->category->name ?? 'NULL'}} > {{$product->name}}</p>
             </div>
         </div>
     </section>

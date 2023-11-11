@@ -196,9 +196,10 @@
               
             <p>Comincia ad acquistare...</p>
             <hr class="divider">
-            <a class="link-no-decoration tc-black navbargrg-link-offcanvas w-100" href="{{route('viewBySex',[$sex ='UOMO'])}}">UOMO <i class="fa-solid fa-chevron-right"></i></a>
+            <a class="link-no-decoration tc-black navbargrg-link-offcanvas" data-bs-toggle="offcanvas" href="#categoryOffCanvasMen" role="button" aria-controls="categoryOffCanvasMen">UOMO <i class="fa-solid fa-chevron-right"></i></a>
+            
             <hr class="divider">
-            <a class="link-no-decoration tc-black navbargrg-link-offcanvas" href="{{route('viewBySex',[$sex ='DONNA'])}}">DONNA <i class="fa-solid fa-chevron-right"></i></a>
+            <a class="link-no-decoration tc-black navbargrg-link-offcanvas" data-bs-toggle="offcanvas" href="#categoryOffCanvasWoman" role="button" aria-controls="categoryOffCanvasWoman">DONNA <i class="fa-solid fa-chevron-right"></i></a>
             <hr class="divider">
             <a class="link-no-decoration tc-black navbargrg-link-offcanvas w-100" href="{{route('viewBySex',[$sex ='UOMO'])}}">CASA <i class="fa-solid fa-chevron-right"></i></a>
             <hr class="divider">
@@ -207,7 +208,7 @@
             </a>
           </div>
         </div>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="categoryOffcanvas" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas offcanvas-start" tabindex="-3" id="categoryOffcanvas" aria-labelledby="offcanvasMenuLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasBottomLabel">CATEGORIES</h5>
             <button type="button" class="btnGrg" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark tc-red"></i></button>
@@ -215,7 +216,43 @@
           <div class="offcanvas-body">
             <div>
               @foreach ($allCategories as $category)
-                <p class="">{{$category->name}}</p>
+              <a href="">
+              <p class="">{{$category->name}}</p>
+                <hr class="divider">
+              </a>
+              @endforeach
+            </div>    
+          </div>
+        </div>
+        <div class="offcanvas offcanvas-start" tabindex="-2" id="categoryOffCanvasMen">
+          <div class="offcanvas-header">
+              <h5 class="offcanvas-title">UOMO-CATEGORIES</h5>
+              <button type="button" class="btnGrg" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark tc-red"></i></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              <a class="link-no-decoration tc-red navbargrg-link-offcanvas" href="{{route('viewBySex',['sex' => 'Uomo'])}}">Vedi tutto</a>
+              <hr class="divider">
+              @foreach ($allCategories as $category)
+                <a class="link-no-decoration tc-black navbargrg-link-offcanvas" href="{{route('viewBySexCategory',['sex' => 'Uomo','category' => $category])}}">
+                  <p class="">{{$category->name}}</p>
+                </a>
+                <hr class="divider">
+              @endforeach
+            </div>    
+          </div>
+        </div>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="categoryOffCanvasWoman">
+          <div class="offcanvas-header">
+              <h5 class="offcanvas-title">DONNA-CATEGORIES</h5>
+              <button type="button" class="btnGrg" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark tc-red"></i></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              @foreach ($allCategories as $category)
+                <a class="link-no-decoration tc-black navbargrg-link-offcanvas" href="{{route('viewBySexCategory',['sex' => 'Donna','category' => $category])}}">
+                  <p class="">{{$category->name}}</p>
+                </a>
                 <hr class="divider">
               @endforeach
             </div>    
@@ -234,8 +271,8 @@
         </div> 
       </div>
       <div class="col-3  d-flex flex-row justify-content-end align-items-center">
-        <div>
-          <a class="link-no-decoration tc-white d" href="{{route('viewCart',['userName'=>Auth::user()->name ?? 'user','userSurname'=>Auth::user()->surname ?? 'user'])}}">
+        <div class="d-little">
+          <a class="link-no-decoration tc-white" href="{{route('viewCart',['userName'=>Auth::user()->name ?? 'user','userSurname'=>Auth::user()->surname ?? 'user'])}}">
               <i class="fa-solid fa-cart-shopping navbargrg-link"> </i>
             </a>
         </div>

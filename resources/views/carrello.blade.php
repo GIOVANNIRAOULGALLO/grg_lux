@@ -58,22 +58,19 @@
                 <div class="col-12 text-center">
                     <p>Il tuo carrello è vuoto!</p>
                     <p><a href="">CONTINUA AD ACQUISTARE</a></p>
-                    <div class="d-flex justify-content-center">
-                        <button class="btn btn-danger mx-5 my-4">
-                            la moda che piace
-                        </button>
-                        <button class="btn btn-danger mx-5 my-4">
-                            la moda che piace
-                        </button>
-                        <button class="btn btn-danger mx-5 my-4">
-                            la moda che piace
-                        </button>
-                        <button class="btn btn-danger mx-5 my-4">
-                            la moda che piace
-                        </button>
-                        <button class="btn btn-danger mx-5 my-4">
-                            la moda che piace
-                        </button>
+                    <div class="d-flex flex-row flex-wrap justify-content-center">
+                        @foreach(\App\Models\Product::all()->take(8) as $product)
+                            <div class="card mx-3 my-3">
+                                <a href="{{route('product.show',compact('product'))}}">
+                                    <img src="https://picsum.photos/250/350" class="card-img-top mx-auto img-fluid" alt="{{$product->name}}">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-text fw-bold text-brand">{{$product->brand->name ?? 'NULL'}}</p>
+                                    <p class="card-text">{{$product->name}}</p>
+                                    <p class="card-text"> € {{$product->price}}</p>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                     <div>
                         <p class="fs-5">oppure </p>

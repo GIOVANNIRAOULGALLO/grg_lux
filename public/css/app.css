@@ -11798,6 +11798,7 @@ textarea.form-control-lg {
     padding: 5px;
 }
 
+/* LAPTOP E MINORI */
 @media screen and (max-width:992px){
     .nav-item {
         line-height:50px;
@@ -11806,17 +11807,10 @@ textarea.form-control-lg {
         position: relative;
         top: 0;
     }
-    .circle-counter{
-        bottom: 50px;
-    }
 }
 
 
-
-
-
-
-
+/* TABLET E MINORI */
 @media screen and (max-width:768px){   
     .grg-brand {
         color: gold;
@@ -11851,21 +11845,20 @@ textarea.form-control-lg {
     .img-product-detail{
         transform: scale(0.6);
     }
-    /* ----------------------------------------------------------------------------------------------------------------------------- */
+    /* --------------------------------------------------------------------------------------------------------------------------- */
 
-    /* HOMEPAGE */
+    /* NAVBAR */
     /* ---------------------------------------------------------------------------------------------------------------------------- */
-
-    .over-text-welcome{
-        font-size: 12px;
-        left: 40px;
+    .d-little{
+        margin-top: 10px;
+    }
+    .circle-counter{
+        margin-top: 10px;
     }
 }
 
 
-
-
-
+/* DA LAPTOP IN SU */
 @media screen and (min-width: 992px) {
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: .7rem;
@@ -11873,7 +11866,6 @@ textarea.form-control-lg {
     }
     .search-box {
         width: 300px !important;
-    }
-   
+    } 
 }
 

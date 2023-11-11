@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
     
 use Stripe;
-use Session;
 use Stripe\Charge;
+use App\Models\User;
 use App\Models\Adress;
 use App\Models\Product;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Contracts\Session\Session;
     
 class StripeController extends Controller
 {

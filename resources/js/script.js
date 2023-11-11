@@ -89,6 +89,8 @@ offcanvasMenu.addEventListener('hidden.bs.offcanvas', function () {
   bsOffcanvas2.show();
 });
 
+
+
 // ----------------------------
 // ACCOUNT
 // --------------------

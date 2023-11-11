@@ -98,7 +98,7 @@ class ProductController extends Controller
     public function update(Request $req, Product $product)
     {
         $product->update($req->all());
-        return redirect(route('homepage'));
+        return redirect(route('product.show',compact('product')));
     }
 
     /**
@@ -171,5 +171,11 @@ class ProductController extends Controller
         $products=Product::where('sex',$sex)->get();
         $total=$products->count();
         return view('product.viewby',compact('products','sex','total'));
+    }
+    
+    public function viewBySexCategory($sex,$category){
+        $products=Product::where('sex',$sex)->where('category_id',$category)->get();
+        $total=$products->count();
+        return view('product.viewbysc',compact('products','sex','category','total'));
     }
 }
