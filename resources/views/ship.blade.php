@@ -18,7 +18,7 @@
             </div>
             @if(Auth::user()->adresses)
                 <div class="row">
-                    <div class="col-6 d-flex flex-column align-items-center">
+                    <div class="col-12 col-md-6 d-flex flex-column align-items-center">
                         <div class="row justify-content-center  flex-row py-2 border border-warning text-start px-5 mx-auto">
                             <div class="col-12 text-start">
                                 <div><p class="fw-bold text-secondary">Città: <span class="px-1 text-dark">{{\App\Models\Adress::where('user_id',Auth::user()->id)->get()->last()->city}}</span></p></div>
@@ -42,7 +42,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 mt-5">
+                    <div class="col-12 col-md-6 mt-5">
                         <div class="row justify-content-center">
                             <div class="col-12 text-center mt-2 mb-3">
                                 <p class="fs-4">Se l'indirizzo è corretto</p>

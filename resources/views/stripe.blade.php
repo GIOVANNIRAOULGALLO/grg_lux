@@ -17,7 +17,7 @@
                   </p> 
                   <p> {{$adresses->last()->city}}, via {{$adresses->last()->road}}, n° {{$adresses->last()->number}} <br>CAP {{$adresses->last()->cap}}</p>
                </div>
-               <div class="col-6 mt-5">
+               <div class="col-12 col-md-6 mt-5">
                <div class="panel panel-default credit-card-box">
                   <div class="panel-heading display-table" >
                      <div class="row">
@@ -49,33 +49,33 @@
                                  class='form-control' size='4' type='text'>
                            </div>
                         </div>
-                        <div class='form-row row'>
-                           <div class='col-xs-12 form-group card required'>
-                              <label class='control-label'>Numero della carta</label> <input
-                                 autocomplete='off' class='form-control card-number' size='20'
+                        <div class="form-row row">
+                           <div class="col-xs-12 form-group card required">
+                              <label class="control-label">Numero della carta</label> <input
+                                  class='form-control card-number' size='20'
                                  type='text'>
                            </div>
                         </div>
-                        <div class='form-row row'>
-                           <div class='col-xs-12 col-md-4 form-group cvc required'>
-                              <label class='control-label'>CVC</label> <input autocomplete='off'
-                                 class='form-control card-cvc' placeholder='ex. 311' size='4'
+                        <div class="form-row row">
+                           <div class="col-xs-12 col-md-4 form-group cvc required">
+                              <label class="control-label">CVC</label> <input autocomplete='off'
+                                 class="form-control card-cvc" placeholder="ex. 311" size='4'
                                  type='text'>
                            </div>
-                           <div class='col-xs-12 col-md-4 form-group expiration required'>
-                              <label class='control-label'>Expiration Month</label> <input
-                                 class='form-control card-expiry-month' placeholder='MM' size='2'
+                           <div class="col-xs-12 col-md-4 form-group expiration required">
+                              <label class="control-label">Expiration Month</label> <input
+                                 class="form-control card-expiry-month" placeholder="MM" size='2'
                                  type='text'>
                            </div>
-                           <div class='col-xs-12 col-md-4 form-group expiration required'>
+                           <div class="col-xs-12 col-md-4 form-group expiration required">
                               <label class='control-label'>Expiration Year</label> <input
-                                 class='form-control card-expiry-year' placeholder='YYYY' size='4'
+                                 class="form-control card-expiry-year" placeholder="YYYY" size='4'
                                  type='text'>
                            </div>
                         </div>
                         <div class='form-row row'>
                            <div class='col-md-12 error form-group hide'>
-                              <div class='alert-danger alert'>Please correct the errors and try
+                              <div class='alert-danger alert hidden'>Please correct the errors and try
                                  again.
                               </div>
                            </div>

@@ -3,12 +3,19 @@
     <section class="container-fluid my-5">
         <div class="row justify-content-center text-center">
             <div class="col-12">
-                <p class="sex-text">Collezione {{$sex}}</p>
-                @if($sex == 'Uomo')
+                @if($products)
+                    @if($sex == 'Uomo')
                     <p class="description-sex-text text-uppercase">Tutto il meglio per l'uomo forte</p>
-                @else
+                    @else
                     <p class="description-sex-text text-uppercase">L'eleganza femminile è come la pioggia</p>
+                    @endif
+                    <p class="sex-text">{{$products[0]->category->name}} {{$sex}}</p>
+                @else
+                    <p class="sex-text">Non ci sono articoli</p>
+                    
                 @endif
+                
+         
             </div>
         </div>
         <div class="row flex-wrap flex-md-nowrap justify-content-between">

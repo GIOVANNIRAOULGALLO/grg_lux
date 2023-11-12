@@ -11582,6 +11582,18 @@ textarea.form-control-lg {
     align-items: center;
 }
 
+.btn-checkout{
+    background-color: gold;
+    border: 1 px solid black;
+    border-radius: 4px;
+    font-weight: bold;
+    height: 50px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn-pay:hover{
     transform: scale(1.02);
     transition: 0.2s;
@@ -11646,7 +11658,9 @@ textarea.form-control-lg {
 /*-----------------------------------------------------------------------  */
 /* CART */
 /* ------------------------------------------------------------- */
-
+.card-cart{
+    height: 100px;
+}
 
 .circle-counter{
     background-color: gold;

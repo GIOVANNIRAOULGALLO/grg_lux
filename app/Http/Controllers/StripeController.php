@@ -10,7 +10,7 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Contracts\Session\Session;
+use Symfony\Component\HttpFoundation\Session\Session;
     
 class StripeController extends Controller
 {
@@ -24,10 +24,9 @@ class StripeController extends Controller
         $adresses=Adress::where('user_id',Auth::user()->id)->get();
         $products=Product::where('buy',true)->get();
         $count=0;
-        foreach($products as $product){ 
+        foreach($products as $product){
             $count+=$product->price;
         }
-        
         return view('stripe',compact('count','adresses'));
     }
    
@@ -37,7 +36,8 @@ class StripeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function stripePost(Request $request)
-    {
+    {   
+        $productbuyed=0;
         $products=Product::where('buy',true)->get();
         $count=0;
         foreach($products as $product){ 
@@ -47,14 +47,10 @@ class StripeController extends Controller
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         Stripe\Charge::create ([
                 "amount" => $count,
-                "currency" => "usd",
+                "currency" => "EUR",
                 "source" => $request->stripeToken,
-                "description" => "This payment is tested purpose phpcodingstuff.com"
-        ]);
-        
-   
-        Session::flash('success', 'Payment successful!');
-           
+                "description" => "This payment is for a test"
+        ]);      
         return redirect(route('ordine'));
     }
 }
