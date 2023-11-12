@@ -26,7 +26,6 @@ Route::get('/search',[ProductController::class,'search'])->name('product.search'
 Route::get('/ordine', [ProductController::class, 'ordine'])->name('ordine');
 Route::get('/ship', [ProductController::class, 'ship'])->name('ship');
 Route::get('/{sex}',[ProductController::class,'viewBySex'])->name('viewBySex');
-Route::get('/{sex}/{category}',[ProductController::class,'viewBySexCategory'])->name('viewBySexCategory');
 Route::post('/stripepost', [StripeController::class, 'stripePost'])->name('stripe.post');
 Route::post('/ship/{userName}{userSurname}',[ProductController::class,'insertAdress'])->name('insertAdress');
 Route::post('/update/{product}',[ProductController::class,'update'])->name('product.update');
@@ -37,5 +36,6 @@ Route::post('/addToCart/{product}',[ProductController::class,'addToCart'])->name
 Route::post('/removeToCart/{product}',[ProductController::class,'removeToCart'])->name('removeToCart');
 Route::post('/addLoved/{product}',[ProductController::class,'addLoved'])->name('addLoved');
 Route::delete('/trash/{product}',[ProductController::class,'trash'])->name('product.trash');
+Route::get('/{sex}/{category}',[ProductController::class,'viewBySexCategory'])->name('viewBySexCategory');
 
 

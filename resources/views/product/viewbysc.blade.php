@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name="title">GRG-SWX</x-slot>
+    <x-slot name="title">GRG - {{$sex}}</x-slot>
     <section class="container-fluid my-5">
         <div class="row justify-content-center text-center">
             <div class="col-12">

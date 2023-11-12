@@ -112,7 +112,7 @@ class ProductController extends Controller
         $product->delete();
         return redirect(route('homepage'));
     }
-
+    // VISUALIZZA CARRELLO
     public function viewCart(){
         $products=Product::where('buy',true)->get();
         return view('carrello',compact('products'));
