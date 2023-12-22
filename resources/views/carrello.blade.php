@@ -15,7 +15,6 @@
         
         @if(\App\Models\Product::where('buy',1)->count()>0)
             <div class="row justify-content-center align-items-center text-center">
-            
             @php($count=0)  
                 <div class="col-12 col-md-6 d-flex justify-content-center flex-wrap order-1 order-lg-0">
                 <p class="fs-2 fw-bolder text-start mt-3">Articoli nel mio Carrello ({{\App\Models\Product::where('buy',1)->count()}}):</p>

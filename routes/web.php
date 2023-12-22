@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PublicController;
 use App\Http\Controllers\StripeController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\ProductController;
@@ -39,3 +40,4 @@ Route::delete('/trash/{product}',[ProductController::class,'trash'])->name('prod
 Route::get('/{sex}/{category}',[ProductController::class,'viewBySexCategory'])->name('viewBySexCategory');
 
 
+Route::post('/locale/{locale}', [PublicController::class, 'locale'])->name('locale');

@@ -19,7 +19,7 @@
                             <img src=".\img\money.jpg" alt="">
                             <div class="welcome-saldi">
                                 <p class="fs-1 fs-md-1 text-center fw-bold">TEMPO DI <span class="tc-red">SALDI</span></p>
-                                <p class="text-center">Corri a vedere i nostri sconti dal 30% al 60%</p>
+                                <p class="text-center">{{ __('ui.welcome')}}Corri a vedere i nostri sconti dal 30% al 60%</p>
                                 <a href="" class="button-welcome">
                                     SCOPRI DI PIU
                                 </a>

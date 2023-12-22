@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Symfony\Component\HttpFoundation\Session\Session;
 use App\Actions\Fortify\CreateNewUser;
 use App\Actions\Fortify\ResetUserPassword;
 use App\Actions\Fortify\UpdateUserPassword;

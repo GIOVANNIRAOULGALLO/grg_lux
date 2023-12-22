@@ -416,6 +416,9 @@
     border: none;
 }
 
+
+
+/* NAVBAR */
 .navbargrg-link-offcanvas{
     display: flex;
     justify-content: space-between;
@@ -458,6 +461,10 @@
     border-radius: 50%;
 }
 
+.dropdown-login{
+    padding-right: 20px;
+    width: min-content;
+}
 
 /* --------------------------------------------------- */
 
