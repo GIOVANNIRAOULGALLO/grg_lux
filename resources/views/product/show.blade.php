@@ -30,12 +30,16 @@
                 <p class="card-text">{{$product->price}} €</p>
                 <form method="POST" action="{{route('addToCart',compact('product'))}}">
                     @csrf
-                    <button type ="submit" class="my-2 btn-grg-general ms-auto ms-md-0" id="btnAdd">Add to cart</button>
+                    <button type ="submit" class="my-2 btn-grg-general ms-auto ms-md-0" id="btnAdd">Aggiungi al carrello</button>
                 </form>
+            @if(Auth::user())
+                @if(Auth::user()->name == 'admin')
                 <form method="GET" action="{{route('product.edit',compact('product'))}}">
                     @csrf
                     <button type ="submit" class="my-2 btn-grg-general ms-auto ms-md-0" id="btnAdd">Edit</button>
                 </form>
+                @endif
+            @endif
             </div>
         </div>
         @if(Auth::user())

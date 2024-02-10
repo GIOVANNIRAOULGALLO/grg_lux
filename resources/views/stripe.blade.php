@@ -24,8 +24,8 @@
                         <div class="col-12">
                         </div>
                      </div>
-                     <div class="row display-tr" >
-                        <h6 class="panel-title display-td" >Inserisci i dati della tua carta</h6>
+                     <div class="row display-tr">
+                        <h3 class="panel-title display-td">Inserisci i dati della tua carta</h3>
                      </div>
                   </div>
                   <div class="panel-body">
@@ -43,7 +43,7 @@
                         data-stripe-publishable-key="{{ env('STRIPE_KEY') }}"
                         id="payment-form">
                         @csrf
-                        <div class='form-row row'>
+                        <div class='form-row row my-4'>
                            <div class='col-xs-12 form-group required'>
                               <label class='control-label'>Intestesta a</label> <input
                                  class='form-control' size='4' type='text'>
@@ -56,34 +56,36 @@
                                  type='text'>
                            </div>
                         </div>
-                        <div class="form-row row">
-                           <div class="col-xs-12 col-md-4 form-group cvc required">
+                        <div class="form-row row ">
+                           <div class="col-xs-12 mt-3 col-md-4 form-group cvc required">
                               <label class="control-label">CVC</label> <input autocomplete='off'
                                  class="form-control card-cvc" placeholder="ex. 311" size='4'
                                  type='text'>
                            </div>
-                           <div class="col-xs-12 col-md-4 form-group expiration required">
+                           <div class="col-xs-12 mt-3 col-md-4 form-group expiration required">
                               <label class="control-label">Expiration Month</label> <input
                                  class="form-control card-expiry-month" placeholder="MM" size='2'
                                  type='text'>
                            </div>
-                           <div class="col-xs-12 col-md-4 form-group expiration required">
+                           <div class="col-xs-12 mt-3 col-md-4 form-group expiration required">
                               <label class='control-label'>Expiration Year</label> <input
                                  class="form-control card-expiry-year" placeholder="YYYY" size='4'
                                  type='text'>
                            </div>
                         </div>
                         <div class='form-row row'>
+                           @if(session('message'))
                            <div class='col-md-12 error form-group hide'>
                               <div class='alert-danger alert hidden'>Please correct the errors and try
                                  again.
                               </div>
+                           @endif
                            </div>
                         </div>
                         </div>
                         <div class="row">
                            <div class="col-xs-12">
-                              <button class="btn btn-primary btn-lg btn-block" type="submit">Paga ora {{$count}} $</button>
+                              <button class="btn btn-primary btn-lg btn-block mt-3" type="submit">Paga ora {{$count}} $</button>
                            </div>
                      </form>
                   </div>

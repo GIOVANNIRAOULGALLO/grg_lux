@@ -1,5 +1,6 @@
 <?php
 
 return[
-    'welcome' => 'welcome',
+    'welcome' => 'BENVENUTO NEL PARADISO DELLA MODA',
+    'news'=>'NOVITÀ'
 ];

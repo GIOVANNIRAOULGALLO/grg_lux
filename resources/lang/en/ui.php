@@ -1,5 +1,6 @@
 <?php
 
 return[
-    'welcome' => 'benvenuti',
+    'welcome' => "Welcome to the Fashion paradise",
+    'news' => 'NEWS',
 ];

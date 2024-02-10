@@ -68,8 +68,30 @@
 /* --------------------------------------------------------------------------------------------------------------- */
 /* WELCOME */
 /* .................................................................................................................. */
+.welcome-messagge{
+    position: relative;
+    font-size: 50px;
+    bottom: 70%;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    padding-top:20px;
+    padding-left: 40px;
+    color: gold;
+    font-weight: bold;
+    -webkit-text-stroke: 1px rgb(0, 0, 0); 
+    background: linear-gradient(50deg,rgba(0, 0, 0, 0.205),rgba(255, 217, 0, 0.189));
+    z-index: 4;
+}
 
-
+.welcome-news{
+    letter-spacing: 10px;
+    margin-top: -50px;
+}
+.button-language{
+    border: 1px solid gold;
+    border-radius: 50%;
+}
 .welcome-background{
     height: 85vh;
 }
@@ -346,11 +368,37 @@
     margin-bottom: 20px;
 }
 
+/* ------------------------------------------------------------------------------------------------------------- */
+/* CHART PAGE */
+/* ---------------------------------------------------------------------------------------------------- */
+
+.describe-chart{
+    margin-left: 230px;
+}
+
+.btn-grg-product-chart{
+    background-color: red;
+    border: 1 px solid black;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 10px;
+    height: 50px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
 
 /* ------------------------------------------------------------------------------------------------------------- */
 /* STRIPE PAY */
 /* ---------------------------------------------------------------------------------------------------- */
-
 
 .panel-title {
     display: inline;

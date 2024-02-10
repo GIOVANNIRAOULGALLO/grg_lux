@@ -1,10 +1,10 @@
 <x-layout>
     <x-slot name="title">GRG - {{$sex}}</x-slot>
-    <section class="container-fluid my-5">
+    <section class="container-fluid my-5 vh-100">
         <div class="row justify-content-center text-center">
             <div class="col-12">
                 @if(!$products->isNotEmpty())
-                    <p class="sex-text">Non ci sono articoli</p>
+                    <p class="sex-text">Non ci sono articoli per questa categoria</p>
                 @else
                     
                     @if($sex == 'Uomo')
@@ -31,9 +31,9 @@
                         ORDINA
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Prezzo: dal più basso</a>
+                        <a class="dropdown-item" href="#">Prezzo: dal più alto</a>
+                        <a class="dropdown-item" href="#">Novità</a>
                     </div>
                 </div>
             </div>

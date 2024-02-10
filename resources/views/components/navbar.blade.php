@@ -25,6 +25,12 @@
             <a class="link-no-decoration tc-black navbargrg-link-offcanvas" data-bs-toggle="offcanvas" href="#categoryOffCanvasWoman" role="button" aria-controls="categoryOffCanvasWoman">DONNA <i class="fa-solid fa-chevron-right"></i></a>
             <hr class="divider">
             <a class="link-no-decoration tc-black navbargrg-link-offcanvas w-100" href="{{route('viewBySex',[$sex ='UOMO'])}}">CASA <i class="fa-solid fa-chevron-right"></i></a>
+            <hr class="divider">
+            <div class="link-no-decoration tc-black navbargrg-link-offcanvas w-100">
+              <div class="dropdown-item">@include('components.locale',['lang' => 'it' , 'nation' => 'it'])</div>
+              <div class="dropdown-item">@include('components.locale',['lang' => 'en' , 'nation' => 'gb'])</div>
+              <div class="dropdown-item">@include('components.locale',['lang' => 'es' , 'nation' => 'es'])</div>
+            </div>
             
           </div>
         </div>
@@ -83,7 +89,9 @@
               <i class="fa-solid fa-cart-shopping navbargrg-link"> </i>
             </a>
         </div>
+        @if(\App\Models\Product::where('buy',1)->count() >=1 )
         <span class="circle-counter"><p class="quantity-cart">{{\App\Models\Product::where('buy',1)->count()}}</p></span>
+        @endif
         <div class="dropdown show d-none d-md-inline"> 
           <a href="#" class="tc-white link-no-decoration mx-3 navbargrg-link dropdown-toggle" role="button"  id="dropdownAccountButton"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             My GRG
@@ -103,21 +111,6 @@
             <a class="dropdown-item" href="{{route('login')}}">LOGIN</a>
             <a class="dropdown-item" href="{{route('register')}}">SIGN IN</a>
             @endif
-          </div>
-        </div>
-        
-        <!-- BANDIERINE -->
-        <div class="dropdown"> 
-          
-        </div>
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <div class="dropdown-item">@include('components.locale',['lang' => 'it' , 'nation' => 'it'])</div>
-            <div class="dropdown-item">@include('components.locale',['lang' => 'en' , 'nation' => 'gb'])</div>
-            <div class="dropdown-item">@include('components.locale',['lang' => 'es' , 'nation' => 'es'])</div>
           </div>
         </div>
       </div>
