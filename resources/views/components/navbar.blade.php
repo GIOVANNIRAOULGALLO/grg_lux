@@ -7,16 +7,14 @@
           </a>
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
           <div class="offcanvas-header">
-              <p class="offcanvas-brand" id="offcanvasBottomLabel">GRG</p>
+              <p class="offcanvas-brand" id="offcanvasBottomLabel">MENU</p>
               <button type="button" class="btnGrg" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark tc-red"></i></button>
           </div>
           <div class="offcanvas-body text-center">
-            <form method="GET" action="{{route('product.search')}}" class="offcanvas-search">
+            <form method="GET" action="#route('product.search')}}" class="offcanvas-search">
               <input class="form-control navbar-search" type="text" placeholder="Cerca.." aria-label="Search" autoComplete="off" name="q">
-              <button class="tc-black btn-search" type="submit" name=""><i class="fa-solid fa-magnifying-glass "></i></button>
+              <button class="tc-black btn-search btn-search-offcanvas" type="submit" name=""><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
-                <!-- <input type="text" id="mySearch" placeholder="Cerca.." title="" class="navbar-search"><br> -->
-              
             <p>Comincia ad acquistare...</p>
             <hr class="divider">
             <a class="link-no-decoration tc-black navbargrg-link-offcanvas" data-bs-toggle="offcanvas" href="#categoryOffCanvasMen" role="button" aria-controls="categoryOffCanvasMen">UOMO <i class="fa-solid fa-chevron-right"></i></a>
@@ -37,16 +35,16 @@
    
         <div class="offcanvas offcanvas-start" tabindex="-2" id="categoryOffCanvasMen">
           <div class="offcanvas-header">
-              <h5 class="offcanvas-title">UOMO-CATEGORIES</h5>
+              <h5 class="offcanvas-title">UOMO-CATEGORIE</h5>
               <button type="button" class="btnGrg" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark tc-red"></i></button>
           </div>
           <div class="offcanvas-body">
             <div>
-              <a class="link-no-decoration tc-red navbargrg-link-offcanvas" href="{{route('viewBySex',['sex' => 'Uomo'])}}">Vedi tutto</a>
+              <a class="link-no-decoration tc-red navbargrg-link-offcanvas category-description-navbar" href="{{route('viewBySex',['sex' => 'Uomo'])}}">Vedi tutto</a>
               <hr class="divider">
               @foreach ($allCategories as $category)
                 <a class="link-no-decoration tc-black navbargrg-link-offcanvas" href="{{route('viewBySexCategory',['sex' => 'Uomo','category' => $category])}}">
-                  <p class="">{{$category->name}}</p>
+                  <p class="category-description-navbar">{{$category->name}}</p>
                 </a>
                 <hr class="divider">
               @endforeach
@@ -55,16 +53,16 @@
         </div>
         <div class="offcanvas offcanvas-start" tabindex="-1" id="categoryOffCanvasWoman">
           <div class="offcanvas-header">
-              <h5 class="offcanvas-title">DONNA-CATEGORIES</h5>
+              <h5 class="offcanvas-title">DONNA-CATEGORIE</h5>
               <button type="button" class="btnGrg" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark tc-red"></i></button>
           </div>
-          <div class="offcanvas-body">
+          <div class="offcanvas-body align-contents-center">
             <div>
-             <a class="link-no-decoration tc-red navbargrg-link-offcanvas" href="{{route('viewBySex',['sex' => 'Donna'])}}">Vedi tutto</a>
+             <a class="link-no-decoration tc-red navbargrg-link-offcanvas category-description-navbar" href="{{route('viewBySex',['sex' => 'Donna'])}}">Vedi tutto</a>
               <hr class="divider">
               @foreach ($allCategories as $category)
                 <a class="link-no-decoration tc-black navbargrg-link-offcanvas" href="{{route('viewBySexCategory',['sex' => 'Donna','category' => $category])}}">
-                  <p class="">{{$category->name}}</p>
+                  <p class="category-description-navbar">{{$category->name}}</p>
                 </a>
                 <hr class="divider">
               @endforeach
@@ -79,7 +77,7 @@
       <div class="col-6 text-center">
         <div>
           <a class="link-no-decoration grg-brand" href="{{route('homepage')}}">
-            <span class="grg-brand-content">GRG</span>
+            <span class="grg-brand-content">G2R</span>
           </a>
         </div> 
       </div>
@@ -102,7 +100,7 @@
           <div class="dropdown-menu dropdown-login" aria-labelledby="dropdownAccountButton">
             @if(Auth::User())
             <a class="dropdown-item" href="#">ACCOUNT</a>
-            <a class="dropdown-item" href="{{route('product.create')}}">INS. PROD.</a>
+            <a class="dropdown-item" href="{{route('product.admin')}}">ADMIN</a>
             <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">LOGOUT</a>
             <form method="POST" action="{{route('logout')}}" id="form-logout">
               @csrf

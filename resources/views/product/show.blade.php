@@ -14,7 +14,7 @@
         </div>
         <div class="row w-100">
             <div class="col-12 w-100">
-                <p class="text-secondary text-show-top">Home > {{$sex}} > {{$product->category->name ?? 'NULL'}} > {{$product->name}}</p>
+                <p class="text-secondary text-show-top">HOME - {{$sex}} > {{$product->category->name ?? 'NULL'}}</p>
             </div>
         </div>
     </section>
@@ -27,7 +27,7 @@
                 <p class="card-text fw-bold text-uppercase fs-1">{{$product->brand->name ?? 'NULL'}}</p>
                 <p class="card-text">{{$product->name}}</p>
                 <p class="card-text">{{$product->description}}</p>
-                <p class="card-text">{{$product->price}} €</p>
+                <p class="card-text">€{{$product->price}}</p>
                 <form method="POST" action="{{route('addToCart',compact('product'))}}">
                     @csrf
                     <button type ="submit" class="my-2 btn-grg-general ms-auto ms-md-0" id="btnAdd">Aggiungi al carrello</button>
@@ -70,7 +70,7 @@
                         <div class="card-body">
                             <p class="card-text fw-bold text-brand">{{$product->brand->name ?? 'NULL'}}</p>
                             <p class="card-text">{{$product->name}}</p>
-                            <p class="card-text">€ {{$product->price}}</p>
+                            <p class="card-text">€ {{$product->price}},00</p>
                         </div>
                     </div>
                 @endforeach

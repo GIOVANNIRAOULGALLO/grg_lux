@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 
 use GuzzleHttp\Handler\Proxy;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class ProductController extends Controller
 {
@@ -38,11 +39,19 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function admin()
+     {
+         $brands=Brand::all();
+         $categories=Category::all();
+         return view('product.admin',compact('categories','brands'));
+     }
+
     public function create()
     {
         $brands=Brand::all();
         $categories=Category::all();
-        return view('product.create',compact('categories','brands'));
+        return view('product.create',compact('categories','brands'))->with('message','Articolo aggiunto al carrello!');
     }
 
     /**
@@ -61,7 +70,7 @@ class ProductController extends Controller
             'category_id'=>$req->category_id,
             'brand_id'=>$req->brand_id
         ]);
-        return redirect(route('homepage'));
+        return redirect(route('product.admin.create'))->with('message','Articolo aggiunto al carrello!');
     }
 
     /**
@@ -155,6 +164,7 @@ class ProductController extends Controller
         $product->update(['buy' => 0 ]);
         $name=Auth::user()->name ?? '';
         $surname=Auth::user()->surname ?? '';
+        $product_name=$product->name;
         return redirect(route('viewCart',['userName'=>'name','userSurname'=>'surname']))->with('message','Articolo rimosso dal carrello');
     }
 
@@ -178,4 +188,12 @@ class ProductController extends Controller
         $total=$products->count();
         return view('product.viewbysc',compact('products','sex','category','total'));
     }
+
+    public function orderAscendent(Product $products){
+        $products=$products->orderBy('price','ASC')->get();
+        // $category=$products->first()->take('category_id')->category()->get();
+        return view('product.viewbysc',compact('products'));
+    }
+    
+
 }

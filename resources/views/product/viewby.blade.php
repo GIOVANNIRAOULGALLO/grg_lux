@@ -41,7 +41,7 @@
                     <div class="card-body">
                         <p class="card-text fw-bold text-brand">{{$product->brand->name ?? 'NULL'}}</p>
                         <p class="card-text">{{$product->name}}</p>
-                        <p class="card-text"> € {{$product->price}}</p>
+                        <p class="card-text"> €{{$product->price}},00</p>
                     </div>
                 </div>
                 @endforeach

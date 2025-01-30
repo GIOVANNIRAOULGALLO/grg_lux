@@ -30,7 +30,7 @@
                             <div class="card-body">
                                 <p class="card-text fw-bold text-brand">{{$product->brand->name ?? 'NULL'}}</p>
                                 <p class="card-text">{{$product->name}}</p>
-                                <p class="card-text"> € {{$product->price}}</p>
+                                <p class="card-text"> €{{$product->price}}</p>
                                 <form action="{{route('removeToCart',compact('product'))}}" method="post">
                                     @csrf
                                     <button type="submit" class="btn-grg-product-chart">Rimuovi dal Carrello</i></button>
@@ -45,7 +45,7 @@
                     @foreach ($products as $product)
                         <div class="d-flex justify-content-between w-50 ">
                             <span>{{$product->name}} {{$product->brand->name}}</span>
-                            <span>€{{$product->price}}</span>
+                            <span>€{{$product->price}},00</span>
                         </div>
                     @endforeach
                     <hr class="divider">
@@ -53,11 +53,11 @@
                     <a href="{{route('ship',compact('count'))}}" class="link-no-decoration"><button class="btn-checkout">Procedi al pagamento</button></a>
                 </div>
             </div>
-            <div class="text-center">
+            <!-- <div class="text-center sticky-bottom">
                 <p class="fs-3">Visualizza le informazioni di pagamento</p>
                 <p class="fs-5">Politica dei resi</p>
-                <img src="https://picsum.photos/1000/300" alt="casual image" class="mb-5 img-fluid">
-            </div>                  
+                <img src="https://picsum.photos/1000/300" alt="casual image" class="img-fluid">
+            </div>                   -->
         @else
             <div class="row justify-content-center">
                 <div class="col-12 text-center">

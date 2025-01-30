@@ -1,29 +1,29 @@
 <x-layout>
     <x-slot name="title">GRG - {{$sex}}</x-slot>
-    <section class="container-fluid my-5 vh-100">
+    <section class="container-fluid my-5 ">
         <div class="row justify-content-center text-center">
-            <div class="col-12">
+            
+            <div class="col-12 vh-100">
                 @if(!$products->isNotEmpty())
                     <p class="sex-text">Non ci sono articoli per questa categoria</p>
                 @else
-                    
-                    @if($sex == 'Uomo')
-                    <p class="description-sex-text text-uppercase">Tutto il meglio per l'uomo forte</p>
-                    @else
-                    <p class="description-sex-text text-uppercase">L'eleganza femminile è come la pioggia</p>
-                    @endif
+                <button type="submit" src="session::back()"></button>
                     <p class="sex-text">{{$products[0]->category->name}} {{$sex}}</p>
-                    
-                @endif  
-         
-            </div>
-        </div>
-        <div class="row flex-wrap flex-md-nowrap justify-content-between">
+                    <div class="row flex-wrap flex-md-nowrap justify-content-between">
             <div class="col-6 col-md-3 text-start order-0 order-md-0">
                 <button type="button" class="btn-filters" data-bs-toggle="modal" data-bs-target="#exampleModal">FILTRA</button>
             </div>
+            
             <div class="col-12 col-md-6 text-center order-2 order-md-1">
-                <span>Trovati {{$products->count()}} prodotti</span>
+                <p class="fs-3">
+                <a class="" href="{{ url()->previous() }}">INDIETRO</a>
+                </p>
+            
+            @if($products->count()>1)
+                <span>{{$products->count()}} prodotti disponibili</span>
+            @else
+                <span>{{$products->count()}} prodotto disponibile</span>
+            @endif
             </div>
             <div class="col-6 col-md-3 text-end order-1 order-md-2">
                 <div class="dropdown me-0">
@@ -31,7 +31,7 @@
                         ORDINA
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Prezzo: dal più basso</a>
+                        <a class="dropdown-item" href="{{route('orderAscendent',compact('products'))}}">Prezzo: dal più basso</a>
                         <a class="dropdown-item" href="#">Prezzo: dal più alto</a>
                         <a class="dropdown-item" href="#">Novità</a>
                     </div>
@@ -48,12 +48,17 @@
                     <div class="card-body">
                         <p class="card-text fw-bold text-brand">{{$product->brand->name ?? 'NULL'}}</p>
                         <p class="card-text">{{$product->name}}</p>
-                        <p class="card-text"> € {{$product->price}}</p>
+                        <p class="card-text"> €{{$product->price}},00</p>
                     </div>
                 </div>
                 @endforeach
             </div>
         </div>
+                @endif  
+         
+            </div>
+        </div>
+       
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">

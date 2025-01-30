@@ -18,7 +18,8 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/',[ProductController::class,'index'])->name('homepage');
-Route::get('/create',[ProductController::class,'create'])->name('product.create');
+Route::get('admin/create',[ProductController::class,'create'])->name('product.admin.create');
+Route::get('/admin',[ProductController::class,'admin'])->name('product.admin');
 Route::post('/store',[ProductController::class,'store'])->name('product.store');
 Route::get('/show/{product}',[ProductController::class,'show'])->name('product.show');
 Route::get('/edit/{product}',[ProductController::class,'edit'])->name('product.edit');
@@ -38,6 +39,6 @@ Route::post('/removeToCart/{product}',[ProductController::class,'removeToCart'])
 Route::post('/addLoved/{product}',[ProductController::class,'addLoved'])->name('addLoved');
 Route::delete('/trash/{product}',[ProductController::class,'trash'])->name('product.trash');
 Route::get('/{sex}/{category}',[ProductController::class,'viewBySexCategory'])->name('viewBySexCategory');
-
+Route::get('/orderAscendent',[ProductController::class,'orderAscendent'])->name('orderAscendent');
 
 Route::post('/locale/{locale}', [PublicController::class, 'locale'])->name('locale');
