@@ -110,25 +110,17 @@ class ProductController extends Controller
         return redirect(route('product.show',compact('product')));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
-     */
+    
     public function destroy(Product $product)
     {
         $product->delete();
         return redirect(route('homepage'));
     }
-    // VISUALIZZA CARRELLO
     public function viewCart(){
         $products=Product::where('buy',true)->get();
         return view('carrello',compact('products'));
     }
-
     public function ship(){return view('ship');}
-
     public function insertAdress(Request $req){
         Adress::create([
             'city'=>$req->city,
@@ -140,7 +132,6 @@ class ProductController extends Controller
         ]);
         return redirect(route('stripe'));
     }
-
     public function ordine(){
         $products=Product::where('buy',true)->get();
         $count=0;
@@ -149,7 +140,6 @@ class ProductController extends Controller
         }
         return view('ordine',compact('count'));   
     }
-
     public function addToCart(Product $product){
         if($product->buy == 1){
             return redirect(route('product.show',compact('product')))->with('message','Articolo aggiunto al carrello!');
@@ -159,7 +149,6 @@ class ProductController extends Controller
             return redirect(route('product.show',compact('product')))->with('message','Articolo aggiunto al carrello!');
         }
     }
-    
     public function removeToCart(Product $product){
         $product->update(['buy' => 0 ]);
         $name=Auth::user()->name ?? '';
@@ -167,33 +156,27 @@ class ProductController extends Controller
         $product_name=$product->name;
         return redirect(route('viewCart',['userName'=>'name','userSurname'=>'surname']))->with('message','Articolo rimosso dal carrello');
     }
-
     public function addLoved(Product $product){
         if(Auth::user()){
             $user=Auth::user()->id;
             $product->users()->attach($user); 
-        }
-       
+        }  
         return redirect(route('product.show',compact('product')));
     }
-
     public function viewBySex($sex){
         $products=Product::where('sex',$sex)->get();
         $total=$products->count();
         return view('product.viewby',compact('products','sex','total'));
     }
-    
     public function viewBySexCategory($sex,$category){
-        $products=Product::where('sex',$sex)->where('category_id',$category)->get();
+        $category_id=Category::where('name' , $category)->value('id');
+        $products=Product::where('sex',$sex)->where('category_id',$category_id)->get();
         $total=$products->count();
         return view('product.viewbysc',compact('products','sex','category','total'));
     }
-
     public function orderAscendent(Product $products){
         $products=$products->orderBy('price','ASC')->get();
         // $category=$products->first()->take('category_id')->category()->get();
         return view('product.viewbysc',compact('products'));
     }
-    
-
 }

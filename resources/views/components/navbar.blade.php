@@ -2,8 +2,8 @@
   <div class="container-fluid">
     <div class="row justify-content-center align-items-center flex-nowrap">
       <div class="col-3  d-flex flex-row align-items-center flex-nowrap">
-          <a class="link-no-decoration ms-1 tc-white " data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button" aria-controls="offcanvasMenu">
-          <i class="fa-solid fa-bars tc-white navbargrg-link"><span class="my-auto">MENU</span></i>
+          <a class="link-no-decoration ms-1 tc-white menu-g2r" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button" aria-controls="offcanvasMenu">
+          <i class="fa-solid fa-bars tc-white navbargrg-link menu-g2r-bars"></i><span class="menu-g2r-script">MENU</span>
           </a>
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
           <div class="offcanvas-header">
@@ -43,7 +43,7 @@
               <a class="link-no-decoration tc-red navbargrg-link-offcanvas category-description-navbar" href="{{route('viewBySex',['sex' => 'Uomo'])}}">Vedi tutto</a>
               <hr class="divider">
               @foreach ($allCategories as $category)
-                <a class="link-no-decoration tc-black navbargrg-link-offcanvas" href="{{route('viewBySexCategory',['sex' => 'Uomo','category' => $category])}}">
+                <a class="link-no-decoration tc-black navbargrg-link-offcanvas" href="{{route('viewBySexCategory',['sex' => 'UOMO','category' => $category->name])}}">
                   <p class="category-description-navbar">{{$category->name}}</p>
                 </a>
                 <hr class="divider">
@@ -58,10 +58,10 @@
           </div>
           <div class="offcanvas-body align-contents-center">
             <div>
-             <a class="link-no-decoration tc-red navbargrg-link-offcanvas category-description-navbar" href="{{route('viewBySex',['sex' => 'Donna'])}}">Vedi tutto</a>
+             <a class="link-no-decoration tc-red navbargrg-link-offcanvas category-description-navbar" href="{{route('viewBySex',['sex' => 'DONNA'])}}">Vedi tutto</a>
               <hr class="divider">
               @foreach ($allCategories as $category)
-                <a class="link-no-decoration tc-black navbargrg-link-offcanvas" href="{{route('viewBySexCategory',['sex' => 'Donna','category' => $category])}}">
+                <a class="link-no-decoration tc-black navbargrg-link-offcanvas" href="{{route('viewBySexCategory',['sex' => 'DONNA','category' => $category->name])}}">
                   <p class="category-description-navbar">{{$category->name}}</p>
                 </a>
                 <hr class="divider">
@@ -70,12 +70,12 @@
           </div>
         </div>
         <form method="GET" action="{{route('product.search')}}" class="d-none d-lg-flex">
-          <input class="form-control me-2 input-search" type="text" placeholder="Search" aria-label="Search" autoComplete="off" name="q">
+          <input class="form-control me-4 input-search" type="text" placeholder="Search" aria-label="Search" autoComplete="off" name="q">
           <button class="tc-white btn-search" type="submit" name=""><i class="fa-solid fa-magnifying-glass navbargrg-link"></i></button>
         </form>
       </div>
       <div class="col-6 text-center">
-        <div>
+        <div class="content-middle">
           <a class="link-no-decoration grg-brand" href="{{route('homepage')}}">
             <span class="grg-brand-content">G2R</span>
           </a>
@@ -91,8 +91,8 @@
         <span class="circle-counter"><p class="quantity-cart">{{\App\Models\Product::where('buy',1)->count()}}</p></span>
         @endif
         <div class="dropdown show d-none d-md-inline"> 
-          <a href="#" class="tc-white link-no-decoration mx-3 navbargrg-link dropdown-toggle" role="button"  id="dropdownAccountButton"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            My GRG
+          <a href="#" class="tc-white link-no-decoration mx-3 navbargrg-link dropdown-toggle myg2r" role="button"  id="dropdownAccountButton"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            MY G2R
             @if(Auth::User())
             <span class="account-on"></span>
            @endif

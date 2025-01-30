@@ -11284,14 +11284,14 @@ textarea.form-control-lg {
 /* -------------------------------------------------------------------------------------------------------------- */
 /* GENERAL *
 /* -------------------------------------------------------------------------------------------------------------- */
-
-
 *{
-    font-family: 'Gayathri', sans-serif;
-    letter-spacing: 1.5px;    
+    font-family: "Questrial", serif;
+    letter-spacing: 1.2px;    
 }
+
 /* SCROLLBAR */
 /* width */
+
 ::-webkit-scrollbar {
     width: 10px;
   }
@@ -11343,7 +11343,15 @@ textarea.form-control-lg {
 /* -------------------------------------------------------------------------------------------------------------- */
 /* NAVBAR */
 /* -------------------------------------------------------------------------------------------------------------- */
+.menu-g2r:hover, .myg2r:hover, .menu-g2r:hover{
+    color: gold;
+}
 
+.menu-g2r-script{
+    position: relative;
+    left: 1px;
+    top: -1px;
+}
 
 .grg-brand:hover{
     color: white;
@@ -11362,28 +11370,27 @@ textarea.form-control-lg {
 }
 .grg-brand-content{
   font-family: "Bona Nova SC", serif;
-  position: absolute;
-  top: 7.5px;
+  position: relative;
   text-align: center;
 }
 .input-search{
     background: transparent;
+    margin-left: 20px;
     border: none;
     font-size: 13px;
 }
   
-
 /* --------------------------------------------------------------------------------------------------------------- */
 /* WELCOME */
-/* .................................................................................................................. */
+/* ................................................................................................................. */
+
 .welcome-messagge{
     margin-left: auto;
     margin-right: auto;
-    font-size: 70px;
+    font-size: 50px;
     margin-top: 110px;
     text-align: center;
     color: rgb(0, 0, 0);
-    font-weight: bold;
     -webkit-text-stroke: 1px rgb(0, 0, 0); 
     z-index: 4;
 }
@@ -11398,21 +11405,24 @@ textarea.form-control-lg {
     padding-left: 40px;
     color: rgb(0, 0, 0);
 }
+
 .welcome-dx{
     background-color:rgb(162, 160, 0);
     height: auto;
     color: white;
-
 }
+
 .welcome-news{
     color: gold;
     letter-spacing: 10px;
     margin-top: 30px;
 }
+
 .button-language{
     border: 1px solid gold;
     border-radius: 50%;
 }
+
 .welcome-background{
     height: 85vh;
 }
@@ -11456,7 +11466,6 @@ textarea.form-control-lg {
     background-color: rgba(255, 247, 0, 0.716);
     border-radius: 4px;
 }
-
 
 /* -------------------------------------------------------------------------------------------------------------- */
 /* PRODUCTS */
@@ -11509,11 +11518,9 @@ textarea.form-control-lg {
     font-size: 11px;
 }
 
-
 /* -------------------------------------------------------------------------------------------------------------- */
 /* ACCOUNT */
 /* -------------------------------------------------------------------------------------------------------------- */
-
 
 .add-image{
     position: relative;
@@ -11538,17 +11545,14 @@ textarea.form-control-lg {
     transition: 0.4s;    
 }
 
-
 /* -------------------------------------------------------------------------------------------------------------- */
 /* footer */
 /* -------------------------------------------------------------------------------------------------------------- */
-
 
 .grg-footer{
     width: 100%;
     margin:0;
 }
-
 
 /* -------------------------------------------------------------------------------------------------------------- */
 /* PAYMENT */
@@ -11580,10 +11584,9 @@ textarea.form-control-lg {
 }
 
 
-/* ------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------*/
 /* BUTTONS */
-/* -------------------------------------------------------------------------------------------------------------------------------- */
-
+/* ----------------------------------------------------------------------------------------------------------------------------- */
 
 .btn-filters{
     background: none;
@@ -11715,8 +11718,6 @@ textarea.form-control-lg {
     margin-bottom: 10px;
 }
 
-
-
 /* ------------------------------------------------------------------------------------------------------------- */
 /* STRIPE PAY */
 /* ---------------------------------------------------------------------------------------------------- */
@@ -11740,33 +11741,22 @@ textarea.form-control-lg {
     width: 61%;
 }
 
-
 /*-----------------------------------------------------------------------  */
 /* CART */
 /* ------------------------------------------------------------- */
+
 .card-cart{
     height: 100px;
 }
 
-.circle-counter{
-    background-color: gold;
-    color: black;
-    height: 15px;
-    width: 15px;
-    margin-bottom: 30px;
-    margin-right: 3px;
-    border-radius: 50%;
-    text-align: center;
+.cart-product{
+    width: 50%;;
     border: 1px solid black;
+    justify-content: flex-end;
+    margin-right: 0;
 }
 
-.quantity-cart{
-    font-size: 12px;
-    margin-bottom: auto;
-    margin-top:auto;
-    padding-left: 3px;
-    padding-right: 3px;
-}
+
 
 .carouel-image{
     width: 100%;
@@ -11785,22 +11775,26 @@ textarea.form-control-lg {
     border: none;
 }
 
-
-
+/* ----------------------------------------------------------------------------------------------------------------------------- */
 /* NAVBAR */
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
 .navbargrg-link-offcanvas{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .category-description-navbar{
     margin-top: 5%;
 }
 
 .navbargrg-link-offcanvas:hover{
     color:black;
-    font-weight: 700;
     font-size: 25px;
+}
+.navbar-grg-link{
+    display: inline-block;
 }
 
 .offcanvas-brand{
@@ -11808,12 +11802,11 @@ textarea.form-control-lg {
     margin-top:auto;
     margin-bottom: auto;
     color: gold;
-    font-weight: bolder;
     text-shadow: 1px 1px black;
  }
 
  .navbar-search{
-    width: 60%;
+    width: 70%;
     border: 3px solid gold;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -11824,12 +11817,12 @@ textarea.form-control-lg {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
-
 }
+
 .btn-search-offcanvas{
     margin-bottom:15px;
 }
+
 .account-on{
     display: inline-block;
     margin-bottom: 10px;
@@ -11846,14 +11839,21 @@ textarea.form-control-lg {
     width: min-content;
 }
 
-/* --------------------------------------------------- */
-
-
-.cart-product{
-    width: 50%;;
+.circle-counter{
+    background-color: gold;
+    color: black;
+    height: 20px;
+    width: 20px;
+    margin-bottom: 30px;
+    margin-right: 3px;
+    border-radius: 50%;
+    text-align: center;
     border: 1px solid black;
-    justify-content: flex-end;
-    margin-right: 0;
+}
+.quantity-cart{
+    position: relative;
+    margin-top: 1px;
+    font-size: 12px;
 }
 
 
@@ -11907,9 +11907,7 @@ textarea.form-control-lg {
     align-items: center;
 }
 
-
 /* -------------------------------------------------------------------------------------------- */
-
 
 .brandsResult{
     border:1px solid gold;

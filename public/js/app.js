@@ -3071,14 +3071,18 @@ resizeFn(); // var PARAMS = @json($params)
 // const { filter } = require("lodash");
 
 var inputSearch = document.querySelector('.input-search');
-var buttonSearch = document.querySelector('.button-search');
+var buttonSearch = document.querySelector('.btn-search');
 inputSearch.addEventListener("focus", function () {
   inputSearch.style.position = 'relative';
-  inputSearch.style.width = '250px';
-  inputSearch.style.marginLeft = '50px';
+  inputSearch.style.width = '180px';
+  inputSearch.style.left = '20px'; // buttonSearch.style.position='relative';
+
+  buttonSearch.style.marginLeft = '50px';
 });
 inputSearch.addEventListener("focusout", function () {
   inputSearch.style.width = "100%";
+  inputSearch.style.right = '100px';
+  buttonSearch.style.position = 'relative';
 }); // --------------------------------------------------------------------------------------------------------------------------
 
 var offcanvasMenu = document.getElementById('offcanvasMenu');

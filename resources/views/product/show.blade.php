@@ -4,7 +4,7 @@
         <div class="row justify-content-center text-center">
             <div class="col-12 mx-0 px-0">
                 @if (session('message'))
-                    <div x-data="{show: true}" x-init="setTimeout(() => show = false, 2000)" x-show="show">
+                    <div x-data="{show: true}" x-init="setTimeout(() => show = false, 800)" x-show="show">
                         <div class="messagebuy">
                             {{ session('message') }}
                         </div>
@@ -14,7 +14,7 @@
         </div>
         <div class="row w-100">
             <div class="col-12 w-100">
-                <p class="text-secondary text-show-top">HOME - {{$sex}} > {{$product->category->name ?? 'NULL'}}</p>
+                <p class="text-secondary text-show-top">HOME - {{$sex}} -  {{$product->category->name ?? 'NULL'}}</p>
             </div>
         </div>
     </section>

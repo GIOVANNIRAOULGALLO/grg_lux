@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name="title">GRG - Homepage</x-slot>
+    <x-slot name="title">G2R - Homepage</x-slot>
     <section class="container-fluid overflow-hidden">
         <div class="row justify-content-center text-center">
             <div class="col-12">
@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="row justify-content-center mt-0">
-            <div class="col-6 px-0">
+            <div class="col-12 px-0 col-md-6 order-2">
                 <div class="d-flex flex-column">
                     <div>
                         <img src=".\img\welcome_pic.jpg" alt="Welcome Pic" height="650px">
@@ -23,7 +23,7 @@
                 </div>
               
             </div>
-            <div class="col-6 px-0 welcome-dx">
+            <div class="col-12 px-0 welcome-dx col-md-6 order-1">
             
               <p class="welcome-messagge">WELCOME</p>
               <p class="welcome-messagge">TO</p>
