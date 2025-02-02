@@ -267,6 +267,8 @@
 /* -------------------------------------------------------------------------------------------------------------- */
 
 .grg-footer{
+    position: fixed;
+    bottom: 0;
     width: 100%;
     margin:0;
 }
@@ -372,6 +374,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn-pay:hover{

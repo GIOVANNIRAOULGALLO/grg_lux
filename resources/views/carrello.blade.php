@@ -13,15 +13,12 @@
             </div>
         </div> 
     </section>
-    <section class="container vh-100">
-       
-        
+    <section class="container vh-100">  
         @if(\App\Models\Product::where('buy',1)->count()>0)
             <div class="row justify-content-center align-items-center text-center">
             @php($count=0)  
-            <p class="fs-2 fw-bolder text-start mt-3 describe-chart">Articoli nel mio Carrello ({{\App\Models\Product::where('buy',1)->count()}}):</p>
-                <div class="col-12 col-md-6 d-flex justify-content-center flex-wrap order-1 order-lg-0">
-              
+            <div class="col-12 col-md-6 d-flex justify-content-center flex-wrap order-1 order-lg-0">
+                    <p class="fs-2 fw-bolder text-start mt-3 describe-chart">Articoli nel mio Carrello ({{\App\Models\Product::where('buy',1)->count()}}):</p>
                     @foreach ($products as $product)
                         <div class="card mx-3 my-2 card-checkout">
                             <a href="{{route('product.show',compact('product'))}}">
@@ -39,13 +36,14 @@
                         </div>
                         @php($count+=$product->price)
                     @endforeach
-                </div>
-                <div class="col-12 col-md-6 d-flex flex-column justify-content-start text-center align-items-center align-self-start mt-5">
-                    <p class="fs-3 fw-bolder">Il mio Carrello({{\App\Models\Product::where('buy',1)->count()}}):</p>
+                </div>    
+                <div class="col-12 col-md-6">
+                    <p class="fs-3 fw-bolder">Riepilogo carrello({{\App\Models\Product::where('buy',1)->count()}}):</p>
                     @foreach ($products as $product)
-                        <div class="d-flex justify-content-between w-50 ">
-                            <span>{{$product->name}} {{$product->brand->name}}</span>
-                            <span>€{{$product->price}},00</span>
+                        <div class="d-flex py-2">
+                            <div class="p-2"><img src="https://picsum.photos/25/25" class="card-img-top mx-auto img-fluid" alt="{{$product->name}}"></div>
+                            <div class="p-2"><p>{{$product->name}} {{$product->brand->name}}</p></div>
+                            <div class="ml-auto p-2"><p>€{{$product->price}},00</p></div>
                         </div>
                     @endforeach
                     <hr class="divider">

@@ -7,9 +7,11 @@ use Stripe\Charge;
 use App\Models\User;
 use App\Models\Adress;
 use App\Models\Product;
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Symfony\Component\HttpFoundation\Session\Session;
     
 class StripeController extends Controller
@@ -40,17 +42,28 @@ class StripeController extends Controller
         $productbuyed=0;
         $products=Product::where('buy',true)->get();
         $count=0;
+
+        $email=Auth::user()->email;
+        $user=Auth::user()->name;
+        $message="Grazie per aver acquistato";
+        $contact=compact('email','user','message');
+        Mail::to($email)->send(new ContactMail($contact));
         foreach($products as $product){ 
             $count+=$product->price;
             $product->update(['buy'=>  0]);
         }
+       
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         Stripe\Charge::create ([
                 "amount" => $count,
                 "currency" => "EUR",
                 "source" => $request->stripeToken,
                 "description" => "This payment is for a test"
-        ]);      
+        ]);
+        // mando mail
+        
+
+       
         return redirect(route('ordine'));
     }
 }

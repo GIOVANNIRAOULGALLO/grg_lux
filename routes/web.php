@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\StripeController;
 use App\Http\Controllers\AccountController;
@@ -40,5 +41,9 @@ Route::post('/addLoved/{product}',[ProductController::class,'addLoved'])->name('
 Route::delete('/trash/{product}',[ProductController::class,'trash'])->name('product.trash');
 Route::get('/{sex}/{category}',[ProductController::class,'viewBySexCategory'])->name('viewBySexCategory');
 Route::get('/orderAscendent',[ProductController::class,'orderAscendent'])->name('orderAscendent');
-
 Route::post('/locale/{locale}', [PublicController::class, 'locale'])->name('locale');
+
+
+Route::get('/contatti',[FormController::class,'form'])->name('form');
+Route::post('/contatti/submit' , [FormController::class,'store'])->name('store');
+Route::get('/thankYou',[FormController::class,'thankYou'])->name('thankYou');

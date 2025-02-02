@@ -1,57 +1,56 @@
 <x-layout>
-    <x-slot name="title">GRG - {{$sex}}</x-slot>
+    <x-slot name="title">G2R - {{$sex}} - {{$category}}</x-slot>
     <section class="container-fluid my-5 ">
         <div class="row justify-content-center text-center">
             <div class="col-12 vh-100">
                 @if(!$products->isNotEmpty())
                     <p class="sex-text">Non ci sono articoli per questa categoria</p>
                 @else
-                <p class="sex-text">{{$sex}} - {{$products[0]->category->name}} </p>
-                <div class="row flex-wrap flex-md-nowrap justify-content-between">
-                    <div class="col-6 col-md-3 text-start order-0 order-md-0">
-                        <button type="button" class="btn-filters" data-bs-toggle="modal" data-bs-target="#exampleModal">FILTRA</button>
-                    </div>
-                    <div class="col-12 col-md-6 text-center order-2 order-md-1">
-                        @if($products->count()>1)
-                            <span>{{$products->count()}} prodotti disponibili</span>
-                        @else
-                            <span>{{$products->count()}} prodotto disponibile</span>
-                        @endif
-                </div>
-                <div class="col-6 col-md-3 text-end order-1 order-md-2">
-                    <div class="dropdown me-0">
-                    <button class="btn-filters dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        ORDINA
-                    </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="{{route('orderAscendent',compact('products'))}}">Prezzo: dal più basso</a>
-                            <a class="dropdown-item" href="#">Prezzo: dal più alto</a>
-                            <a class="dropdown-item" href="#">Novità</a>
+                    <p class="sex-text">{{$products[0]->category->name}} {{$sex}}</p>
+                    <div class="row flex-wrap flex-md-nowrap justify-content-between">
+                        <div class="col-6 col-md-3 text-start order-0 order-md-0">
+                            <button type="button" class="btn-filters" data-bs-toggle="modal" data-bs-target="#exampleModal">FILTRA</button>
+                        </div>
+                        <div class="col-12 col-md-6 text-center order-2 order-md-1">
+                            @if($products->count()>1)
+                                <span>{{$products->count()}} prodotti disponibili</span>
+                            @else
+                                <span>{{$products->count()}} prodotto disponibile</span>
+                            @endif
+                        </div>
+                        <div class="col-6 col-md-3 text-end order-1 order-md-2">
+                            <div class="dropdown me-0">
+                                <button class="btn-filters dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    ORDINA
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="{{route('orderAscendent',compact('products'))}}">Prezzo: dal più basso</a>
+                                    <a class="dropdown-item" href="#">Prezzo: dal più alto</a>
+                                    <a class="dropdown-item" href="#">Novità</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row justify-content-center text-center mb-5 pb-5">
-                <div class="col-12 d-flex flex-row  flex-wrap justify-content-center">
-                @foreach ($products as $product)
-                <div class="card mx-3 my-3">
-                    <a href="{{route('product.show',compact('product'))}}">
-                        <img src="https://picsum.photos/250/350" class="card-img-top mx-auto img-fluid" alt="{{$product->name}}">
-                    </a>
-                    <div class="card-body">
-                        <p class="card-text fw-bold text-brand">{{$product->brand->name ?? 'NULL'}}</p>
-                        <p class="card-text">{{$product->name}}</p>
-                        <p class="card-text"> €{{$product->price}},00</p>
+                    <div class="row justify-content-center text-center mb-5 pb-5">
+                        <div class="col-12 d-flex flex-row  flex-wrap justify-content-center">
+                        @foreach ($products as $product)
+                            <div class="card mx-3 my-3">
+                                <a href="{{route('product.show',compact('product'))}}">
+                                    <img src="https://picsum.photos/250/350" class="card-img-top mx-auto img-fluid" alt="{{$product->name}}">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-text fw-bold text-brand">{{$product->brand->name ?? 'NULL'}}</p>
+                                    <p class="card-text">{{$product->name}}</p>
+                                    <p class="card-text"> €{{$product->price}},00</p>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
-                @endforeach
-            </div>
-        </div>
                 @endif  
          
             </div>
         </div>
-       
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">

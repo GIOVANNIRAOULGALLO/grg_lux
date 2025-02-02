@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name="title">GRG → {{$product->brand->name}}-{{$product->name}}</x-slot>
+    <x-slot name="title">{{$product->name}} {{$product->brand->name}} G2R</x-slot>
     <section class="container-fluid">
         <div class="row justify-content-center text-center">
             <div class="col-12 mx-0 px-0">
