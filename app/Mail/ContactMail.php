@@ -13,15 +13,17 @@ class ContactMail extends Mailable
     use Queueable, SerializesModels;
     public $contact;
     public $products;
+    public $address;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($contatto)
+    public function __construct($contatto,$address)
     {
         $this->products=Product::where('buy',true)->get();
         $this->contact=$contatto;
+        $this->address=$address;
     }
 
 

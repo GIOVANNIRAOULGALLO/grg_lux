@@ -46,8 +46,9 @@ class StripeController extends Controller
         $email=Auth::user()->email;
         $user=Auth::user()->name;
         $message="Grazie per aver acquistato";
-        $contact=compact('email','user','message');
-        Mail::to($email)->send(new ContactMail($contact));
+        $address=Auth::user()->adresses()->latest()->first();
+        $contact=compact('email','user','message','address');
+        Mail::to($email)->send(new ContactMail($contact,$address));
         foreach($products as $product){ 
             $count+=$product->price;
             $product->update(['buy'=>  0]);

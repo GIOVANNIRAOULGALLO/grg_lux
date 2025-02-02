@@ -12,7 +12,7 @@ class Product extends Model
 {
     use Searchable;
     use HasFactory;
-    protected $fillable=['name','description','price','sex','category_id','brand_id','buy'];
+    protected $fillable=['name','description','price','sex','magazine','category_id','brand_id','buy'];
 
     public function toSearchableArray()
     {
@@ -22,7 +22,8 @@ class Product extends Model
             'description'=>$this->description,
             'category'=>$this->category->name,
             'brand'=>$this->brand->name,
-            'sex'=>$this->sex
+            'sex'=>$this->sex,
+            'magazine'=>$this->magazine
         ];
         return $array;
     }

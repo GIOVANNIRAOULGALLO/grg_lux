@@ -16,15 +16,6 @@ class FormController extends Controller
     public function form(){
         return view('form');
     }
-    public function store (Auth $user){
-        // dd($req->all());
-        $email=Auth::user()->email;
-        $user=Auth::user()->name;
-        $message="Grazie per aver acquistato";
-        $contact=compact('email','user','message');
-        Mail::to($email)->send(new ContactMail($contact));
-        return redirect(route('thankYou'));
-    }
     public function thankYou(){
         return view('thankYou');
     }

@@ -83,6 +83,10 @@
                            </div>
                         </div>
                         </div>
+
+                        <!-- <form method="POST" action="{{route('store')}}" class="mt-2">
+                           @csrf
+                     </form> -->
                         <div class="row">
                            <div class="col-xs-12">
                               <button class="btn btn-primary btn-lg btn-block mt-3" type="submit">Paga ora {{$count}} $</button>
