@@ -11,4 +11,7 @@ cmds = [
 ]
 
 [phases.start]
-cmds = ["php artisan serve --host 0.0.0.0 --port $PORT"]
+cmds = [
+    "php-fpm -D",   # Avvia PHP-FPM in background
+  "nginx -g 'daemon off;'"  # Avvia Nginx
+]
