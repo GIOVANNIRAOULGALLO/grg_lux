@@ -35,7 +35,7 @@
                         <div class="col-12 d-flex flex-row  flex-wrap justify-content-center">
                         @foreach ($products as $product)
                             <div class="card mx-3 my-3">
-                                <a href="{{route('product.show',compact('product'))}}">
+                                <a href="{{route('product.show',compact('product','name'->$product->name))}}">
                                     <img src="https://picsum.photos/250/350" class="card-img-top mx-auto img-fluid" alt="{{$product->name}}">
                                 </a>
                                 <div class="card-body">

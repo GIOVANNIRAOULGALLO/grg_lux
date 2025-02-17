@@ -22,7 +22,7 @@ Route::get('/',[ProductController::class,'index'])->name('homepage');
 Route::get('admin/create',[ProductController::class,'create'])->name('product.admin.create');
 Route::get('/admin',[ProductController::class,'admin'])->name('product.admin');
 Route::post('/store',[ProductController::class,'store'])->name('product.store');
-Route::get('/show/{product}',[ProductController::class,'show'])->name('product.show');
+Route::get('/{name}',[ProductController::class,'show'])->name('product.show');
 Route::get('/edit/{product}',[ProductController::class,'edit'])->name('product.edit');
 Route::get('/stripe', [StripeController::class, 'stripe'])->name('stripe');
 Route::get('/search',[ProductController::class,'search'])->name('product.search');
@@ -42,8 +42,6 @@ Route::delete('/trash/{product}',[ProductController::class,'trash'])->name('prod
 Route::get('/{sex}/{category}',[ProductController::class,'viewBySexCategory'])->name('viewBySexCategory');
 Route::get('/orderAscendent',[ProductController::class,'orderAscendent'])->name('orderAscendent');
 Route::post('/locale/{locale}', [PublicController::class, 'locale'])->name('locale');
-
-
 Route::get('/contatti',[FormController::class,'form'])->name('form');
 Route::post('/contatti/submit' , [FormController::class,'store'])->name('store');
 Route::get('/thankYou',[FormController::class,'thankYou'])->name('thankYou');

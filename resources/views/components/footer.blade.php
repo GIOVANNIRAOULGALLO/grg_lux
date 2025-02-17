@@ -1,4 +1,4 @@
-<footer class="row bg-black grg-footer text-center" id="grgFooter">
+<footer class="row bg-dark text-white text-center py-3 mb-auto grg-footer" id="grgFooter">
     <div class="col-4 d-flex flex-column my-2">
         <a href="#" class="link-no-decoration text-white">About Us</a>
         <a href="#" class="link-no-decoration text-white">Contact</a>
