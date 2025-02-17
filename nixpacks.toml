@@ -12,6 +12,5 @@ cmds = [
 
 [phases.start]
 cmds = [
-    "php-fpm -D",   # Avvia PHP-FPM in background
-  "nginx -g 'daemon off;'"  # Avvia Nginx
+    "php -S 0.0.0.0:$PORT -t public"
 ]
