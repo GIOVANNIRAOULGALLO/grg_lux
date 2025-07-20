@@ -122,7 +122,7 @@ return [
     'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
-
+    'stripe_key' => env('STRIPE_KEY'),
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

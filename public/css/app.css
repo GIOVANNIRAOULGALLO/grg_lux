@@ -11369,7 +11369,6 @@ textarea.form-control-lg {
     align-items: center;
 }
 .grg-brand-content{
-  font-family: "Bona Nova SC", serif;
   position: relative;
   text-align: center;
 }
@@ -11477,10 +11476,12 @@ textarea.form-control-lg {
 
 .text-area-misure{
     width: 100%;
-    height: 200px;
+    height: 100px;
     resize: none;
 }
-
+.insert-misure{
+    width: 100px;
+}
 .description-sex-text{
     font-size: 15px;
 }
@@ -11700,8 +11701,16 @@ textarea.form-control-lg {
 /* CHART PAGE */
 /* ---------------------------------------------------------------------------------------------------- */
 
-.describe-chart{
-    margin-left: 230px;
+/* .describe-chart{
+    margin-left: 130px;
+} */
+
+.dividerVertical {
+  width: 1px;
+  background-color: #ccc;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn-grg-product-chart{

@@ -24,9 +24,9 @@
                                     ORDINA
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="{{route('orderAscendent',compact('products'))}}">Prezzo: dal più basso</a>
-                                    <a class="dropdown-item" href="#">Prezzo: dal più alto</a>
-                                    <a class="dropdown-item" href="#">Novità</a>
+                                    <a class="dropdown-item" href="{{route('orderAscendent',compact('products','sex','category'))}}">Prezzo: dal più basso</a>
+                                    <a class="dropdown-item" href="{{route('orderDescendent',compact('products','sex','category'))}}">Prezzo: dal più alto </a>
+                                    <a class="dropdown-item" href="{{route('orderNews',compact('products','sex','category'))}}">Novità</a>
                                 </div>
                             </div>
                         </div>

@@ -2,12 +2,20 @@
     <x-slot name="title">Create Product</x-slot>
     <section class="container">
         <div class="row justify-content-center text-center my-4">
-            <div class="col-12 col-md-6">
-                <h1>Create</h1>
+          <div class="col-12 mx-0 px-0">
+                @if (session('message'))
+                    <div x-data="{show: true}" x-init="setTimeout(() => show = false, 1200)" x-show="show">
+                        <div class="messagebuy">
+                            {{ session('message') }}
+                        </div>
+                    </div>
+                @endif
             </div>
-        </div>
-        <div class="row justify-content-center text-center my-5 pb-5">
+          </div>
+        <div class="row justify-content-center text-center pb-5">
             <div class="col-12 col-md-6">
+                <h1>Insert New Products to the <br> GRG Store</h1>
+                <p class="text-danger fs-bold">Remember! All fields are required.</p>
                 <form method="POST" action="{{route('product.store')}}">
                     @csrf
                     <div class="mb-3">
@@ -16,7 +24,7 @@
                     </div>
                     <div class="mb-3">
                       <label for="productDescription" class="form-label">Descrizione</label>
-                      <textarea name="description" id="productDescription" class=" text-area-misure"></textarea>
+                      <textarea name="description" id="productDescription" class="text-area-misure"></textarea>
                     </div>
                     <div class="mb-3 row justify-content-center">
                       <div class="col-12 col-md-6 text-end"> 
@@ -57,6 +65,14 @@
                     <div class="mb-3">
                         <label for="productPrice" class="form-label">Prezzo</label>
                         <input type="number" class="form-control" id="productPrice" name="price">
+                    </div>
+                    <div class="mb-3">
+                        <label for="productColor" class="form-label">Colore:</label>
+                        <input type="text" class="form-control" id="productColor" name="color">
+                    </div>
+                     <div class="mb-3">
+                        <label for="productQuantity" class="form-label">Quantità:</label>
+                        <input type="text" class="form-control" id="productQuantity" name="quantity">
                     </div>
                     <button type="submit" class="btn-grg my-2">Inserisci</button>
                   </form>

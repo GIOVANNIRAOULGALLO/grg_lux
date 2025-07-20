@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Brand;
-use App\Models\Adress;
+
+use App\Models\Address;
 use App\Models\Product;
 use App\Models\Category;
-use Illuminate\Http\Request;
 
+use Illuminate\Http\Request;
 use GuzzleHttp\Handler\Proxy;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Session\Session;
@@ -51,7 +52,7 @@ class ProductController extends Controller
     {
         $brands=Brand::all();
         $categories=Category::all();
-        return view('product.create',compact('categories','brands'))->with('message','Articolo aggiunto al carrello!');
+        return view('product.create',compact('categories','brands'))->with('message','Articolo inserito correttamente!');
     }
 
     /**
@@ -68,9 +69,11 @@ class ProductController extends Controller
             'price'=>$req->price,
             'sex'=>$req->sex,
             'category_id'=>$req->category_id,
-            'brand_id'=>$req->brand_id
+            'brand_id'=>$req->brand_id,
+            'color'=>$req->color,
+            'quantity'=>$req->quantity
         ]);
-        return redirect(route('product.admin.create'))->with('message','Articolo aggiunto al carrello!');
+        return redirect(route('product.admin.create'))->with('message','Articolo inserito correttamente!');
     }
 
     /**
@@ -120,9 +123,9 @@ class ProductController extends Controller
         $products=Product::where('buy',true)->get();
         return view('carrello',compact('products'));
     }
-    public function ship(){return view('ship');}
-    public function insertAdress(Request $req){
-        Adress::create([
+    public function ship(){ return view('ship');}
+    public function insertAddress(Request $req){
+        Address::create([
             'city'=>$req->city,
             'road'=>$req->road,
             'number'=>$req->number,
@@ -174,9 +177,26 @@ class ProductController extends Controller
         $total=$products->count();
         return view('product.viewbysc',compact('products','sex','category','total'));
     }
-    public function orderAscendent(Product $products){
+    public function orderAscendent(Product $products,$sex,$category){
+       
         $products=$products->orderBy('price','ASC')->get();
+        $total=$products->count();
         // $category=$products->first()->take('category_id')->category()->get();
-        return view('product.viewbysc',compact('products'));
+        return view('product.viewbysc',compact('products','sex','category','total'));
     }
+
+    public function orderDescendent(Product $products,$sex,$category){
+        $products=$products->orderBy('price','DESC')->get();
+        $total=$products->count();
+        // $category=$products->first()->take('category_id')->category()->get();
+        return view('product.viewbysc',compact('products','sex','category','total'));
+    }
+
+    public function orderNews(Product $products,$sex,$category){
+        $products=$products->orderBy('created_at','DESC')->get();
+        $total=$products->count();
+        // $category=$products->first()->take('category_id')->category()->get();
+        return view('product.viewbysc',compact('products','sex','category','total'));
+    }
+    
 }

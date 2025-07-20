@@ -16,16 +16,19 @@
                     <h3 class="my-3">INDIRIZZO DI SPEDIZIONE</h3>
                 </div>
             </div>
-            @if(Auth::user()->adresses)
+            @php
+                $address = Auth::user()->addresses()->latest()->first();
+            @endphp
+            @if($address)
                 <div class="row">
                     <div class="col-12 col-md-6 d-flex flex-column align-items-center">
                         <div class="row justify-content-center  flex-row py-2 border border-warning text-start px-5 mx-auto">
                             <div class="col-12 text-start">
-                                <div><p class="fw-bold text-secondary">Città: <span class="px-1 text-dark">{{\App\Models\Adress::where('user_id',Auth::user()->id)->get()->last()->city}}</span></p></div>
-                                <div><p class="fw-bold text-secondary">Indirizzo: <span class="px-1 text-dark">{{\App\Models\Adress::where('user_id',Auth::user()->id)->get()->last()->road}}</span></p></div>
-                                <div><p class="fw-bold text-secondary">Civico: <span class="px-1 text-dark">{{\App\Models\Adress::where('user_id',Auth::user()->id)->get()->last()->number}}</span></p></div>
-                                <div><p class="fw-bold text-secondary">CAP: <span class="px-1 text-dark">{{\App\Models\Adress::where('user_id',Auth::user()->id)->get()->last()->cap}}</span></p></div>
-                                <div> <p class="fw-bold text-secondary">Nazione: <span class="px-1 text-dark">{{\App\Models\Adress::where('user_id',Auth::user()->id)->get()->last()->state}}</span></p></div>
+                                <div><p class="fw-bold text-secondary">Città: <span class="px-1 text-dark">{{\App\Models\Address::where('user_id',Auth::user()->id)->get()->last()->city}}</span></p></div>
+                                <div><p class="fw-bold text-secondary">Indirizzo: <span class="px-1 text-dark">{{\App\Models\Address::where('user_id',Auth::user()->id)->get()->last()->road}}</span></p></div>
+                                <div><p class="fw-bold text-secondary">Civico: <span class="px-1 text-dark">{{\App\Models\Address::where('user_id',Auth::user()->id)->get()->last()->number}}</span></p></div>
+                                <div><p class="fw-bold text-secondary">CAP: <span class="px-1 text-dark">{{\App\Models\Address::where('user_id',Auth::user()->id)->get()->last()->cap}}</span></p></div>
+                                <div> <p class="fw-bold text-secondary">Nazione: <span class="px-1 text-dark">{{\App\Models\Address::where('user_id',Auth::user()->id)->get()->last()->state}}</span></p></div>
                             </div>      
                         </div>
                         <div class="row mt-2">
@@ -60,7 +63,7 @@
             @else
             <div class="row justify-content-center flex-row text-center align-items-center my-4 mx-auto">
                 <div class="col-12">
-                    <form method="POST" action="{{route('insertAdress',['userName'=>Auth::user()->name ?? 'user','userSurname'=>Auth::user()->surname ?? 'user'])}}">
+                    <form method="POST" action="{{route('insertAddress',['userName'=>Auth::user()->name ?? 'user','userSurname'=>Auth::user()->surname ?? 'user'])}}">
                         @csrf
                         <div class="form-group">
                             <label for="city">Città: </label>

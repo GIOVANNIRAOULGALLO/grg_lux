@@ -20,22 +20,25 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        
     }
 </style>
 <body>
-    <h1>G2R ti dice Grazie per il tuo ordine, {{$contact['user']}}!</h1>
-    <ul>
-        <li>Email: {{$contact['email']}}</li>
-    </ul>
-    <h4>Riepilogo:</h4>
+    <h1>Il team di G2R ti ringrazia per l'ordine effettuato, {{$contact['user']}}!</h1>
+    <h4>Di seguito il riepilogo degli articoli:</h4>
+    @php
+        $sum=0;
+    @endphp
     <div class="mail-card">
         @foreach($products as $product)
             <p>{{$product['name']}} , {{$product->brand->name }} - {{$product['price']}} €</p>
             <div class="p-2"><img src="https://picsum.photos/250/250" class="" alt=""></div>
+            @php
+                $sum=$sum + $product->price;
+            @endphp
         @endforeach
     </div>
-   
+    <p>Per un totale di: {{$sum}} €</p>
+    <p>__________________________________</p>
     <p>La invieremo a: </p>
     <p>{{$address->city}} , via {{$address->road}} {{$address->number}} ({{$address->state}})</p>
 

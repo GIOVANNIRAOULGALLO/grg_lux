@@ -100,6 +100,7 @@
           <div class="dropdown-menu dropdown-login" aria-labelledby="dropdownAccountButton">
             @if(Auth::User())
             <a class="dropdown-item" href="#">ACCOUNT</a>
+            <a class="dropdown-item" href="{{route('ordini')}}">ORDINI</a>
             <a class="dropdown-item" href="{{route('product.admin')}}">ADMIN</a>
             <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">LOGOUT</a>
             <form method="POST" action="{{route('logout')}}" id="form-logout">

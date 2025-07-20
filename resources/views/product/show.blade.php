@@ -19,29 +19,33 @@
         </div>
     </section>
     <section class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-12 col-md-6 text-center text-md-end" id="sectionImg">
+        <div class="row justify-content-md-center text-end text-md-center">
+             <div class="col-12 col-md-6">
                 <img src="https://picsum.photos/400" alt="{{$product->name}}" id="showPicture" class="img-product-detail">
             </div>
             <div class="col-12 col-md-6 d-flex flex-column justify-content-center text-center text-md-start" id="textShow">
                 <p class="card-text fw-bold text-uppercase fs-1">{{$product->brand->name ?? 'NULL'}}</p>
                 <p class="card-text">{{$product->name}}</p>
                 <p class="card-text">{{$product->description}}</p>
-                <p class="card-text">€{{$product->price}}</p>
-                <form method="POST" action="{{route('addToCart',compact('product'))}}">
+                <p class="card-text">{{$product->color}}</p>
+                <p class="fs-3">€{{$product->price}}</p>
+                 <form method="POST" action="{{route('addToCart',compact('product'))}}">
                     @csrf
-                    <button type ="submit" class="my-2 btn-grg-general ms-auto ms-md-0" id="btnAdd">Aggiungi al carrello</button>
-                </form>
-            @if(Auth::user())
-                @if(Auth::user()->name == 'admin')
-                <form method="GET" action="{{route('product.edit',compact('product'))}}">
-                    @csrf
-                    <button type ="submit" class="my-2 btn-grg-general ms-auto ms-md-0" id="btnAdd">Edit</button>
-                </form>
-                @endif
-            @endif
+                <button type ="submit" class="my-2 btn-grg-general ms-auto ms-md-0" id="btnAdd">Aggiungi al carrello</button>
+                </form> 
             </div>
-        </div>
+           
+        </div>    
+       
+        @if(Auth::user())
+            @if(Auth::user()->name == 'admin')
+            <form method="GET" action="{{route('product.edit',compact('product'))}}">
+                @csrf
+                <button type ="submit" class="my-2 btn-grg-general ms-auto ms-md-0" id="btnAdd">Edit</button>
+            </form>
+            @endif
+        @endif
+    
         @if(Auth::user())
             @if(Auth::user()->name == 'admin')
                 <div class="row justify-content-center text-center my-4">

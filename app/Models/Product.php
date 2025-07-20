@@ -12,7 +12,7 @@ class Product extends Model
 {
     use Searchable;
     use HasFactory;
-    protected $fillable=['name','description','price','sex','magazine','category_id','brand_id','buy'];
+    protected $fillable=['name','description','price','sex','color','quantity','category_id','brand_id','buy'];
 
     public function toSearchableArray()
     {
@@ -23,7 +23,8 @@ class Product extends Model
             'category'=>$this->category->name,
             'brand'=>$this->brand->name,
             'sex'=>$this->sex,
-            'magazine'=>$this->magazine
+            'color'=>$this->color,
+            'quantity'=>$this->quantity
         ];
         return $array;
     }
@@ -36,5 +37,10 @@ class Product extends Model
     public function users(){
         return $this->belongsToMany(User::class);
     }
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class)->withPivot('quantity')->withTimestamps();
+    }
+
      
 }
