@@ -62,11 +62,11 @@
                             </div>
                         </form>
 
-                        <div class="form-row mt-3">
+                        <!-- <div class="form-row mt-3">
                             <div class="col-md-12 error form-group hide">
                                 <div class="alert alert-danger">Per favore, correggi gli errori e riprova.</div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -126,7 +126,6 @@
     <script>
         Stripe.setPublishableKey("{{ $stripeKey }}");
     </script>
-    <script>console.log("Stripe key: {{ $stripeKey }}");</script>
      <script type="text/javascript">
         $(function() {
             var $form = $(".require-validation");

@@ -143,8 +143,15 @@ class ProductController extends Controller
         }
         return view('ordine',compact('count'));   
     }
-    public function addToCart(Product $product){
+    public function addToCart(Product $product,Request $request){
         if($product->buy == 1){
+            $quantity = max(1, min($request->input('quantity'), $product->quantity));
+            $cart = session()->get('cart', []);
+            $cart[$product->id] = [
+                'product_id' => $product->id,
+                'quantity' => $quantity,
+            ];
+            session()->put('cart', $cart);
             return redirect(route('product.show',compact('product')))->with('message','Articolo aggiunto al carrello!');
         }
         else{

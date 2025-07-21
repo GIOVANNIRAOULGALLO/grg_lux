@@ -43,31 +43,30 @@ class StripeController extends Controller
         $count=0;
         $email=Auth::user()->email;
         $user=Auth::user()->name;
-        $message="Grazie per aver acquistato";
+        $message="Grazie per aver acquistato da G2R";
         $address=Auth::user()->addresses()->latest()->first();
+
         $contact=compact('email','user','message','address');
         Mail::to($email)->send(new ContactMail($contact, $address));
         
-        foreach($products as $product){ 
-
-          
+        foreach($products as $product){           
             if($product->quantity != 0){ 
                 $quantity = $product->pivot->quantity ?? 1; // se usi pivot o altro campo
                 $subtotal = $product->price * $quantity;
                 $count += $subtotal;
-
+                
                 // Scala il magazzino
                 $product->quantity -= $quantity;
-                $product->buy = false;
+                $product->buy = 0;
                 $product->save();
 
-            // Aggiungi l’ordine nel DB (se non lo fai già)
-            $order=Order::create([
-                'user_id' => Auth::id(),
-                'address_id' => $address->id ?? null,
-                'totale' => $count, 
-                'stato' => 'pagato',
-            ]);
+                // Aggiungi l’ordine nel DB
+                $order=Order::create([
+                    'user_id' => Auth::id(),
+                    'address_id' => $address->id ?? null,
+                    'totale' => $count, 
+                    'stato' => 'pagato',
+                ]);
                 $qty = $quantities[$product->id] ?? 1;
                 $product->decrement('quantity', $qty);
                 $order->products()->attach($product->id, ['quantity' => $qty]);

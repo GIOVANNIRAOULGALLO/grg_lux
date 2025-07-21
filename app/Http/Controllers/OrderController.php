@@ -11,5 +11,4 @@ class OrderController extends Controller
         $orders = Auth::user()->orders()->with('address')->with('products')->latest()->get();
         return view('orders.index', compact('orders'));
     }
-
 }

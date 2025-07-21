@@ -30,8 +30,8 @@
                                         <p class="card-text fw-bold text-brand">{{$product->brand->name ?? 'NULL'}}</p>
                                         <p class="card-text">{{$product->name}}</p>
                                         <p class="card-text"> €{{$product->price}}</p>
-                                        <label for="quantity">Quantità: </label><input type="number" name="quantity" value="{{ $product->pivot->quantity ?? 1 }}" min="1" max="{{ $product->quantity }}">
-
+                                        <label for="quantity">Quantità:</label>
+                                        <input type="number" name="quantity" value="1" min="1" max="{{$product->quantity}}" class="form-control mb-2" style="width: 80px; display:inline-block;">
                                         <form action="{{route('removeToCart',compact('product'))}}" method="post">
                                             @csrf
                                             <button type="submit" class="btn-grg-product-chart">Rimuovi dal Carrello</i></button>
@@ -47,14 +47,15 @@
                     <div class="dividerVertical"> </div>
                 </div>
                 <div class="col-12 col-md-5 sticky-top">
-                    <p class="fs-3 mt-5 fw-bolder no-scroll">Riepilogo carrello({{\App\Models\Product::where('buy',1)->count()}}):</p>
+                    <p class="fs-3 mt-5 fw-bolder no-scroll">Articoli nel carrello: ({{\App\Models\Product::where('buy',1)->count()}}):</p>
                     @foreach ($products as $product)
                         <div class="d-flex py-2">
                             <div class="p-2"><img src="https://picsum.photos/25/25" class="card-img-top mx-auto img-fluid" alt="{{$product->name}}"></div>
                             <div class="p-2"><p>{{$product->name}} {{$product->brand->name}}</p></div>
                             <div class="p-2"><p> - </p></div>
                             <div class="ml-auto p-2"><p>€{{$product->price}},00</p></div>
-                            <div class="p-2"><p> {{ $product->pivot->quantity ?? 1 }}</p></div>
+                            <div class="p-2"><p></p></div>
+                            
                         </div>
                     @endforeach
                     <hr class="divider">

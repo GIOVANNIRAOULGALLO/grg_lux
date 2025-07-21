@@ -47,6 +47,7 @@ Route::get('/{sex}/{category}/d',[ProductController::class,'orderDescendent'])->
 Route::get('/{sex}/{category}/n',[ProductController::class,'orderNews'])->name('orderNews');
 Route::get('/{sex}/{category}/n',[ProductController::class,'orderNews'])->name('orderNews');
 Route::post('/locale/{locale}', [PublicController::class, 'locale'])->name('locale');
+Route::post('/cart/update/{product}', [OrderController::class, 'updateQuantity'])->name('updateQuantity');
 
 
 
